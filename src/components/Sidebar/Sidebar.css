@@ -1,5 +1,5 @@
 .sidebar {
-  background-color: #f2f2f2;
+  background-color: #ffff00;
   width: 0;
   padding: 10px;
   position: fixed;
@@ -67,12 +67,13 @@
 
 @media only screen and (max-width: 768px) {
   .sidebar {
-    width: 100%;
+    width: 15%;
     transform: translateX(-100%);
   }
 
   .sidebar.open.slide {
     transform: translateX(0);
+    width: 15%;
   }
 }
 
