@@ -16,7 +16,7 @@ const Sidebar = ({ isOpen }) => {
         <li className="sidebar-item">
           <Link to="/" className="sidebar-button">
             <span className="sidebar-icon">
-              <AiOutlineHome />
+              <AiOutlineHome size={24} />
             </span>
             <span className="sidebar-label">Home</span>
           </Link>
@@ -24,7 +24,7 @@ const Sidebar = ({ isOpen }) => {
         <li className="sidebar-item">
           <Link to="/academic-projects" className="sidebar-button">
             <span className="sidebar-icon">
-              <AiOutlineProject />
+              <AiOutlineProject size={24} />
             </span>
             <span className="sidebar-label">Academic projects</span>
           </Link>
@@ -32,7 +32,7 @@ const Sidebar = ({ isOpen }) => {
         <li className="sidebar-item">
           <Link to="/talks" className="sidebar-button">
             <span className="sidebar-icon">
-              <AiOutlineFileText />
+              <AiOutlineFileText size={24} />
             </span>
             <span className="sidebar-label">Talks</span>
           </Link>
@@ -40,7 +40,7 @@ const Sidebar = ({ isOpen }) => {
         <li className="sidebar-item">
           <Link to="/publications" className="sidebar-button">
             <span className="sidebar-icon">
-              <AiOutlineBook />
+              <AiOutlineBook size={24} />
             </span>
             <span className="sidebar-label">Publications</span>
           </Link>
@@ -48,7 +48,7 @@ const Sidebar = ({ isOpen }) => {
         <li className="sidebar-item">
           <Link to="/certifications" className="sidebar-button">
             <span className="sidebar-icon">
-              <AiOutlineCheckCircle />
+              <AiOutlineCheckCircle size={24} />
             </span>
             <span className="sidebar-label">Certifications</span>
           </Link>
