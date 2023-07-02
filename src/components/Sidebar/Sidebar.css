@@ -75,3 +75,10 @@
     transform: translateX(0);
   }
 }
+
+@media only screen and (min-width: 769px) {
+  .sidebar {
+    width: 15%;
+    transform: translateX(0);
+  }
+}
