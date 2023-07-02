@@ -46,7 +46,7 @@
   }
   
   .sidebar-toggle-icon.open {
-    transform: rotate(90deg);
+    transform: rotate(180deg);
   }
   
   .toolbar-title {
