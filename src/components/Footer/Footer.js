@@ -2,9 +2,13 @@ import React from 'react';
 import './Footer.css';
 
 const Footer = () => {
+  const currentYear = new Date().getFullYear();
+
   return (
     <footer className="footer">
-      Made with React @2023
+      © {currentYear} Simão Cunha
+      <br />
+      Developed with React
     </footer>
   );
 };

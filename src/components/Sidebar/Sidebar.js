@@ -12,48 +12,46 @@ const Sidebar = ({ isOpen }) => {
 
   return (
     <div className={`sidebar ${isOpen ? 'open' : ''}`} style={sidebarStyle}>
-      <ul className="sidebar-list">
-        <li className="sidebar-item">
-          <Link to="/" className="sidebar-button">
-            <span className="sidebar-icon">
-              <AiOutlineHome size={24} />
-            </span>
-            <span className="sidebar-label">Home</span>
-          </Link>
-        </li>
-        <li className="sidebar-item">
-          <Link to="/academic-projects" className="sidebar-button">
-            <span className="sidebar-icon">
-              <AiOutlineProject size={24} />
-            </span>
-            <span className="sidebar-label">Academic projects</span>
-          </Link>
-        </li>
-        <li className="sidebar-item">
-          <Link to="/talks" className="sidebar-button">
-            <span className="sidebar-icon">
-              <AiOutlineFileText size={24} />
-            </span>
-            <span className="sidebar-label">Talks</span>
-          </Link>
-        </li>
-        <li className="sidebar-item">
-          <Link to="/publications" className="sidebar-button">
-            <span className="sidebar-icon">
-              <AiOutlineBook size={24} />
-            </span>
-            <span className="sidebar-label">Publications</span>
-          </Link>
-        </li>
-        <li className="sidebar-item">
-          <Link to="/certifications" className="sidebar-button">
-            <span className="sidebar-icon">
-              <AiOutlineCheckCircle size={24} />
-            </span>
-            <span className="sidebar-label">Certifications</span>
-          </Link>
-        </li>
-      </ul>
+      <div className="sidebar-section">
+        <Link to="/" className="sidebar-link">
+          <span className="sidebar-icon">
+            <AiOutlineHome size={24} />
+          </span>
+          <span className="sidebar-label">Home</span>
+        </Link>
+      </div>
+      <div className="sidebar-section">
+        <Link to="/academic-projects" className="sidebar-link">
+          <span className="sidebar-icon">
+            <AiOutlineProject size={24} />
+          </span>
+          <span className="sidebar-label">Academic projects</span>
+        </Link>
+      </div>
+      <div className="sidebar-section">
+        <Link to="/talks" className="sidebar-link">
+          <span className="sidebar-icon">
+            <AiOutlineFileText size={24} />
+          </span>
+          <span className="sidebar-label">Talks</span>
+        </Link>
+      </div>
+      <div className="sidebar-section">
+        <Link to="/publications" className="sidebar-link">
+          <span className="sidebar-icon">
+            <AiOutlineBook size={24} />
+          </span>
+          <span className="sidebar-label">Publications</span>
+        </Link>
+      </div>
+      <div className="sidebar-section">
+        <Link to="/certifications" className="sidebar-link">
+          <span className="sidebar-icon">
+            <AiOutlineCheckCircle size={24} />
+          </span>
+          <span className="sidebar-label">Certifications</span>
+        </Link>
+      </div>
     </div>
   );
 };
