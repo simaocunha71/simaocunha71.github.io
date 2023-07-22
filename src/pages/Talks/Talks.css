@@ -20,26 +20,10 @@
 
 .talk-buttons {
   display: flex;
-  justify-content: flex-end;
+  justify-content: center; /* Center the buttons horizontally */
   gap: 10px; /* Add some space between the buttons */
 }
 
-.project-table {
-  margin: 0 auto;
-  border-collapse: collapse;
-  width: 100%;
-}
-
-.project-table th,
-.project-table td {
-  border: 1px solid #ccc;
-  padding: 10px;
-  text-align: center;
-}
-
-.project-table th {
-  background-color: #f2f2f2;
-}
 
 .rounded-button {
   display: inline-block;
@@ -92,38 +76,6 @@
   outline: none;
 }
 
-.image-gallery {
-  position: relative;
-  text-align: center;
-}
-
-.image-gallery img {
-  max-width: 100%;
-  max-height: 100%;
-}
-
-.nav-btn {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  padding: 10px;
-  border: none;
-  border-radius: 50%;
-  background-color: rgba(255, 255, 255, 0.8);
-  color: #000000;
-  cursor: pointer;
-  font-size: 20px;
-  outline: none;
-}
-
-.prev-btn {
-  left: 10px;
-}
-
-.next-btn {
-  right: 10px;
-}
-
 .pdf-list {
   list-style: none;
   padding: 0;
@@ -132,7 +84,7 @@
 .pdf-list-item {
   display: block;
   width: 95%;
-  padding: 8px 16px;
+  padding: 8px 10px; /* Updated padding to make it equal on both sides */
   border-radius: 20px;
   background-color: #f2f2f2;
   color: #000000;
@@ -144,4 +96,12 @@
 
 .pdf-list-item:hover {
   background-color: #dcdcdc;
+}
+
+.talk-image {
+  max-width: 50%;
+  height: auto;
+  margin: 0 auto;
+  margin-bottom: 20px;
+  border-radius: 10px; /* Make the corners rounded */
 }

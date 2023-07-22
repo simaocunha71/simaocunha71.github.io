@@ -1,104 +1,48 @@
-import React, { useState } from 'react';
+import React from 'react';
 import Footer from '../../components/Footer/Footer';
 import './Talks.css';
 
+//Sustrainable image
+import presentationImage from '../../assets/docs/sustrainable/presentation.jpeg';
+
 const Talks = () => {
-  const [showPdfPopup, setShowPdfPopup] = useState(false);
-  const [showImageGallery, setShowImageGallery] = useState(false);
-
-  const togglePdfPopup = () => {
-    setShowPdfPopup((prevState) => !prevState);
-  };
-
-  const toggleImageGallery = () => {
-    setShowImageGallery((prevState) => !prevState);
-  };
-
-  const pdfItems = [
-    { id: 1, name: 'PDF File 1', url: 'https://example.com/pdf1.pdf' },
-    { id: 2, name: 'PDF File 2', url: 'https://example.com/pdf2.pdf' },
-    // Add more PDF items as needed
-  ];
-
-  const images = [
-    'https://example.com/image1.jpg',
-    'https://example.com/image2.jpg',
-    // Add more image URLs as needed
-  ];
-
-  const handlePdfItemClick = (url) => {
-    window.open(url, '_blank');
-  };
-
-  const handleNextImage = () => {
-    // Implement the logic to navigate to the next image
-  };
-
-  const handlePrevImage = () => {
-    // Implement the logic to navigate to the previous image
+  const handlePdfButtonClick = (pdfName) => {
+    // Replace this function with your desired action when a button is clicked
+    alert(`You clicked the button for ${pdfName}`);
   };
 
   return (
     <>
       <div style={{ marginBottom: '100px' }}></div>
       <div className="talk-item">
-        <div className="talk-title">Title 1</div>
-        <div className="talk-description">Description 1</div>
+        <div className="talk-title">SusTrainable Summer School at Coimbra 2023</div>
+        <div className="talk-description">
+          I had the opportunity to receive a scholarship from the University of Minho to participate in the second SusTrainable summer school organized in Coimbra, Portugal by the University of Coimbra. 
+          Additionally, I had the privilege of presenting my work on the energy efficiency of sorting algorithms and programming languages using RAPL during the Students Workshop and Posters Session.
+        </div>
+        <img
+          src={presentationImage}
+          alt="Talks Image"
+          className="talk-image"
+        />
         <div className="talk-buttons">
-          <button className="rounded-button" onClick={togglePdfPopup}>Select PDF</button>
-          <button className="rounded-button" onClick={toggleImageGallery}>Open Gallery</button>
+          <button className="rounded-button poster-button" onClick={() => handlePdfButtonClick('Poster')}>
+            Poster
+          </button>
+          <button className="rounded-button presentation-button" onClick={() => handlePdfButtonClick('Presentation')}>
+            Presentation
+          </button>
+          <button className="rounded-button report-button" onClick={() => handlePdfButtonClick('Report')}>
+            Report
+          </button>
+          <button
+            onClick={() => window.open('https://github.com/simaocunha71/EnergyMeasurement', '_blank')}
+            className="rounded-button github-button"
+          >
+            GitHub repository
+          </button>
         </div>
       </div>
-
-      <div className="talk-item">
-        <div className="talk-title">Title 2</div>
-        <div className="talk-description">Description 2</div>
-        <div className="talk-buttons">
-          <button className="rounded-button" onClick={togglePdfPopup}>Select PDF</button>
-          <button className="rounded-button" onClick={toggleImageGallery}>Open Gallery</button>
-        </div>
-      </div>
-
-      {/* Add more items as needed */}
-
-      {showPdfPopup && (
-        <div className="popup-overlay">
-          <div className="popup-content">
-            <button className="popup-close-btn" onClick={togglePdfPopup}>X</button>
-            <ul className="pdf-list">
-              {pdfItems.map((item) => (
-                <li
-                  key={item.id}
-                  className="pdf-list-item"
-                  onClick={() => handlePdfItemClick(item.url)}
-                >
-                  {item.name}
-                </li>
-              ))}
-            </ul>
-          </div>
-        </div>
-      )}
-
-      {showImageGallery && (
-        <div className="popup-overlay">
-          <div className="popup-content">
-            <button className="popup-close-btn" onClick={toggleImageGallery}>X</button>
-            <div className="image-gallery">
-              {/* Display the current image */}
-              <img src={images[0]} alt="Gallery" />
-
-              {/* Add navigation buttons */}
-              <button className="nav-btn prev-btn" onClick={handlePrevImage}>
-                Previous
-              </button>
-              <button className="nav-btn next-btn" onClick={handleNextImage}>
-                Next
-              </button>
-            </div>
-          </div>
-        </div>
-      )}
 
       <Footer />
     </>
