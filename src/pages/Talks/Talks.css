@@ -1,0 +1,147 @@
+.talk-item {
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  margin: 10px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.talk-title {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.talk-description {
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+.talk-buttons {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px; /* Add some space between the buttons */
+}
+
+.project-table {
+  margin: 0 auto;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+.project-table th,
+.project-table td {
+  border: 1px solid #ccc;
+  padding: 10px;
+  text-align: center;
+}
+
+.project-table th {
+  background-color: #f2f2f2;
+}
+
+.rounded-button {
+  display: inline-block;
+  padding: 8px 16px;
+  border-radius: 20px;
+  background-color: #f2f2f2;
+  color: #000000;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+
+.rounded-button:hover {
+  background-color: #dcdcdc;
+}
+
+.popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.popup-content {
+  position: relative;
+  padding: 20px;
+  border-radius: 10px;
+  background-color: #ffffff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  width: 80%;
+  max-width: 800px; /* Set a maximum width for the content */
+  height: 80%;
+  max-height: 600px; /* Set a maximum height for the content */
+  overflow-y: auto;
+}
+
+.popup-close-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 20px;
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
+  outline: none;
+}
+
+.image-gallery {
+  position: relative;
+  text-align: center;
+}
+
+.image-gallery img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.nav-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  padding: 10px;
+  border: none;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.8);
+  color: #000000;
+  cursor: pointer;
+  font-size: 20px;
+  outline: none;
+}
+
+.prev-btn {
+  left: 10px;
+}
+
+.next-btn {
+  right: 10px;
+}
+
+.pdf-list {
+  list-style: none;
+  padding: 0;
+}
+
+.pdf-list-item {
+  display: block;
+  width: 95%;
+  padding: 8px 16px;
+  border-radius: 20px;
+  background-color: #f2f2f2;
+  color: #000000;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s;
+  margin-bottom: 10px;
+}
+
+.pdf-list-item:hover {
+  background-color: #dcdcdc;
+}
