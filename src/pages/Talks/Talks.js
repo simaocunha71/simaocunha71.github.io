@@ -1,14 +1,23 @@
 import React from 'react';
 import Footer from '../../components/Footer/Footer';
+import { Document, Page, pdfjs } from 'react-pdf';
 import './Talks.css';
 
 //Sustrainable image
 import presentationImage from '../../assets/docs/sustrainable/presentation.jpeg';
+import presentationPDF from '../../assets/docs/sustrainable/presentation.pdf';
+import posterPDF from '../../assets/docs/sustrainable/poster.pdf';
+import reportPDF from '../../assets/docs/sustrainable/report.pdf';
+
+// Ensure pdfjs worker is set correctly
+pdfjs.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.min.js`;
 
 const Talks = () => {
-  const handlePdfButtonClick = (pdfName) => {
-    // Replace this function with your desired action when a button is clicked
-    alert(`You clicked the button for ${pdfName}`);
+  const [selectedPdf] = React.useState(null);
+
+  const handlePdfButtonClick = (pdfUrl) => {
+    // Open the PDF in a new tab
+    window.open(pdfUrl, '_blank');
   };
 
   return (
@@ -26,13 +35,13 @@ const Talks = () => {
           className="talk-image"
         />
         <div className="talk-buttons">
-          <button className="rounded-button poster-button" onClick={() => handlePdfButtonClick('Poster')}>
+          <button className="rounded-button poster-button" onClick={() => handlePdfButtonClick(posterPDF)}>
             Poster
           </button>
-          <button className="rounded-button presentation-button" onClick={() => handlePdfButtonClick('Presentation')}>
+          <button className="rounded-button presentation-button" onClick={() => handlePdfButtonClick(presentationPDF)}>
             Presentation
           </button>
-          <button className="rounded-button report-button" onClick={() => handlePdfButtonClick('Report')}>
+          <button className="rounded-button report-button" onClick={() => handlePdfButtonClick(reportPDF)}>
             Report
           </button>
           <button
@@ -42,6 +51,13 @@ const Talks = () => {
             GitHub repository
           </button>
         </div>
+        {selectedPdf && (
+          <div className="pdf-container">
+            <Document file={selectedPdf}>
+              <Page pageNumber={1} />
+            </Document>
+          </div>
+        )}
       </div>
 
       <Footer />
