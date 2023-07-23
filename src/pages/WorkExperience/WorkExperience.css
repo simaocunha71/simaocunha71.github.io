@@ -1,0 +1,17 @@
+.work-experience-card {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    padding: 10px;
+    max-width: 100%; /* Set the maximum width to 100% to make it responsive */
+  }
+  
+  .company-image {
+    width: 10%;
+    height: 10%;
+    margin-right: 20px;
+    border-radius: 10%;
+  }
+  

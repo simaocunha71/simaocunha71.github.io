@@ -1,0 +1,53 @@
+.talk-item {
+    display: flex;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    margin: 10px;
+    align-items: center; /* Align items vertically at the center */
+  }
+  
+  .talk-image-container {
+    flex: 0 0 100px; /* Set a fixed width for the image container (adjust as needed) */
+    overflow: hidden; /* Make sure the image stays within its container */
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+  }
+  
+  .talk-content {
+    flex: 1;
+    padding: 20px;
+  }
+  
+  .talk-title {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    text-align: center;
+  }
+  
+  .talk-description {
+    font-size: 16px;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  
+  .talk-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+  }
+  
+  .rounded-button {
+    display: inline-block;
+    padding: 8px 16px;
+    border-radius: 20px;
+    background-color: #f2f2f2;
+    color: #000000;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s;
+  }
+  
+  .rounded-button:hover {
+    background-color: #dcdcdc;
+  }

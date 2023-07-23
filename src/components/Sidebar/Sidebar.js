@@ -1,5 +1,5 @@
 import React from 'react';
-import { AiOutlineProject, AiOutlineFileText, AiOutlineBook, AiOutlineCheckCircle, AiOutlineHome } from 'react-icons/ai';
+import { AiOutlineProject, AiOutlineFileText, AiOutlineBook, AiOutlineCheckCircle, AiOutlineHome, AiFillBank } from 'react-icons/ai';
 import { Link } from 'react-router-dom';
 import './Sidebar.css';
 
@@ -26,6 +26,14 @@ const Sidebar = ({ isOpen }) => {
             <AiOutlineProject size={24} />
           </span>
           <span className="sidebar-label">Academic projects</span>
+        </Link>
+      </div>
+      <div className="sidebar-section">
+        <Link to="/work-experience" className="sidebar-link">
+          <span className="sidebar-icon">
+            <AiFillBank  size={24} />
+          </span>
+          <span className="sidebar-label">Work Experience</span>
         </Link>
       </div>
       <div className="sidebar-section">

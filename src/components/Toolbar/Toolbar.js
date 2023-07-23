@@ -7,7 +7,7 @@ const Toolbar = ({ toggleSidebar, isSidebarOpen }) => {
       <button className="sidebar-toggle" onClick={toggleSidebar}>
         <span className={`sidebar-toggle-icon ${isSidebarOpen ? 'open' : ''}`}></span>
       </button>
-      <h1 className="toolbar-title">Simão Cunha's Personal Website</h1>
+      <h1 className="toolbar-title">Simão Cunha's Portfolio</h1>
     </div>
   );
 };

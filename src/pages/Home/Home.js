@@ -1,5 +1,4 @@
 import React from 'react';
-import { FaLinkedin, FaGithub, FaEnvelope } from 'react-icons/fa';
 import './Home.css';
 import coverImage from '../../assets/profile_image.jpeg';
 
@@ -20,13 +19,13 @@ const Home = () => {
         <p className="description limited-width">{description}</p>
         <div className="button-container">
           <a href={linkedinUrl} target="_blank" rel="noopener noreferrer">
-            <FaLinkedin className="icon" />
+            <img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" alt="LINKEDIN" />
           </a>
           <a href={githubUrl} target="_blank" rel="noopener noreferrer">
-            <FaGithub className="icon" />
+            <img src="https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white" alt="GITHUB" />
           </a>
           <a href={emailUrl}>
-            <FaEnvelope className="icon" />
+            <img src="https://img.shields.io/badge/Microsoft_Outlook-0078D4?style=for-the-badge&logo=microsoft-outlook&logoColor=white" alt="EMAIL" />
           </a>
         </div>
       </div>
