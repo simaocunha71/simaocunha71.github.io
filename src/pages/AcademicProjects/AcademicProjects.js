@@ -1,6 +1,9 @@
 import React from 'react';
 import './AcademicProjects.css';
 
+import presentationPDF from '../../assets/docs/TDS_Entrega_PI_93262_93168_Apresentacao.pdf';
+import reportPDF from '../../assets/docs/TDS_Entrega_PI_93262_93168_Relatorio.pdf';
+
 const AcademicProjects = () => {
   return (
     <div>
@@ -217,9 +220,9 @@ const AcademicProjects = () => {
       <table className="project-table">
         <thead>
           <tr>
-            <th>UC (course)</th>
-            <th>Linguagem(s) (Language(s))</th>
-            <th>Repositório(s) (Repository(ies))</th>
+          <th>Course</th>
+            <th>Language(s)</th>
+            <th>Repository(ies)</th>
           </tr>
         </thead>
         <tbody>
@@ -238,7 +241,9 @@ const AcademicProjects = () => {
               <img src="https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=java&logoColor=white" alt="Java" />
             </td>
             <td>
-                <a href="https://github.com/LuisMPSilva01/BraGuia" className="rounded-button">Project</a>
+                <a href="https://github.com/LuisMPSilva01/BraGuia" className="rounded-button">Projects</a>
+                <a href= {reportPDF} className="rounded-button">Investigation Project Report</a>
+                <a href= {presentationPDF} className="rounded-button">Investigation Project Presentation</a>
             </td>
           </tr>
           <tr>
