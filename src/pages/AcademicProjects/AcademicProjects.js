@@ -17,8 +17,8 @@ const AcademicProjects = () => {
           <thead>
             <tr>
               <th>Course</th>
-              <th>Language(s)</th>
-              <th>Repository(ies)</th>
+              <th>Languages</th>
+              <th>Repository</th>
             </tr>
           </thead>
           <tbody>
@@ -61,8 +61,8 @@ const AcademicProjects = () => {
           <thead>
           <tr>
               <th>Course</th>
-              <th>Language(s)</th>
-              <th>Repository(ies)</th>
+              <th>Languages</th>
+              <th>Repository</th>
             </tr>
           </thead>
           <tbody>
@@ -117,8 +117,8 @@ const AcademicProjects = () => {
           <thead>
           <tr>
               <th>Course</th>
-              <th>Language(s)</th>
-              <th>Repository(ies)</th>
+              <th>Languages</th>
+              <th>Repository</th>
             </tr>
           </thead>
           <tbody>
@@ -216,13 +216,86 @@ const AcademicProjects = () => {
       <details open>
         <summary><b>Master's degree <span role="img" aria-label="mortar board">🎓</span></b></summary>
   
+        <h3>4th year</h3>
+        <table className="project-table">
+          <thead>
+            <tr>
+              <th>Course</th>
+              <th>Languages</th>
+              <th>Repository</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Cloud Computing Applications and Services</td>
+              <td>
+                <img src="https://img.shields.io/badge/Google_Cloud-4285F4?style=for-the-badge&logo=google-cloud&logoColor=white" alt="GCP" />
+                <img src="https://img.shields.io/badge/Ansible-000000?style=for-the-badge&logo=ansible&logoColor=white" alt="Ansible" />
+                <img src="https://img.shields.io/badge/kubernetes-326ce5.svg?&style=for-the-badge&logo=kubernetes&logoColor=white" alt="K8" />
+                <img src="https://img.shields.io/badge/Ghost-000?style=for-the-badge&logo=ghost&logoColor=yellow" alt="Ghost" />
+              </td>
+              <td>
+                <a href="https://github.com/simaocunha71/ghost-cloud" className="rounded-button">Project</a>
+              </td>
+            </tr>
+            <tr>
+              <td>Parallel Computing</td>
+              <td>
+                <img src="https://img.shields.io/badge/C-00599C?style=for-the-badge&logo=c&logoColor=white" alt="C" />
+              </td>
+              <td>
+                <a href="https://github.com/simaocunha71/kmeans-cp" className="rounded-button">Project</a>
+              </td>
+            </tr>
+            <tr>
+              <td>Data and Machine Learning</td>
+              <td>
+                <img src="https://img.shields.io/badge/Python-FFD43B?style=for-the-badge&logo=python&logoColor=blue" alt="Python" />
+                <img src="https://img.shields.io/badge/scikit_learn-F7931E?style=for-the-badge&logo=scikit-learn&logoColor=white" alt="Sklearn" />
+              </td>
+              <td>
+                <a href="https://github.com/simaocunha71/machine_learning-daa" className="rounded-button">Project</a>
+              </td>
+            </tr>
+            <tr>
+              <td>Network Services Engineering</td>
+              <td>
+                <img src="https://img.shields.io/badge/Python-FFD43B?style=for-the-badge&logo=python&logoColor=blue" alt="Python" />
+                <img src="https://img.shields.io/badge/VirtualBox-21416b?style=for-the-badge&logo=VirtualBox&logoColor=white" alt="VB" />
+              </td>
+              <td>
+                <a href="https://github.com/simaocunha71/streaming-esr" className="rounded-button">Project</a>
+              </td>
+            </tr>
+            <tr>
+              <td>Formal Methods in Software Engineering</td>
+              <td>Non applicable</td>
+              <td>
+                <a href="https://github.com/simaocunha71/mfes" className="rounded-button">Project</a>
+              </td>
+            </tr>
+            <tr>
+              <td>Software Requirements and Architectures</td>
+              <td>
+                <img src="https://img.shields.io/badge/Python-FFD43B?style=for-the-badge&logo=python&logoColor=blue" alt="Python" />
+                <img src="https://img.shields.io/badge/Django-092E20?style=for-the-badge&logo=django&logoColor=green" alt="Django" />
+                <img src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white" alt="HTML" />
+                <img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white" alt="CSS" />
+              </td>
+              <td>
+                <a href="https://github.com/surumkata/rasbet" className="rounded-button">Project</a>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+
         <h4 style={{ textAlign: 'center' }}>Master's courses area #1: Software Development, Validation and Maintenance</h4>
       <table className="project-table">
         <thead>
           <tr>
           <th>Course</th>
-            <th>Language(s)</th>
-            <th>Repository(ies)</th>
+            <th>Languages</th>
+            <th>Repository</th>
           </tr>
         </thead>
         <tbody>
@@ -265,8 +338,8 @@ const AcademicProjects = () => {
         <thead>
           <tr>
             <th>Course</th>
-            <th>Language(s)</th>
-            <th>Repository(ies)</th>
+            <th>Languages</th>
+            <th>Repository</th>
           </tr>
         </thead>
         <tbody>
