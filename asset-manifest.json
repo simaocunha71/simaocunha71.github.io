@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.6f706a51.css",
-    "main.js": "/static/js/main.260e7001.js",
+    "main.js": "/static/js/main.8bb1ff13.js",
     "static/js/787.71e672d5.chunk.js": "/static/js/787.71e672d5.chunk.js",
     "static/media/report.pdf": "/static/media/report.b748c0a4ac038758a4de.pdf",
     "static/media/TDS_Entrega_PI_93262_93168_Relatorio.pdf": "/static/media/TDS_Entrega_PI_93262_93168_Relatorio.e47178ab0263b68133fd.pdf",
@@ -10,17 +10,19 @@
     "static/media/Sustrainable_Students_Workshop_certificate.pdf": "/static/media/Sustrainable_Students_Workshop_certificate.13450a3020bf0fb0d3eb.pdf",
     "static/media/presentation.pdf": "/static/media/presentation.d28a0cf0c038e7ff4ef0.pdf",
     "static/media/Sustrainable_Attendence_certificate.pdf": "/static/media/Sustrainable_Attendence_certificate.530b9eb7f0322a9e97d2.pdf",
+    "static/media/CV_Simão_Pedro_Sá_Cunha_EN.pdf": "/static/media/CV_Simão_Pedro_Sá_Cunha_EN.291c1bd7ee88dbb5d994.pdf",
+    "static/media/CV_Simão_Pedro_Sá_Cunha_PT.pdf": "/static/media/CV_Simão_Pedro_Sá_Cunha_PT.87c9260f48cd0dca1af3.pdf",
     "static/media/English_C1_Simao_Cunha.pdf": "/static/media/English_C1_Simao_Cunha.59fc0c2dd5d779c7be28.pdf",
     "static/media/presentation.jpeg": "/static/media/presentation.81e53dbb2a6c133d7966.jpeg",
     "static/media/bosch.png": "/static/media/bosch.26e3f8df7432580d1a6f.png",
     "static/media/profile_image.jpeg": "/static/media/profile_image.d1cf9e7832fa3d1128e1.jpeg",
     "index.html": "/index.html",
     "main.6f706a51.css.map": "/static/css/main.6f706a51.css.map",
-    "main.260e7001.js.map": "/static/js/main.260e7001.js.map",
+    "main.8bb1ff13.js.map": "/static/js/main.8bb1ff13.js.map",
     "787.71e672d5.chunk.js.map": "/static/js/787.71e672d5.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.6f706a51.css",
-    "static/js/main.260e7001.js"
+    "static/js/main.8bb1ff13.js"
   ]
 }
