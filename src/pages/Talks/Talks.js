@@ -1,5 +1,4 @@
 import React from 'react';
-import Footer from '../../components/Footer/Footer';
 import { Document, Page, pdfjs } from 'react-pdf';
 import './Talks.css';
 
@@ -60,7 +59,7 @@ const Talks = () => {
         )}
       </div>
 
-      <Footer />
+      <div style={{ marginBottom: '100px' }}></div>
     </>
   );
 };
