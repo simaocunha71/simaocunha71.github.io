@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import Talks from './pages/Talks/Talks';
-import Certifications from './pages/Certifications/Certifications';
+import Certificates from './pages/Certificates/Certificates';
 import Publications from './pages/Publications/Publications';
 import AcademicProjects from './pages/AcademicProjects/AcademicProjects';
 import WorkExperience from './pages/WorkExperience/WorkExperience';
@@ -26,7 +26,7 @@ const App = () => {
           <Route path="/" exact component={Home} /> {/* Rota padrão */}
           <Route path="/work-experience" component={WorkExperience} />
           <Route path="/talks" component={Talks} />
-          <Route path="/certifications" component={Certifications} />
+          <Route path="/certificates" component={Certificates} />
           <Route path="/publications" component={Publications} />
           <Route path="/academic-projects" component={AcademicProjects} />
         </Switch>

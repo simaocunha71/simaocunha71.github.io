@@ -1,16 +1,19 @@
 import React from 'react';
 import { Document, Page, pdfjs } from 'react-pdf';
-import './Certifications.css';
+import './Certificates.css';
 
 // PDFs
 import english_certificate from '../../assets/docs/certificates/English_C1_Simao_Cunha.pdf';
 import sustrainable_attendence from '../../assets/docs/certificates/Sustrainable_Attendence_certificate.pdf';
 import sustrainable_students from '../../assets/docs/certificates/Sustrainable_Students_Workshop_certificate.pdf';
+import CV_EN from '../../assets/docs/cv/CV_Simão_Pedro_Sá_Cunha_EN.pdf';
+import CV_PT from '../../assets/docs/cv/CV_Simão_Pedro_Sá_Cunha_PT.pdf';
+
 
 // Ensure pdfjs worker is set correctly
 pdfjs.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.min.js`;
 
-const Certifications = () => {
+const Certificates = () => {
   const [selectedPdf] = React.useState(null);
 
   const handlePdfButtonClick = (pdfUrl) => {
@@ -21,6 +24,28 @@ const Certifications = () => {
   return (
     <>
       <div style={{ marginBottom: '100px' }}></div>
+
+      {/* Item 1 */}
+      <div className="talk-item">
+        <div className="talk-content">
+          <div className="talk-title">Curriculum Vitae</div>
+          <div className="talk-buttons">
+            <button className="rounded-button" onClick={() => handlePdfButtonClick(CV_EN)}>
+              English version
+            </button>
+            <button className="rounded-button" onClick={() => handlePdfButtonClick(CV_PT)}>
+              Portuguese version
+            </button>
+          </div>
+          {selectedPdf && (
+            <div className="pdf-container">
+              <Document file={selectedPdf}>
+                <Page pageNumber={1} />
+              </Document>
+            </div>
+          )}
+        </div>
+      </div>
 
       {/* Item 1 */}
       <div className="talk-item">
@@ -93,4 +118,4 @@ const Certifications = () => {
   );
 };
 
-export default Certifications;
+export default Certificates;

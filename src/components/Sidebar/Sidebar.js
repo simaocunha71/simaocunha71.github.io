@@ -53,11 +53,11 @@ const Sidebar = ({ isOpen }) => {
         </Link>
       </div>
       <div className="sidebar-section">
-        <Link to="/certifications" className="sidebar-link">
+        <Link to="/certificates" className="sidebar-link">
           <span className="sidebar-icon">
             <AiOutlineCheckCircle size={24} />
           </span>
-          <span className="sidebar-label">Certifications</span>
+          <span className="sidebar-label">Certificates</span>
         </Link>
       </div>
     </div>

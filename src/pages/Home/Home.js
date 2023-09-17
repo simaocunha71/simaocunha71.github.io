@@ -12,7 +12,6 @@ const Home = () => {
   Here you can find more about my projects and get in touch with me using the following links:`;
 
   return (
-    <>
     <div className="home-container">
       <div className="image-container">
         <img src={coverImage} alt="Profile" className="cover-image" />
@@ -31,9 +30,7 @@ const Home = () => {
           </a>
         </div>
       </div>
-      <div style={{ marginBottom: '100px' }}></div>
     </div>
-    </>
   );
 };
 
