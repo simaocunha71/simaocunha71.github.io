@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.667f83df.css",
-    "main.js": "/static/js/main.f29fcee4.js",
+    "main.css": "/static/css/main.7c2aa33a.css",
+    "main.js": "/static/js/main.1929c1fd.js",
     "static/js/787.71e672d5.chunk.js": "/static/js/787.71e672d5.chunk.js",
     "static/media/report.pdf": "/static/media/report.b748c0a4ac038758a4de.pdf",
     "static/media/TDS_Entrega_PI_93262_93168_Relatorio.pdf": "/static/media/TDS_Entrega_PI_93262_93168_Relatorio.e47178ab0263b68133fd.pdf",
@@ -15,12 +15,12 @@
     "static/media/bosch.png": "/static/media/bosch.26e3f8df7432580d1a6f.png",
     "static/media/profile_image.jpeg": "/static/media/profile_image.d1cf9e7832fa3d1128e1.jpeg",
     "index.html": "/index.html",
-    "main.667f83df.css.map": "/static/css/main.667f83df.css.map",
-    "main.f29fcee4.js.map": "/static/js/main.f29fcee4.js.map",
+    "main.7c2aa33a.css.map": "/static/css/main.7c2aa33a.css.map",
+    "main.1929c1fd.js.map": "/static/js/main.1929c1fd.js.map",
     "787.71e672d5.chunk.js.map": "/static/js/787.71e672d5.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.667f83df.css",
-    "static/js/main.f29fcee4.js"
+    "static/css/main.7c2aa33a.css",
+    "static/js/main.1929c1fd.js"
   ]
 }
