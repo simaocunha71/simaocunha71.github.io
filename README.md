@@ -2,6 +2,11 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+## NOTE:
+In order to deploy updates:
+- Username = simaocunha71
+- Password = [ver key em documents/]
+
 ## Available Scripts
 
 In the project directory, you can run:
