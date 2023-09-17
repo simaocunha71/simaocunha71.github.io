@@ -1,17 +1,54 @@
+/* WorkExperience.css */
+
 .work-experience-card {
-    display: flex;
-    align-items: center;
-    margin-bottom: 20px;
-    border: 1px solid #ccc;
-    border-radius: 10px;
-    padding: 10px;
-    max-width: 100%; /* Set the maximum width to 100% to make it responsive */
-  }
-  
-  .company-image {
-    width: 10%;
-    height: 10%;
-    margin-right: 20px;
-    border-radius: 10%;
-  }
-  
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  padding: 20px;
+  max-width: 100%;
+  /* Set the maximum width to 100% to make it responsive */
+  position: relative;
+  /* Add relative positioning */
+}
+
+.company-image {
+  width: 10%;
+  height: 10%;
+  margin-right: 20px;
+  border-radius: 10%;
+}
+
+.keywords-container {
+  margin-top: 10px;
+}
+
+.keyword-rectangle {
+  display: inline-block;
+  border: 2px solid #333;
+  /* Border color */
+  border-radius: 10px;
+  /* Makes it rounded */
+  padding: 5px 10px;
+  /* Adjust padding as needed */
+  margin-right: 5px;
+  /* Adjust margin as needed */
+  background-color: #f0f0f0;
+  /* Background color */
+  color: #333;
+  /* Text color */
+}
+
+.skills-label {
+  position: absolute;
+  /* Position it absolutely within the card */
+  bottom: 10px;
+  /* Adjust as needed */
+  right: 10px;
+  /* Adjust as needed */
+  font-weight: bold;
+  /* Make it bold */
+  color: #333;
+  /* Text color */
+}
