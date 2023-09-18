@@ -34,6 +34,7 @@ const workExperiences = [
 
 const WorkExperience = () => {
   return (
+    <>
     <div className="work-experience-list">
       <div style={{ marginBottom: '100px' }}></div>
       {workExperiences.map((experience, index) => (
@@ -46,7 +47,7 @@ const WorkExperience = () => {
             <ul>
               {experience.description.split('\n').map((item, itemIndex) => (
                 <li key={itemIndex}>{item.trim()}</li>
-              ))}
+                ))}
             </ul>
             <div className="keywords-container">
               {experience.keywords.map((keyword, keywordIndex) => (
@@ -56,10 +57,11 @@ const WorkExperience = () => {
               ))}
             </div>
           </div>
-          <div style={{ marginBottom: '100px' }}></div>
         </div>
       ))}
     </div>
+      <div style={{ marginBottom: '100px' }}></div>
+      </>
   );
 };
 
