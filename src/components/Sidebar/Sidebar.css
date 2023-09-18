@@ -67,13 +67,13 @@
 
 @media only screen and (max-width: 768px) {
   .sidebar {
-    width: 100%;
+    width: 50%;
     transform: translateX(0);
   }
 
   .sidebar.open.slide {
     transform: translateX(0);
-    width: 100%;
+    width: 50%;
   }
 
   .sidebar.open .sidebar-label {
@@ -83,7 +83,7 @@
 
 @media only screen and (min-width: 769px) {
   .sidebar {
-    width: 15%;
+    width: 50%;
     transform: translateX(0);
   }
 }
