@@ -31,4 +31,45 @@
   }
   
   
-  
+  .grid-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.talk-item {
+  position: relative;
+}
+
+.talk-caption {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: white; /* Alterado para branco */
+  color: black; /* Alterado para preto */
+  padding: 10px;
+  text-align: center;
+}
+
+.image-container {
+  position: relative;
+  text-align: center; /* Para centralizar a imagem horizontalmente */
+}
+
+.talk-image {
+  max-width: 60%; /* Para garantir que a imagem não ultrapasse a largura do seu contêiner */
+  height: auto;
+  display: inline-block; /* Para centralizar a imagem horizontalmente */
+}
+
+.talk-caption {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.8); /* Ajuste a opacidade conforme necessário */
+  color: black;
+  padding: 10px;
+  text-align: center;
+}

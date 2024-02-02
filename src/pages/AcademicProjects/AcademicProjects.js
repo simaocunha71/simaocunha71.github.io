@@ -1,15 +1,34 @@
 import React from 'react';
 import './AcademicProjects.css';
+import '../Talks/Talks.css';
 
-import presentationPDF from '../../assets/docs/TDS_Entrega_PI_93262_93168_Apresentacao.pdf';
-import reportPDF from '../../assets/docs/TDS_Entrega_PI_93262_93168_Relatorio.pdf';
+//TDS documents
+import TDS_presentationPDF from '../../assets/docs/TDS_Entrega_PI_93262_93168_Apresentacao.pdf';
+import TDS_reportPDF from '../../assets/docs/TDS_Entrega_PI_93262_93168_Relatorio.pdf';
+
+//PEI documents
+import PEI_competicao from '../../assets/docs/PEI/competicao.png';
+import PEI_competicoes from '../../assets/docs/PEI/competicoes.png';
+import PEI_jogador from '../../assets/docs/PEI/jogador.png';
+import PEI_jogo from '../../assets/docs/PEI/jogo.png';
+import PEI_equipa from '../../assets/docs/PEI/equipa.png';
+import PEI_filter from '../../assets/docs/PEI/filter.png';
+
+//RPD documents
+import RPD_presentationPDF from '../../assets/docs/apresentacao_rpd.pdf';
+import RPD_reportPDF from '../../assets/docs/rpd.pdf';
 
 const AcademicProjects = () => {
+  // Função para abrir a imagem em uma nova guia
+  const openImageInNewTab = (imageUrl) => {
+    window.open(imageUrl, '_blank');
+  };
+
   return (
     <div>
       <h1>My college projects <span role="img" aria-label="floppy disk">💾</span></h1>
 
-      <details open>
+      <details closed>
         <summary><b>Bachelor's degree <span role="img" aria-label="books">📚</span></b></summary>
   
         <h3>1st year</h3>
@@ -315,8 +334,8 @@ const AcademicProjects = () => {
             </td>
             <td>
                 <a href="https://github.com/LuisMPSilva01/BraGuia" className="rounded-button">Projects</a>
-                <a href= {reportPDF} className="rounded-button">Investigation Project Report</a>
-                <a href= {presentationPDF} className="rounded-button">Investigation Project Presentation</a>
+                <a href= {TDS_reportPDF} className="rounded-button">Investigation Project Report</a>
+                <a href= {TDS_presentationPDF} className="rounded-button">Investigation Project Presentation</a>
             </td>
           </tr>
           <tr>
@@ -367,6 +386,64 @@ const AcademicProjects = () => {
           </tr>
         </tbody>
       </table>
+        <h3>5th year</h3>
+        <div className="talk-item">
+          <div className="talk-title">Informatics Engineering Project</div>
+          <div className="talk-description">
+            This project involved creating dashboards using WyScout API data in Microsoft PowerBI for Sporting Clube de Braga. 
+            Below are some of the pages created in the project:
+          </div>
+          <div className="grid-container">
+            <div className="image-container" onClick={() => openImageInNewTab(PEI_competicoes)}>
+              <img src={PEI_competicoes} alt="PEI_competicoes" className="talk-image" />
+              <div className="talk-caption">Competitions search page in PowerBI</div>
+            </div>
+            <div className="image-container" onClick={() => openImageInNewTab(PEI_competicao)}>
+              <img src={PEI_competicao} alt="PEI_competicao" className="talk-image" />
+              <div className="talk-caption">Competition page in PowerBI</div>
+            </div>
+            <div className="image-container" onClick={() => openImageInNewTab(PEI_jogador)}>
+              <img src={PEI_jogador} alt="PEI_jogador" className="talk-image" />
+              <div className="talk-caption">Player page in PowerBI</div>
+            </div>
+            <div className="image-container" onClick={() => openImageInNewTab(PEI_jogo)}>
+              <img src={PEI_jogo} alt="PEI_jogo" className="talk-image" />
+              <div className="talk-caption">Game page in PowerBI</div>
+            </div>
+            <div className="image-container" onClick={() => openImageInNewTab(PEI_equipa)}>
+              <img src={PEI_equipa} alt="PEI_equipa" className="talk-image" />
+              <div className="talk-caption">Team page in PowerBI</div>
+            </div>
+            <div className="image-container" onClick={() => openImageInNewTab(PEI_filter)}>
+              <img src={PEI_filter} alt="PEI_filter" className="talk-image" />
+              <div className="talk-caption">Player advanced search page in PowerBI</div>
+            </div>
+          </div>
+          <div className="talk-buttons">
+            <a href="https://github.com/realRunlo/BragaScoutingPlatform" className="rounded-button">Github repository</a>
+          </div>
+        </div>
+
+        <div className="talk-item">
+          <div className="talk-title">Master's Dissertation in Informatics Engineering</div>
+          <div className="talk-description">
+            This dissertation details the creation of a platform designed for evaluating Large Language Models
+            (LLMs) through benchmarking coding tasks using well-known datasets such as Human-Eval. The primary
+            goal of this platform is to assess the effectiveness and energy efficiency of LLMs in addressing diverse
+            challenges, with a specific focus on code generation and software development. The document thoroughly
+            examines the project's context, motivation, and objectives, emphasizing the transformative influence of
+            LLMs like GPT-4 and LLAMA-2 on the field of software development. Furthermore, it delves into the
+            challenges posed by the energy consumption of LLMs when represented as quantized models, analyzing
+            their size and weight differences. This exploration underscores the fundamental principles of sustainability
+            within software engineering. Through an extensive analysis of the performance of existing LLMs, this
+            dissertation actively contributes to the progression of both efficient and sustainable software development
+            practices.
+          </div>
+          <div className="talk-buttons">
+            <a href={RPD_reportPDF} className="rounded-button">Preliminary Dissertation Report (PDR)</a>
+            <a href={RPD_presentationPDF} className="rounded-button">PDR Presentation</a>
+          </div>
+        </div>
       </details>
       <div style={{ marginBottom: '100px' }}></div>
     </div>
