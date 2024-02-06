@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './AcademicProjects.css';
 import '../Talks/Talks.css';
 
@@ -19,19 +19,37 @@ import RPD_presentationPDF from '../../assets/docs/apresentacao_rpd.pdf';
 import RPD_reportPDF from '../../assets/docs/rpd.pdf';
 
 const AcademicProjects = () => {
-  // Função para abrir a imagem em uma nova guia
+  // State variables to manage table visibility for each year
+  const [activeYear, setActiveYear] = useState('5th'); // 5th year is active by default
+
+  // Function to toggle visibility for a specific year
+  const toggleYearVisibility = (year) => {
+    if (activeYear !== year) {
+      setActiveYear(year);
+    }
+  };
+
   const openImageInNewTab = (imageUrl) => {
     window.open(imageUrl, '_blank');
   };
 
   return (
-    <div>
-      <h1>My college projects <span role="img" aria-label="floppy disk">💾</span></h1>
+    <div style={{ marginTop: '100px' }}>
 
-      <details closed>
-        <summary><b>Bachelor's degree <span role="img" aria-label="books">📚</span></b></summary>
-  
-        <h3>1st year</h3>
+      <div className="button-container_ap">
+        {/* Buttons for each year */}
+        <button className="rounded-button" onClick={() => toggleYearVisibility('1st')}>1st Year</button>
+        <button className="rounded-button" onClick={() => toggleYearVisibility('2nd')}>2nd Year</button>
+        <button className="rounded-button" onClick={() => toggleYearVisibility('3rd')}>3rd Year</button>
+        <button className="rounded-button" onClick={() => toggleYearVisibility('4th')}>4th Year</button>
+        <button className="rounded-button" onClick={() => toggleYearVisibility('5th')}>5th Year</button>
+      </div>
+
+        {/* Table for 1st year */}
+        {activeYear === '1st' && (
+          <>
+            <h3>Bachelor's 1st year</h3>
+
         <table className="project-table">
           <thead>
             <tr>
@@ -74,8 +92,13 @@ const AcademicProjects = () => {
             </tr>
           </tbody>
         </table>
+          </>
+        )}
 
-        <h3>2nd year</h3>
+        {activeYear === '2nd' && (
+          <>
+
+          <h3>Bachelor's 2nd year</h3>
         <table className="project-table">
           <thead>
           <tr>
@@ -130,8 +153,15 @@ const AcademicProjects = () => {
             </tr>
           </tbody>
         </table>
+          </>
+        )}
 
-        <h3>3rd year</h3>
+        {activeYear === '3rd' && (
+          <>
+          <h3>Bachelor's 3rd year</h3>
+
+
+        
         <table className="project-table">
           <thead>
           <tr>
@@ -229,13 +259,17 @@ const AcademicProjects = () => {
             </tr>
           </tbody>
         </table>
-      </details>
+          </>
+        )}
+
 
       <div style={{ marginBottom: '10px' }}></div>
-      <details open>
-        <summary><b>Master's degree <span role="img" aria-label="mortar board">🎓</span></b></summary>
-  
-        <h3>4th year</h3>
+
+        {activeYear === '4th' && (
+          <>
+          <h3>Master's 4th year</h3>
+
+        
         <table className="project-table">
           <thead>
             <tr>
@@ -386,7 +420,14 @@ const AcademicProjects = () => {
           </tr>
         </tbody>
       </table>
-        <h3>5th year</h3>
+          </>
+        )}
+
+        {activeYear === '5th' && (
+          <>
+          <h3>Master's 5th year</h3>
+
+        
         <div className="talk-item">
           <div className="talk-title">Informatics Engineering Project</div>
           <div className="talk-description">
@@ -444,7 +485,8 @@ const AcademicProjects = () => {
             <a href={RPD_presentationPDF} className="rounded-button">PDR Presentation</a>
           </div>
         </div>
-      </details>
+        </>
+      )}
       <div style={{ marginBottom: '100px' }}></div>
     </div>
   );

@@ -73,3 +73,10 @@
   padding: 10px;
   text-align: center;
 }
+
+.button-container_ap {
+  display: flex;
+  flex-direction: row; /* Stack buttons horizontally */
+  align-items: center; /* Center items vertically */
+  justify-content: center; /* Center items horizontally */
+}
