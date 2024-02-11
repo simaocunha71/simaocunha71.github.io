@@ -31,7 +31,7 @@ const Talks = () => {
         <div className="talk-title">SusTrainable Summer School at Coimbra 2023</div>
         <div className="talk-description">
           I had the opportunity to receive a scholarship from the University of Minho to participate in the second SusTrainable summer school organized in Coimbra, Portugal by the University of Coimbra.
-          Additionally, I had the privilege of presenting my work on the energy efficiency of sorting algorithms and programming languages using RAPL during the Students Workshop and Posters Session.
+          Additionally, I had the privilege of presenting collaborative work with Luís Silva on the energy efficiency of sorting algorithms and programming languages using RAPL during the Students Workshop and Posters Session.
         </div>
         <img
           src={sustrainable_presentationImage}

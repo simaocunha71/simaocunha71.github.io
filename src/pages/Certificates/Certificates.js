@@ -8,7 +8,8 @@ import sustrainable_attendence from '../../assets/docs/certificates/Sustrainable
 import sustrainable_students from '../../assets/docs/certificates/Sustrainable_Students_Workshop_certificate.pdf';
 import CV_EN from '../../assets/docs/cv/CV_Simão_Pedro_Sá_Cunha_EN.pdf';
 import CV_PT from '../../assets/docs/cv/CV_Simão_Pedro_Sá_Cunha_PT.pdf';
-
+import UOD_Pitch from '../../assets/docs/certificates/UMinhoOpenDays_Pitch.pdf';
+import UOD_Poster from '../../assets/docs/certificates/UMinhoOpenDays_Poster.pdf';
 
 // Ensure pdfjs worker is set correctly
 pdfjs.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.min.js`;
@@ -72,13 +73,16 @@ const Certificates = () => {
       {/* Item 2 */}
       <div className="talk-item">
         <div className="talk-content">
-          <div className="talk-title">Sustrainable Summer School 2023 - Attendance Certificate</div>
+          <div className="talk-title">Sustrainable Summer School 2023 - Attendance and Students Workshop and Poster Session Certificates</div>
           <div className="talk-description">
-            Obtained from University of Coimbra - Attendance Certificate
+            Obtained from the University of Coimbra - from July 11, 2023 to July 14, 2023
           </div>
           <div className="talk-buttons">
             <button className="rounded-button" onClick={() => handlePdfButtonClick(sustrainable_attendence)}>
-              Open PDF Certificate
+              Attendance Certificate
+            </button>
+            <button className="rounded-button" onClick={() => handlePdfButtonClick(sustrainable_students)}>
+              Students Workshop and Poster Session Certificate
             </button>
           </div>
           {selectedPdf && (
@@ -94,13 +98,16 @@ const Certificates = () => {
       {/* Item 3 */}
       <div className="talk-item">
         <div className="talk-content">
-          <div className="talk-title">Sustrainable Summer School 2023 - Students Workshop and Poster Session Certificate</div>
+          <div className="talk-title">1st UMinho Research & Innovation Open Days 2024 - Pitch and Poster Session Certificates</div>
           <div className="talk-description">
-            Obtained from University of Coimbra - Students Workshop and Poster Session Certificate
+            Obtained from the University of Minho - January 2024
           </div>
           <div className="talk-buttons">
-            <button className="rounded-button" onClick={() => handlePdfButtonClick(sustrainable_students)}>
-              Open PDF Certificate
+            <button className="rounded-button" onClick={() => handlePdfButtonClick(UOD_Pitch)}>
+              Pitch Certificate
+            </button>
+            <button className="rounded-button" onClick={() => handlePdfButtonClick(UOD_Poster)}>
+              Poster Certificate
             </button>
           </div>
           {selectedPdf && (
