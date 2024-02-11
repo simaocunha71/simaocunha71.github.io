@@ -1,14 +1,14 @@
 import React from 'react';
-import { Document, Page, pdfjs } from 'react-pdf';
+import { pdfjs } from 'react-pdf';
 import './Talks.css';
 
-//Sustainable docs
+// Sustainable docs
 import sustrainable_presentationImage from '../../assets/docs/sustrainable/presentation.jpeg';
 import sustrainable_presentationPDF from '../../assets/docs/sustrainable/presentation.pdf';
 import sustrainable_posterPDF from '../../assets/docs/sustrainable/poster.pdf';
 import sustrainable_reportPDF from '../../assets/docs/sustrainable/report.pdf';
 
-//UMinho Open Days docs
+// UMinho Open Days docs
 import uminho_open_days_presentationImage from '../../assets/docs/uminho_open_days/presentation.jpg';
 import uminho_open_days_presentationPDF from '../../assets/docs/uminho_open_days/presentation.pdf';
 import uminho_open_days_posterPDF from '../../assets/docs/uminho_open_days/poster.pdf';
@@ -17,11 +17,9 @@ import uminho_open_days_posterPDF from '../../assets/docs/uminho_open_days/poste
 pdfjs.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.min.js`;
 
 const Talks = () => {
-  const [openedPdf, setOpenedPdf] = React.useState(null);
-
-  const handlePdfButtonClick = (pdfUrl) => {
-    // Open the PDF in a new tab
-    window.open(pdfUrl, '_blank');
+  const handlePdfButtonClick = (pdfUrl, pdfName) => {
+    // Open the PDF in a new tab with the document name
+    window.open(pdfUrl, pdfName);
   };
 
   return (
@@ -35,17 +33,17 @@ const Talks = () => {
         </div>
         <img
           src={sustrainable_presentationImage}
-          alt="Talks Image"
+          alt="SusTrainable Summer School Presentation"
           className="talk-image"
         />
         <div className="talk-buttons">
-          <button className="rounded-button poster-button" onClick={() => handlePdfButtonClick(sustrainable_posterPDF)}>
+          <button className="rounded-button poster-button" onClick={() => handlePdfButtonClick(sustrainable_posterPDF, 'Poster')}>
             Poster
           </button>
-          <button className="rounded-button presentation-button" onClick={() => handlePdfButtonClick(sustrainable_presentationPDF)}>
+          <button className="rounded-button presentation-button" onClick={() => handlePdfButtonClick(sustrainable_presentationPDF, 'Presentation')}>
             Presentation
           </button>
-          <button className="rounded-button report-button" onClick={() => handlePdfButtonClick(sustrainable_reportPDF)}>
+          <button className="rounded-button report-button" onClick={() => handlePdfButtonClick(sustrainable_reportPDF, 'Report')}>
             Report
           </button>
           <button
@@ -54,7 +52,6 @@ const Talks = () => {
           >
             GitHub repository
           </button>
-
         </div>
       </div>
 
@@ -66,14 +63,14 @@ const Talks = () => {
         </div>
         <img
           src={uminho_open_days_presentationImage}
-          alt="Talks Image"
+          alt="UMinho Open Days Presentation"
           className="talk-image"
         />
         <div className="talk-buttons">
-          <button className="rounded-button poster-button" onClick={() => handlePdfButtonClick(uminho_open_days_posterPDF)}>
+          <button className="rounded-button poster-button" onClick={() => handlePdfButtonClick(uminho_open_days_posterPDF, 'Poster')}>
             Poster
           </button>
-          <button className="rounded-button presentation-button" onClick={() => handlePdfButtonClick(uminho_open_days_presentationPDF)}>
+          <button className="rounded-button presentation-button" onClick={() => handlePdfButtonClick(uminho_open_days_presentationPDF, 'Presentation')}>
             Presentation
           </button>
           <button
@@ -84,14 +81,6 @@ const Talks = () => {
           </button>
         </div>
       </div>
-
-      {openedPdf && (
-        <div className="pdf-container">
-          <Document file={openedPdf}>
-            <Page pageNumber={1} />
-          </Document>
-        </div>
-      )}
 
       <div style={{ marginBottom: '100px' }}></div>
     </>
