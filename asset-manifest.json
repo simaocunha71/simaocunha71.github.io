@@ -1,12 +1,14 @@
 {
   "files": {
     "main.css": "/static/css/main.0febb045.css",
-    "main.js": "/static/js/main.a14abdd6.js",
+    "main.js": "/static/js/main.69508151.js",
     "static/js/787.71e672d5.chunk.js": "/static/js/787.71e672d5.chunk.js",
     "static/media/report.pdf": "/static/media/report.b748c0a4ac038758a4de.pdf",
     "static/media/TDS_Entrega_PI_93262_93168_Relatorio.pdf": "/static/media/TDS_Entrega_PI_93262_93168_Relatorio.e47178ab0263b68133fd.pdf",
     "static/media/presentation.jpg": "/static/media/presentation.50a36fbc32fc2aada91f.jpg",
     "static/media/TDS_Entrega_PI_93262_93168_Apresentacao.pdf": "/static/media/TDS_Entrega_PI_93262_93168_Apresentacao.23bc93a5aa12fbd33bcb.pdf",
+    "static/media/UMinhoOpenDays_Poster.pdf": "/static/media/UMinhoOpenDays_Poster.80402e33f5cae743c6c6.pdf",
+    "static/media/UMinhoOpenDays_Pitch.pdf": "/static/media/UMinhoOpenDays_Pitch.1d518159200dd7c5cd10.pdf",
     "static/media/poster.pdf": "/static/media/poster.2a2a76637acd8664c7e5.pdf",
     "static/media/rpd.pdf": "/static/media/rpd.ae2b92fdf2d6e27080a6.pdf",
     "static/media/presentation.pdf": "/static/media/presentation.d28a0cf0c038e7ff4ef0.pdf",
@@ -27,11 +29,11 @@
     "static/media/profile_image.jpeg": "/static/media/profile_image.d1cf9e7832fa3d1128e1.jpeg",
     "index.html": "/index.html",
     "main.0febb045.css.map": "/static/css/main.0febb045.css.map",
-    "main.a14abdd6.js.map": "/static/js/main.a14abdd6.js.map",
+    "main.69508151.js.map": "/static/js/main.69508151.js.map",
     "787.71e672d5.chunk.js.map": "/static/js/787.71e672d5.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.0febb045.css",
-    "static/js/main.a14abdd6.js"
+    "static/js/main.69508151.js"
   ]
 }
