@@ -1,29 +1,10 @@
-.talk-item {
-  border: 1px solid #ccc;
-  border-radius: 10px;
-  margin: 10px;
-  padding: 20px;
-  display: flex;
-  flex-direction: column;
-}
-
-.talk-title {
-  font-size: 24px;
-  font-weight: bold;
-  margin-bottom: 10px;
-}
-
-.talk-description {
-  font-size: 16px;
-  margin-bottom: 20px;
-}
-
 .talk-buttons {
   display: flex;
-  justify-content: center; /* Center the buttons horizontally */
-  gap: 10px; /* Add some space between the buttons */
+  justify-content: center;
+  /* Center the buttons horizontally */
+  gap: 10px;
+  /* Add some space between the buttons */
 }
-
 
 .rounded-button {
   display: inline-block;
@@ -40,68 +21,73 @@
   background-color: #dcdcdc;
 }
 
-.popup-overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: rgba(0, 0, 0, 0.5);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.popup-content {
-  position: relative;
+.talk-item {
+  margin: 10px;
   padding: 20px;
-  border-radius: 10px;
-  background-color: #ffffff;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-  width: 80%;
-  max-width: 800px; /* Set a maximum width for the content */
-  height: 80%;
-  max-height: 600px; /* Set a maximum height for the content */
-  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  /* Add border to the right */
 }
 
-.popup-close-btn {
-  position: absolute;
-  top: 10px;
-  right: 10px;
-  font-size: 20px;
-  cursor: pointer;
-  background-color: transparent;
-  border: none;
-  outline: none;
-}
-
-.pdf-list {
-  list-style: none;
-  padding: 0;
-}
-
-.pdf-list-item {
-  display: block;
-  width: 95%;
-  padding: 8px 10px; /* Updated padding to make it equal on both sides */
-  border-radius: 20px;
-  background-color: #f2f2f2;
-  color: #000000;
-  text-decoration: none;
-  font-weight: bold;
-  transition: background-color 0.3s;
-  margin-bottom: 10px;
-}
-
-.pdf-list-item:hover {
-  background-color: #dcdcdc;
+.talk-description {
+  font-size: 16px;
+  margin-bottom: 20px;
+  text-align: center;
 }
 
 .talk-image {
-  max-width: 50%;
-  height: auto;
-  margin: 0 auto;
+  width: auto; /* Allow the width to adjust according to the image's aspect ratio */
+  height: auto; /* Allow the height to adjust according to the image's aspect ratio */
+  max-width: 100%; /* Set maximum width to ensure responsiveness */
+  max-height: 400px; /* Set maximum height */
+  margin: 0 auto; /* Center the image horizontally */
   margin-bottom: 20px;
   border-radius: 10px; /* Make the corners rounded */
+}
+
+
+
+.talks-container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  /* Alinha os itens ao topo */
+}
+
+.talk-title {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.slideshow-controls {
+  position: absolute;
+  bottom: 20px;
+  left: 0;
+  right: 0;
+  margin: auto;
+  /* Centralizar horizontalmente */
+}
+
+.slideshow-controls button {
+  padding: 10px 20px;
+  margin: 0 5px;
+  border-radius: 5px;
+  font-size: 18px;
+}
+
+.left-button {
+  position: fixed;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.right-button {
+  position: fixed;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
 }

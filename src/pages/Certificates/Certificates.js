@@ -27,10 +27,10 @@ const Certificates = () => {
       <div style={{ marginBottom: '100px' }}></div>
 
       {/* Item 1 */}
-      <div className="talk-item">
-        <div className="talk-content">
-          <div className="talk-title">Curriculum Vitae</div>
-          <div className="talk-buttons">
+      <div className="certificate-item">
+        <div className="certificate-content">
+          <div className="certificate-title">Curriculum Vitae</div>
+          <div className="certificate-buttons">
             <button className="rounded-button" onClick={() => handlePdfButtonClick(CV_EN)}>
               English version
             </button>
@@ -49,13 +49,13 @@ const Certificates = () => {
       </div>
 
       {/* Item 1 */}
-      <div className="talk-item">
-        <div className="talk-content">
-          <div className="talk-title">English C1 Certificate</div>
-          <div className="talk-description">
+      <div className="certificate-item">
+        <div className="certificate-content">
+          <div className="certificate-title">English C1 Certificate</div>
+          <div className="certificate-description">
             Obtained from BabeliUM organization - from October 2021 to February 2022
           </div>
-          <div className="talk-buttons">
+          <div className="certificate-buttons">
             <button className="rounded-button" onClick={() => handlePdfButtonClick(english_certificate)}>
               Open PDF Certificate
             </button>
@@ -71,13 +71,13 @@ const Certificates = () => {
       </div>
 
       {/* Item 2 */}
-      <div className="talk-item">
-        <div className="talk-content">
-          <div className="talk-title">Sustrainable Summer School 2023 - Attendance and Students Workshop and Poster Session Certificates</div>
-          <div className="talk-description">
+      <div className="certificate-item">
+        <div className="certificate-content">
+          <div className="certificate-title">Sustrainable Summer School 2023 - Attendance and Students Workshop and Poster Session Certificates</div>
+          <div className="certificate-description">
             Obtained from the University of Coimbra - from July 11, 2023 to July 14, 2023
           </div>
-          <div className="talk-buttons">
+          <div className="certificate-buttons">
             <button className="rounded-button" onClick={() => handlePdfButtonClick(sustrainable_attendence)}>
               Attendance Certificate
             </button>
@@ -96,13 +96,13 @@ const Certificates = () => {
       </div>
 
       {/* Item 3 */}
-      <div className="talk-item">
-        <div className="talk-content">
-          <div className="talk-title">1st UMinho Research & Innovation Open Days 2024 - Pitch and Poster Session Certificates</div>
-          <div className="talk-description">
+      <div className="certificate-item">
+        <div className="certificate-content">
+          <div className="certificate-title">1st UMinho Research & Innovation Open Days 2024 - Pitch and Poster Session Certificates</div>
+          <div className="certificate-description">
             Obtained from the University of Minho - January 2024
           </div>
-          <div className="talk-buttons">
+          <div className="certificate-buttons">
             <button className="rounded-button" onClick={() => handlePdfButtonClick(UOD_Pitch)}>
               Pitch Certificate
             </button>

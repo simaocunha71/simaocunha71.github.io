@@ -1,37 +1,36 @@
-.talk-item {
+.certificate-item {
     display: flex;
-    border: 1px solid #ccc;
     border-radius: 10px;
     margin: 10px;
     align-items: center; /* Align items vertically at the center */
   }
   
-  .talk-image-container {
+  .certificate-image-container {
     flex: 0 0 100px; /* Set a fixed width for the image container (adjust as needed) */
     overflow: hidden; /* Make sure the image stays within its container */
     border-top-left-radius: 10px;
     border-bottom-left-radius: 10px;
   }
   
-  .talk-content {
+  .certificate-content {
     flex: 1;
     padding: 20px;
   }
   
-  .talk-title {
+  .certificate-title {
     font-size: 24px;
     font-weight: bold;
     margin-bottom: 10px;
     text-align: center;
   }
   
-  .talk-description {
+  .certificate-description {
     font-size: 16px;
     margin-bottom: 20px;
     text-align: center;
   }
   
-  .talk-buttons {
+  .certificate-buttons {
     display: flex;
     justify-content: center;
     gap: 10px;

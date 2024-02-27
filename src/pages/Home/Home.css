@@ -8,6 +8,7 @@
   min-height: 100vh;
   text-align: center;
   background-color: #fff;
+
   /* Set background color to white */
 }
 
@@ -46,5 +47,20 @@
 
 .social-link {
   margin: 0 10px;
-  /* Add margin to create equal spacing between images */
+  /* Add margin to create equal spacing between links */
+  text-decoration: none;
+  color: #333;
+  display: flex;
+  align-items: center;
+  /* Align items vertically */
+  transition: all 0.3s ease;
+}
+
+.social-link svg {
+  margin-right: 5px;
+  /* Adjust margin between icon and text */
+}
+
+.social-link:hover {
+  color: #555;
 }
