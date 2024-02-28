@@ -52,7 +52,7 @@ const Talks = () => {
   };
 
   return (
-    <div style={{ marginTop: '150px' }}>
+    <div style={{ marginTop: '50px' }}>
       <div className="talks-container">
         <div className="talk-item">
           <div className="talk-title">{talks[currentSlide].title}</div>

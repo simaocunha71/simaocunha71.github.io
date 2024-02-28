@@ -12,32 +12,28 @@
 }
 
 .toolbar-left {
-  margin-left: 20px;
-  /* Adjust margin as needed */
-}
-
-.toolbar-right {
-  margin-right: 20px;
-  /* Adjust margin as needed */
-}
-
-.sidebar-links {
   display: flex;
   align-items: center;
 }
 
-.sidebar-link {
-  display: flex;
-  align-items: center;
+.toggle-button {
   margin-left: 20px;
-  color: #333;
-  text-decoration: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  /* Add transition for rotation */
 }
 
-.sidebar-link svg {
-  margin-right: 5px;
+.toggle-button.open {
+  transform: rotate(90deg);
+  /* Rotate the icon when sidebar is open */
 }
 
-.sidebar-link:hover {
-  color: #555;
+.toolbar-title {
+  margin: 0;
+  font-size: 20px;
+  text-align: center;
+  flex: 1;
+  /* Allow the title to take up remaining space */
 }

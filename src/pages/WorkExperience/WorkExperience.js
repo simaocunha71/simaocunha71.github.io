@@ -39,7 +39,6 @@ const WorkExperience = () => {
   return (
     <>
       <div className="work-experience-list">
-        <div style={{ marginBottom: '100px' }}></div>
         {reversedExperiences.map((experience, index) => (
           <div key={experience.company} className="work-experience-card">
             <img src={experience.logo} alt={experience.company} className="company-image" />
@@ -63,7 +62,7 @@ const WorkExperience = () => {
           </div>
         ))}
       </div>
-      <div style={{ marginBottom: '100px' }}></div>
+      <div style={{ marginBottom: '50px' }}></div>
     </>
   );
 };

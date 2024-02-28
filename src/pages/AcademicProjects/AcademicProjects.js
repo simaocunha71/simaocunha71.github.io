@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import './AcademicProjects.css';
-import '../Talks/Talks.css';
 
 //TDS documents
 import TDS_presentationPDF from '../../assets/docs/TDS_Entrega_PI_93262_93168_Apresentacao.pdf';
@@ -33,16 +32,29 @@ const AcademicProjects = () => {
     window.open(imageUrl, '_blank');
   };
 
+  const images = [PEI_competicoes, PEI_competicao, PEI_jogador, PEI_jogo, PEI_equipa, PEI_filter];
+
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+  const goToPreviousSlide = () => {
+    setCurrentIndex((prevIndex) => (prevIndex - 1 + images.length) % images.length);
+  };
+
+  const goToNextSlide = () => {
+    setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
+  };
+
   return (
-    <div style={{ marginTop: '100px' }}>
+    <div style={{ marginTop: '50px' }}>
 
       <div className="button-container_ap">
         {/* Buttons for each year */}
-        <button className="rounded-button" onClick={() => toggleYearVisibility('1st')}>1st Year</button>
-        <button className="rounded-button" onClick={() => toggleYearVisibility('2nd')}>2nd Year</button>
-        <button className="rounded-button" onClick={() => toggleYearVisibility('3rd')}>3rd Year</button>
-        <button className="rounded-button" onClick={() => toggleYearVisibility('4th')}>4th Year</button>
-        <button className="rounded-button" onClick={() => toggleYearVisibility('5th')}>5th Year</button>
+        <button className={`rounded-button_2 ${activeYear === '1st' ? 'active' : ''}`} onClick={() => toggleYearVisibility('1st')}>1st Year</button>
+        <button className={`rounded-button_2 ${activeYear === '2nd' ? 'active' : ''}`} onClick={() => toggleYearVisibility('2nd')}>2nd Year</button>
+        <button className={`rounded-button_2 ${activeYear === '3rd' ? 'active' : ''}`} onClick={() => toggleYearVisibility('3rd')}>3rd Year</button>
+        <button className={`rounded-button_2 ${activeYear === '4th' ? 'active' : ''}`} onClick={() => toggleYearVisibility('4th')}>4th Year</button>
+        <button className={`rounded-button_2 ${activeYear === '5th' ? 'active' : ''}`} onClick={() => toggleYearVisibility('5th')}>5th Year</button>
+
       </div>
 
         {/* Table for 1st year */}
@@ -434,32 +446,19 @@ const AcademicProjects = () => {
             This project involved creating dashboards using WyScout API data in Microsoft PowerBI for Sporting Clube de Braga. 
             Below are some of the pages created in the project:
           </div>
-          <div className="grid-container">
-            <div className="image-container" onClick={() => openImageInNewTab(PEI_competicoes)}>
-              <img src={PEI_competicoes} alt="PEI_competicoes" className="talk-image" />
-              <div className="talk-caption">Competitions search page in PowerBI</div>
+            <div className="slideshow-container">
+              <button className="prev" onClick={goToPreviousSlide}>
+                &lt;
+              </button>
+              <div className="slideshow-item">
+                <img src={images[currentIndex]} alt={`Slide ${currentIndex + 1}`} onClick={() => openImageInNewTab(images[currentIndex])} />
+              </div>
+              <button className="next" onClick={goToNextSlide}>
+                &gt;
+              </button>
             </div>
-            <div className="image-container" onClick={() => openImageInNewTab(PEI_competicao)}>
-              <img src={PEI_competicao} alt="PEI_competicao" className="talk-image" />
-              <div className="talk-caption">Competition page in PowerBI</div>
-            </div>
-            <div className="image-container" onClick={() => openImageInNewTab(PEI_jogador)}>
-              <img src={PEI_jogador} alt="PEI_jogador" className="talk-image" />
-              <div className="talk-caption">Player page in PowerBI</div>
-            </div>
-            <div className="image-container" onClick={() => openImageInNewTab(PEI_jogo)}>
-              <img src={PEI_jogo} alt="PEI_jogo" className="talk-image" />
-              <div className="talk-caption">Game page in PowerBI</div>
-            </div>
-            <div className="image-container" onClick={() => openImageInNewTab(PEI_equipa)}>
-              <img src={PEI_equipa} alt="PEI_equipa" className="talk-image" />
-              <div className="talk-caption">Team page in PowerBI</div>
-            </div>
-            <div className="image-container" onClick={() => openImageInNewTab(PEI_filter)}>
-              <img src={PEI_filter} alt="PEI_filter" className="talk-image" />
-              <div className="talk-caption">Player advanced search page in PowerBI</div>
-            </div>
-          </div>
+            <div style={{ marginTop: '20px' }}></div>
+
           <div className="talk-buttons">
             <a href="https://github.com/realRunlo/BragaScoutingPlatform" className="rounded-button">Github repository</a>
           </div>
