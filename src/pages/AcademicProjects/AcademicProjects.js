@@ -17,6 +17,11 @@ import PEI_filter from '../../assets/docs/PEI/filter.png';
 import RPD_presentationPDF from '../../assets/docs/apresentacao_rpd.pdf';
 import RPD_reportPDF from '../../assets/docs/rpd.pdf';
 
+//Hackathon Bugsbyte images
+import HB2024_main from '../../assets/docs/hackathon_bugsbyte_2024/mainpage.png';
+import HB2024_list from '../../assets/docs/hackathon_bugsbyte_2024/listevents.png';
+import HB2024_eventpage from '../../assets/docs/hackathon_bugsbyte_2024/eventpage.png';
+
 const AcademicProjects = () => {
   // State variables to manage table visibility for each year
   const [activeYear, setActiveYear] = useState('5th'); // 5th year is active by default
@@ -33,14 +38,15 @@ const AcademicProjects = () => {
   };
 
   const images = [PEI_competicoes, PEI_competicao, PEI_jogador, PEI_jogo, PEI_equipa, PEI_filter];
+  const hackathonImages = [HB2024_main, HB2024_list, HB2024_eventpage];
 
   const [currentIndex, setCurrentIndex] = useState(0);
 
-  const goToPreviousSlide = () => {
+  const goToPreviousSlide = (images) => {
     setCurrentIndex((prevIndex) => (prevIndex - 1 + images.length) % images.length);
   };
 
-  const goToNextSlide = () => {
+  const goToNextSlide = (images) => {
     setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
   };
 
@@ -54,6 +60,7 @@ const AcademicProjects = () => {
         <button className={`rounded-button_2 ${activeYear === '3rd' ? 'active' : ''}`} onClick={() => toggleYearVisibility('3rd')}>3rd Year</button>
         <button className={`rounded-button_2 ${activeYear === '4th' ? 'active' : ''}`} onClick={() => toggleYearVisibility('4th')}>4th Year</button>
         <button className={`rounded-button_2 ${activeYear === '5th' ? 'active' : ''}`} onClick={() => toggleYearVisibility('5th')}>5th Year</button>
+        <button className={`rounded-button_2 ${activeYear === 'Other' ? 'active' : ''}`} onClick={() => toggleYearVisibility('Other')}>Other</button>
 
       </div>
 
@@ -447,15 +454,16 @@ const AcademicProjects = () => {
             Below are some of the pages created in the project:
           </div>
             <div className="slideshow-container">
-              <button className="prev" onClick={goToPreviousSlide}>
+              <button className="prev" onClick={() => goToPreviousSlide(images)}>
                 &lt;
               </button>
               <div className="slideshow-item">
                 <img src={images[currentIndex]} alt={`Slide ${currentIndex + 1}`} onClick={() => openImageInNewTab(images[currentIndex])} />
               </div>
-              <button className="next" onClick={goToNextSlide}>
+              <button className="next" onClick={() => goToNextSlide(images)}>
                 &gt;
               </button>
+
             </div>
             <div style={{ marginTop: '20px' }}></div>
 
@@ -484,6 +492,35 @@ const AcademicProjects = () => {
             <a href={RPD_presentationPDF} className="rounded-button">PDR Presentation</a>
           </div>
         </div>
+        </>
+      )}
+      {activeYear === 'Other' && (
+        <>
+          <div className="talk-item">
+            <div className="talk-title">Hackathon Bugsbyte 2024</div>
+            <div className="talk-description">
+              This project was developed during the Hackathon Bugsbyte 2024 held at the Altice Forum in Braga, Portugal. <br></br>
+              Over the course of 48 hours, our team created a simple application aimed at facilitating the search for cultural events across various districts of Portugal. <br></br>
+              The application features a modern user interface designed to enhance the user experience.
+            </div>
+            <div className="slideshow-container">
+              <button className="prev" onClick={() => goToPreviousSlide(hackathonImages)}>
+                &lt;
+              </button>
+              <div className="slideshow-item">
+                <img src={hackathonImages[currentIndex]} alt={`Slide ${currentIndex + 1}`} onClick={() => openImageInNewTab(hackathonImages[currentIndex])} />
+              </div>
+              <button className="next" onClick={() => goToNextSlide(hackathonImages)}>
+                &gt;
+              </button>
+
+            </div>
+            <div style={{ marginTop: '20px' }}></div>
+
+            <div className="talk-buttons">
+              <a href="https://github.com/simaobarroso/hackthon-bugsbyte" className="rounded-button">Github repository</a>
+            </div>
+          </div>
         </>
       )}
       <div style={{ marginBottom: '100px' }}></div>
