@@ -76,6 +76,8 @@ const Talks = () => {
           <button className="right-button" onClick={nextSlide}>&gt;</button>
         </div>
       </div>
+      <div style={{ marginBottom: '100px' }}></div>
+
     </div>
   );
 };
