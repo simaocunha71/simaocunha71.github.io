@@ -19,7 +19,7 @@ const App = () => {
   };
 
   return (
-    <Router>
+    <Router basename={process.env.PUBLIC_URL}>
       <div className="app">
         <Toolbar toggleSidebar={toggleSidebar} />
         <div className="content-container">
