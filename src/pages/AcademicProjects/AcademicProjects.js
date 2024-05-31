@@ -67,7 +67,8 @@ const AcademicProjects = () => {
         {/* Table for 1st year */}
         {activeYear === '1st' && (
           <>
-            <h3>Bachelor's 1st year</h3>
+            <h3 class="custom-indent">Bachelor's 1st year</h3>
+
 
         <table className="project-table">
           <thead>
@@ -116,8 +117,7 @@ const AcademicProjects = () => {
 
         {activeYear === '2nd' && (
           <>
-
-          <h3>Bachelor's 2nd year</h3>
+          <h3 class="custom-indent">Bachelor's 2nd year</h3>
         <table className="project-table">
           <thead>
           <tr>
@@ -177,7 +177,7 @@ const AcademicProjects = () => {
 
         {activeYear === '3rd' && (
           <>
-          <h3>Bachelor's 3rd year</h3>
+          <h3 class="custom-indent">Bachelor's 3rd year</h3>
 
 
         
@@ -286,7 +286,8 @@ const AcademicProjects = () => {
 
         {activeYear === '4th' && (
           <>
-          <h3>Master's 4th year</h3>
+          <h3 class="custom-indent">Master's 4th year</h3>
+
 
         
         <table className="project-table">
@@ -444,7 +445,8 @@ const AcademicProjects = () => {
 
         {activeYear === '5th' && (
           <>
-          <h3>Master's 5th year</h3>
+          <h3 class="custom-indent">Master's 5th year</h3>
+
 
         
         <div className="talk-item">

@@ -111,3 +111,7 @@
 .rounded-button_2.active {
   background-color: #dcdcdc;
 }
+
+.custom-indent {
+  text-indent: 1em;
+}
