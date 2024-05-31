@@ -38,6 +38,7 @@ const WorkExperience = () => {
 
   return (
     <>
+      <div style={{ marginTop: '50px' }}></div>
       <div className="work-experience-list">
         {reversedExperiences.map((experience, index) => (
           <div key={experience.company} className="work-experience-card">

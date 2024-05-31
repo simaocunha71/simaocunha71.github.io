@@ -51,7 +51,7 @@ const AcademicProjects = () => {
   };
 
   return (
-    <div style={{ marginTop: '50px' }}>
+    <div style={{ marginTop: '70px' }}>
 
       <div className="button-container_ap">
         {/* Buttons for each year */}

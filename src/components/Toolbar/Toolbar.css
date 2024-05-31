@@ -11,29 +11,93 @@
   z-index: 1000;
 }
 
-.toolbar-left {
-  display: flex;
-  align-items: center;
-}
-
-.toggle-button {
-  margin-left: 20px;
-  background: none;
-  border: none;
-  cursor: pointer;
-  transition: transform 0.3s ease;
-  /* Add transition for rotation */
-}
-
-.toggle-button.open {
-  transform: rotate(90deg);
-  /* Rotate the icon when sidebar is open */
-}
-
 .toolbar-title {
   margin: 0;
   font-size: 20px;
-  text-align: center;
+  text-align: left;
   flex: 1;
-  /* Allow the title to take up remaining space */
+  text-indent: 1em;
+}
+
+.toolbar-links {
+  display: none;
+  /* Hide by default for mobile */
+  align-items: center;
+}
+
+.toolbar-link {
+  display: flex;
+  align-items: center;
+  margin: 0 10px;
+  color: #333;
+  text-decoration: none;
+  padding: 10px;
+  border-radius: 5px;
+  /* Optional: adds rounded corners */
+  transition: background-color 0.3s ease;
+  /* Smooth transition for hover effect */
+}
+
+.toolbar-link svg {
+  margin-right: 5px;
+}
+
+.toolbar-link:hover {
+  color: #555;
+  background-color: #f0f0f0;
+  /* Light grey background on hover */
+}
+
+.toolbar-right {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.toggle-button {
+  margin-right: 20px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.toolbar-dropdown {
+  position: absolute;
+  top: 120%;
+  /* Start the dropdown below the toolbar */
+  right: 0;
+  /* Align to the right */
+  width: 50vw;
+  /* Set width to 2/3 of the viewport width */
+  background-color: #ffffff;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.toolbar-dropdown .toolbar-link {
+  width: 100%;
+  /* Ensure links take full width */
+  padding: 10px 20px;
+  /* Add padding for better touch target size */
+  margin: 0;
+}
+
+@media (min-width: 768px) {
+  .toolbar-links {
+    display: flex;
+    /* Show for desktop */
+  }
+
+  .toggle-button {
+    display: none;
+    /* Hide toggle button on desktop */
+  }
+
+  .toolbar-dropdown {
+    display: none;
+    /* Hide dropdown on desktop */
+  }
 }
