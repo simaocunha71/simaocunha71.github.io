@@ -1,0 +1,169 @@
+.cv-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* Centralizar verticalmente os botões */
+    flex-direction: column;
+    /* Alinhar os botões verticalmente */
+}
+
+.cv-container {
+    font-family: Arial, sans-serif;
+    color: #333;
+    max-width: 800px;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #fff;
+}
+
+.cv-personal-info {
+    display: flex;
+    align-items: center;
+    background-color: #e0e0e0;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+}
+
+.cv-photo {
+    text-align: center;
+    margin-right: 20px;
+}
+
+.cv-photo img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.cv-photo h1 {
+    margin-top: 10px;
+    font-size: 1.5em;
+}
+
+.cv-details {
+    flex-grow: 1;
+}
+
+.cv-details p {
+    margin: 5px 0;
+    display: flex;
+    align-items: center;
+}
+
+.cv-details i {
+    margin-right: 10px;
+}
+
+.cv-contact a {
+    color: #0066cc;
+    text-decoration: none;
+}
+
+.cv-contact a:hover {
+    text-decoration: underline;
+}
+
+.cv-section {
+    margin-bottom: 20px;
+}
+
+.cv-section h2 {
+    font-size: 1.5em;
+    color: #000;
+    border-bottom: 2px solid #ddd;
+    padding-bottom: 5px;
+}
+
+.cv-job,
+.cv-education {
+    margin-bottom: 15px;
+}
+
+.cv-job h3,
+.cv-education h3 {
+    margin: 0;
+    font-size: 1.2em;
+    color: #333;
+}
+
+.cv-job p,
+.cv-education p {
+    margin: 5px 0;
+    font-size: 0.9em;
+    color: #555;
+}
+
+.cv-job ul,
+.cv-education ul {
+    list-style-type: disc;
+    margin: 5px 0 0 20px;
+    padding: 0;
+    color: #555;
+}
+
+.cv-job li,
+.cv-education li {
+    margin: 0;
+    padding: 0;
+}
+
+.cv-buttons {
+    position: fixed;
+    top: 50%;
+    right: 100px;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.cv-buttons button {
+    margin-bottom: 5px; /* Ajuste a margem entre os botões */
+    width: 200px; /* Defina a largura dos botões */
+    height: 40px; /* Defina a altura dos botões */
+    margin-bottom: 10px;
+    padding: 10px 20px;
+    font-size: 1em;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    color: black;
+    /* Adicione este código para remover a aparência padrão do botão */
+    appearance: none;
+    -webkit-appearance: none;
+}
+
+.cv-buttons button:hover {
+    background-color: #dcdcdc;
+}
+
+.icon-text {
+    margin-left: 10px; /* Adicione o espaçamento desejado à esquerda dos textos */
+}
+
+.cv-digital-skills {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.cv-skill-button {
+    margin-right: 10px;
+    margin-bottom: 10px;
+    padding: 10px 20px;
+    font-size: 1em;
+    cursor: default;
+    border: none;
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    color: black;
+    appearance: none;
+    -webkit-appearance: none;
+}
+
+.cv-skill-button:hover {
+    background-color: #dcdcdc;
+}

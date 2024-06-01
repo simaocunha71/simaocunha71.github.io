@@ -8,6 +8,8 @@ import WorkExperience from './pages/WorkExperience/WorkExperience';
 import Toolbar from './components/Toolbar/Toolbar';
 import Footer from './components/Footer/Footer';
 import Home from './pages/Home/Home';
+import CV_Page from './pages/CV_Page/CV_Page';
+
 import './App.css';
 
 const App = () => {
@@ -24,6 +26,7 @@ const App = () => {
               <Route path="/certificates" component={Certificates} />
               <Route path="/publications" component={Publications} />
               <Route path="/academic-projects" component={AcademicProjects} />
+              <Route path="/curriculum-vitae" component={CV_Page} />
             </Switch>
           </div>
         </div>
