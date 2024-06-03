@@ -1,9 +1,9 @@
 {
   "files": {
-    "main.css": "/static/css/main.42fea01b.css",
-    "main.js": "/static/js/main.d2a72abd.js",
+    "main.css": "/static/css/main.7198483a.css",
+    "main.js": "/static/js/main.a13bf6b5.js",
     "static/js/703.aae957ae.chunk.js": "/static/js/703.aae957ae.chunk.js",
-    "static/js/905.c6e136cd.chunk.js": "/static/js/905.c6e136cd.chunk.js",
+    "static/js/956.3fdfcfad.chunk.js": "/static/js/956.3fdfcfad.chunk.js",
     "static/js/787.71e672d5.chunk.js": "/static/js/787.71e672d5.chunk.js",
     "static/media/report.pdf": "/static/media/report.b748c0a4ac038758a4de.pdf",
     "static/media/TDS_Entrega_PI_93262_93168_Relatorio.pdf": "/static/media/TDS_Entrega_PI_93262_93168_Relatorio.e47178ab0263b68133fd.pdf",
@@ -20,9 +20,7 @@
     "static/media/listevents.png": "/static/media/listevents.4e85231c715db5cc828d.png",
     "static/media/Sustrainable_Attendence_certificate.pdf": "/static/media/Sustrainable_Attendence_certificate.530b9eb7f0322a9e97d2.pdf",
     "static/media/jogador.png": "/static/media/jogador.822dfb4702b68a9af1b4.png",
-    "static/media/CV_Simão_Pedro_Sá_Cunha_EN.pdf": "/static/media/CV_Simão_Pedro_Sá_Cunha_EN.291c1bd7ee88dbb5d994.pdf",
     "static/media/competicao.png": "/static/media/competicao.9eb41c8934e3b59eb423.png",
-    "static/media/CV_Simão_Pedro_Sá_Cunha_PT.pdf": "/static/media/CV_Simão_Pedro_Sá_Cunha_PT.87c9260f48cd0dca1af3.pdf",
     "static/media/competicoes.png": "/static/media/competicoes.0238930d8ef8c5bc25ea.png",
     "static/media/filter.png": "/static/media/filter.3c78b2fc58783608e615.png",
     "static/media/jogo.png": "/static/media/jogo.eaefc921b0d102aa6c06.png",
@@ -33,14 +31,14 @@
     "static/media/bosch.png": "/static/media/bosch.26e3f8df7432580d1a6f.png",
     "static/media/profile_image.jpeg": "/static/media/profile_image.d1cf9e7832fa3d1128e1.jpeg",
     "index.html": "/index.html",
-    "main.42fea01b.css.map": "/static/css/main.42fea01b.css.map",
-    "main.d2a72abd.js.map": "/static/js/main.d2a72abd.js.map",
+    "main.7198483a.css.map": "/static/css/main.7198483a.css.map",
+    "main.a13bf6b5.js.map": "/static/js/main.a13bf6b5.js.map",
     "703.aae957ae.chunk.js.map": "/static/js/703.aae957ae.chunk.js.map",
-    "905.c6e136cd.chunk.js.map": "/static/js/905.c6e136cd.chunk.js.map",
+    "956.3fdfcfad.chunk.js.map": "/static/js/956.3fdfcfad.chunk.js.map",
     "787.71e672d5.chunk.js.map": "/static/js/787.71e672d5.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.42fea01b.css",
-    "static/js/main.d2a72abd.js"
+    "static/css/main.7198483a.css",
+    "static/js/main.a13bf6b5.js"
   ]
 }
