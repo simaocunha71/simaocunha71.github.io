@@ -24,6 +24,28 @@ const Certificates = () => {
     <>
       <div style={{ marginBottom: '50px' }}></div>
 
+      {/* Item 1 */}
+      <div className="certificate-item">
+        <div className="certificate-content">
+          <div className="certificate-title">English C1 Certificate</div>
+          <div className="certificate-description">
+            Obtained from BabeliUM organization - from October 2021 to February 2022
+          </div>
+          <div className="certificate-buttons">
+            <button className="rounded-button" onClick={() => handlePdfButtonClick(english_certificate)}>
+              Open PDF Certificate
+            </button>
+          </div>
+          {selectedPdf && (
+            <div className="pdf-container">
+              <Document file={selectedPdf}>
+                <Page pageNumber={1} />
+              </Document>
+            </div>
+          )}
+        </div>
+      </div>
+
       {/* Item 2 */}
       <div className="certificate-item">
         <div className="certificate-content">
