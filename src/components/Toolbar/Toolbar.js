@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
-import { AiOutlineMenu, AiOutlineProject, AiOutlineFileText, AiOutlineBook, AiOutlineCheckCircle, AiOutlineHome, AiFillBank } from 'react-icons/ai';
-import { FaFileAlt } from 'react-icons/fa';
+import { AiOutlineMenu, AiOutlineProject, AiOutlineFileText, AiOutlineBook, AiOutlineCheckCircle, AiOutlineHome, AiFillBank, AiOutlineFile } from 'react-icons/ai';
 import { Link } from 'react-router-dom';
 import './Toolbar.css';
 
@@ -40,7 +39,7 @@ const Toolbar = () => {
           Certificates
         </Link>
         <Link to="/curriculum-vitae" className="toolbar-link">
-          <FaFileAlt size={24} />
+          <AiOutlineFile size={24} />
           Curriculum Vitae
         </Link>
       </div>
@@ -75,7 +74,7 @@ const Toolbar = () => {
               Certificates
             </Link>
             <Link to="/curriculum-vitae" className="toolbar-link" onClick={handleToggleDropdown}>
-              <FaFileAlt size={24} />
+              <AiOutlineFile size={24} />
               Curriculum Vitae
             </Link>
           </div>
