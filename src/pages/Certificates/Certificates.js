@@ -6,8 +6,6 @@ import './Certificates.css';
 import english_certificate from '../../assets/docs/certificates/English_C1_Simao_Cunha.pdf';
 import sustrainable_attendence from '../../assets/docs/certificates/Sustrainable_Attendence_certificate.pdf';
 import sustrainable_students from '../../assets/docs/certificates/Sustrainable_Students_Workshop_certificate.pdf';
-import CV_EN from '../../assets/docs/cv/CV_Simão_Pedro_Sá_Cunha_EN.pdf';
-import CV_PT from '../../assets/docs/cv/CV_Simão_Pedro_Sá_Cunha_PT.pdf';
 import UOD_Pitch from '../../assets/docs/certificates/UMinhoOpenDays_Pitch.pdf';
 import UOD_Poster from '../../assets/docs/certificates/UMinhoOpenDays_Poster.pdf';
 
@@ -25,50 +23,6 @@ const Certificates = () => {
   return (
     <>
       <div style={{ marginBottom: '50px' }}></div>
-
-      {/* Item 1 */}
-      <div className="certificate-item">
-        <div className="certificate-content">
-          <div className="certificate-title">Curriculum Vitae</div>
-          <div className="certificate-buttons">
-            <button className="rounded-button" onClick={() => handlePdfButtonClick(CV_EN)}>
-              English version
-            </button>
-            <button className="rounded-button" onClick={() => handlePdfButtonClick(CV_PT)}>
-              Portuguese version
-            </button>
-          </div>
-          {selectedPdf && (
-            <div className="pdf-container">
-              <Document file={selectedPdf}>
-                <Page pageNumber={1} />
-              </Document>
-            </div>
-          )}
-        </div>
-      </div>
-
-      {/* Item 1 */}
-      <div className="certificate-item">
-        <div className="certificate-content">
-          <div className="certificate-title">English C1 Certificate</div>
-          <div className="certificate-description">
-            Obtained from BabeliUM organization - from October 2021 to February 2022
-          </div>
-          <div className="certificate-buttons">
-            <button className="rounded-button" onClick={() => handlePdfButtonClick(english_certificate)}>
-              Open PDF Certificate
-            </button>
-          </div>
-          {selectedPdf && (
-            <div className="pdf-container">
-              <Document file={selectedPdf}>
-                <Page pageNumber={1} />
-              </Document>
-            </div>
-          )}
-        </div>
-      </div>
 
       {/* Item 2 */}
       <div className="certificate-item">

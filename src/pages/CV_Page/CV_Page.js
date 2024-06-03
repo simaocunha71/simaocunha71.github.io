@@ -1,6 +1,6 @@
 import React, { useRef, useState, useEffect } from 'react';
-import { FiDownload } from 'react-icons/fi'; // Importar ícones do React Icons
-import { FaCalendar, FaGithub, FaEnvelope, FaLinkedin, FaMapMarkerAlt, FaGlobe } from 'react-icons/fa';
+import { FiDownload, FiPaperclip } from 'react-icons/fi'; // Importar ícones do React Icons
+import { FaCalendar, FaGithub, FaEnvelope, FaLinkedin, FaMapMarkerAlt, FaGlobe, FaCalendarAlt, FaUniversity } from 'react-icons/fa';
 import Flag from 'react-world-flags';
 
 import html2pdf from 'html2pdf.js';
@@ -43,7 +43,7 @@ const CV_Page = () => {
 
         html2pdf().from(element).set(opt).save();
     };
-
+    
     const setPortuguese = () => {
         setLanguage('portuguese');
     };
@@ -52,7 +52,15 @@ const CV_Page = () => {
         setLanguage('english');
     };
 
-    
+    const languageSkillLevels = {
+        "Portuguese": 5,
+        "Português": 5,
+        "Inglês": 4,
+        "English": 4
+    };
+
+    const maxSkillLevel = 5;
+
     // Dicionário com os dados do CV
     const cvData_EN = {
         personal_info: {
@@ -70,9 +78,9 @@ const CV_Page = () => {
                 dates: "11/07/2022 - 05/08/2022",
                 location: "Braga, Portugal",
                 responsibilities: [
-                    "Introduction to Google Cloud Platform",
-                    "Data Fusion instance creation and JSON file upload with a customized pipeline configuration in a Cloud Build file written in YAML",
-                    "Agile Scrum Methodology applied in the entire internship"
+                    "Introduction to Google Cloud Platform.",
+                    "Data Fusion instance creation and JSON file upload with a customized pipeline configuration in a Cloud Build file written in YAML.",
+                    "Agile Scrum Methodology applied in the entire internship."
                 ]
             },
             {
@@ -90,14 +98,14 @@ const CV_Page = () => {
         ],
         education: [
             {
-                degree: "Secondary Education",
-                dates: "09/2012 - 07/2019",
-                institution: "Escola Cooperativa Vale S. Cosme - Didáxis"
+                degree: "Basic and Secondary Education",
+                dates: "September 2012 - July 2019",
+                institution: "Escola Cooperativa Vale S. Cosme - Didáxis, Vila Nova de Famalicão, Portugal"
             },
             {
-                degree: "Integrated Masters in Software Engineering (Bachelor + Master)",
-                dates: "09/2019 - Present",
-                institution: "University of Minho"
+                degree: "Integrated Master in Informatics Engineering",
+                dates: "September 2019 - Present",
+                institution: "University of Minho, Braga, Portugal"
             }
         ],
         language_skills: [
@@ -107,7 +115,7 @@ const CV_Page = () => {
             },
             {
                 language: "English",
-                level: "C1 - Proficient"
+                level: "C1 - Advanced"
             }
         ],
         digital_skills: [
@@ -119,16 +127,45 @@ const CV_Page = () => {
             "Python",
             "React Native",
             "Machine Learning",
-            "Data Science"
+            "Deep Learning",
+            "Image Processing",
+            "Computer Vision",
+            "Data Science",
+            "Microsoft PowerBI",
+            "Agile Scrum",
+            "Google Cloud Platform",
+            "Git/Github"
         ],
-        additional_information: [
-            "Chess Member of Associação Académica Didáxis (A2D) - from 2012 to 2019",
-            "Table Tennis Member of Associação Académica Didáxis (A2D) - from 2017 to 2019",
-            "Certificate English C1 Obtained from BabeliUM organization - from October 2021 until now",
-            "Agile for Software Development Obtained from SkillSoft - from August 2022 until now",
-            "Google Cloud Computing Foundation Obtained from Alison - Empower Yourself - from August 2022 until now",
-            "Sustainable Summer School 2023 - Students Workshop and Poster Session Certificate Obtained from University of Coimbra - July 2023"
+
+        certificates_and_prizes: [
+            {
+                certificate_name: "English C1",
+                institution: "BabeliUM",
+                dates: "October 2021 until now",
+                urls: [
+                    { name: "English C1", url: "https://simaocunha71.github.io/static/media/English_C1_Simao_Cunha.59fc0c2dd5d779c7be28.pdf" }
+                ]
+            },
+            {
+                certificate_name: "Sustainable Summer School 2023 - Students Workshop and Poster Session",
+                institution: "University of Coimbra",
+                dates: "July 2023",
+                urls: [
+                    { name: 'Attendance', url: "https://simaocunha71.github.io/static/media/Sustrainable_Attendence_certificate.530b9eb7f0322a9e97d2.pdf" },
+                    { name: 'Students Workshop and Poster Session', url: "https://simaocunha71.github.io/static/media/Sustrainable_Students_Workshop_certificate.13450a3020bf0fb0d3eb.pdf" }
+                ]      
+            },
+            {
+                certificate_name: "1st UMinho Research & Innovation Open Days 2024 - Pitch and Poster Session",
+                institution: "University of Minho",
+                dates: "January 2024",
+                urls: [
+                    {name: 'Pitch Session', url: "https://simaocunha71.github.io/static/media/UMinhoOpenDays_Pitch.1d518159200dd7c5cd10.pdf"},
+                    {name: 'Poster Session', url: "https://simaocunha71.github.io/static/media/UMinhoOpenDays_Poster.80402e33f5cae743c6c6.pdf"}
+                ]
+            }
         ]
+
     };
 
     /// Dicionário com os dados do CV em Português
@@ -148,9 +185,9 @@ const CV_Page = () => {
                 dates: "11/07/2022 - 05/08/2022",
                 location: "Braga, Portugal",
                 responsibilities: [
-                    "Introdução à Google Cloud Platform",
-                    "Criação de instâncias de Data Fusion e upload de arquivo JSON com uma configuração de pipeline personalizada em um arquivo Cloud Build escrito em YAML",
-                    "Metodologia Agile Scrum aplicada durante todo o estágio"
+                    "Introdução ap Google Cloud Platform.",
+                    "Criação de uma instância Data Fusion e upload de um ficheiro JSON com uma configuração de uma pipeline personalizada através de um ficheiro Cloud Build escrito em YAML.",
+                    "Metodologia Agile Scrum aplicada durante todo o estágio."
                 ]
             },
             {
@@ -158,24 +195,24 @@ const CV_Page = () => {
                 dates: "17/07/2023 - 15/09/2023",
                 location: "Braga, Portugal",
                 responsibilities: [
-                    "Aplicação de técnicas de aprendizado de máquina e deep learning para desenvolver um sistema de detecção de delaminações.",
-                    "Implementação de modelos de aprendizado de máquina usando bibliotecas Python como Scikit-learn (Sklearn) e modelos de Deep Learning usando Deep Learning Halcon da MVTEC para construir algoritmos de detecção robustos.",
-                    "Realização de tarefas de processamento de imagem usando o Halcon da MVTEC para melhorar a pré-processamento de dados.",
-                    "Contribuição para projetos internos de desenvolvimento de software.",
-                    "Aquisição de conhecimentos fundamentais em visão computacional."
+                    "Aplicação de técnicas de Machine Learning e de Deep Learning para desenvolver um sistema capaz de detetar delaminações.",
+                    "Implementação de modelos de Machine Learning usando bibliotecas do Python tais como Scikit - learn (Sklearn) e modelos de Deep Learning usando o software Deep Learning Halcon da empresa MVTEC.",
+                    "Condução de tarefas de processamento de imagem usando o software Halcon da empresa MVTEC para o pré - processamento dos dados.",
+                    "Contribuição para o desenvolvimento de software interno.",
+                    "Conhecimentos básicos sobre visão por computador."
                 ]
             }
         ],
         education: [
             {
-                degree: "Educação Secundária",
-                dates: "09/2012 - 07/2019",
-                institution: "Escola Cooperativa Vale S. Cosme - Didáxis"
+                degree: "Ensino Básico e Secundário",
+                dates: "Setembro 2012 - Julho 2019",
+                institution: "Escola Cooperativa Vale S. Cosme - Didáxis, Vila Nova de Famalicão, Portugal"
             },
             {
-                degree: "Mestrado Integrado em Engenharia de Software (Licenciatura + Mestrado)",
-                dates: "09/2019 - Presente",
-                institution: "Universidade do Minho"
+                degree: "Mestrado Integrado em Engenharia Informática",
+                dates: "Setembro 2019 - Presente",
+                institution: "Universidade do Minho, Braga, Portugal"
             }
         ],
         language_skills: [
@@ -185,7 +222,7 @@ const CV_Page = () => {
             },
             {
                 language: "Inglês",
-                level: "C1 - Proficiente"
+                level: "C1 - Avançado"
             }
         ],
         digital_skills: [
@@ -196,16 +233,44 @@ const CV_Page = () => {
             "Prolog",
             "Python",
             "React Native",
-            "Aprendizado de Máquina",
-            "Ciência de Dados"
+            "Aprendizagem Automática",
+            "Aprendizagem Profunda",
+            "Processamento de Imagem",
+            "Visão por Computador",
+            "Ciência de dados",
+            "Microsoft PowerBI",
+            "Agile Scrum",
+            "Google Cloud Platform",
+            "Git/Github"
         ],
-        additional_information: [
-            "Membro de Xadrez da Associação Académica Didáxis (A2D) - de 2012 a 2019",
-            "Membro de Tênis de Mesa da Associação Académica Didáxis (A2D) - de 2017 a 2019",
-            "Certificado de Inglês C1 Obtido da organização BabeliUM - de outubro de 2021 até agora",
-            "Ágil para Desenvolvimento de Software Obtido pela SkillSoft - de agosto de 2022 até agora",
-            "Fundação Google Cloud Computing Obtida pela Alison - Empower Yourself - de agosto de 2022 até agora",
-            "Escola de Verão Sustentável 2023 - Certificado de Oficina de Estudantes e Sessão de Pôsteres Obtido pela Universidade de Coimbra - julho de 2023"
+
+        certificates_and_prizes: [
+            {
+                certificate_name : "Inglês C1",
+                institution : "BabeliUM",
+                dates : "outubro de 2021 até agora",
+                urls: [
+                    {name: "Inglês C1", url: "https://simaocunha71.github.io/static/media/English_C1_Simao_Cunha.59fc0c2dd5d779c7be28.pdf"}
+                ]
+            },
+            {
+                certificate_name: "Sustainable Summer School 2023 - Students Workshop and Poster Session",
+                institution: "Universidade de Coimbra",
+                dates: "julho de 2023",
+                urls: [
+                    { name: 'Participação', url: "https://simaocunha71.github.io/static/media/Sustrainable_Attendence_certificate.530b9eb7f0322a9e97d2.pdf" },
+                    { name: 'Sessão de Posters e Workshop de Alunos', url: "https://simaocunha71.github.io/static/media/Sustrainable_Students_Workshop_certificate.13450a3020bf0fb0d3eb.pdf" }
+                ]              
+            },
+            {
+                certificate_name: "1st UMinho Research & Innovation Open Days 2024 - Pitch and Poster Session",
+                institution: "Universidade do Minho",
+                dates: "janeiro de 2024",
+                urls: [
+                    { name: 'Sessão de Pitchs', url: "https://simaocunha71.github.io/static/media/UMinhoOpenDays_Pitch.1d518159200dd7c5cd10.pdf" },
+                    { name: 'Sessão de Posters', url: "https://simaocunha71.github.io/static/media/UMinhoOpenDays_Poster.80402e33f5cae743c6c6.pdf" }
+                ]
+            }
         ]
     };
 
@@ -216,7 +281,7 @@ const CV_Page = () => {
     const educationTitle = language === 'portuguese' ? 'Educação e Formação' : 'Education and Training';
     const langsTitle = language === 'portuguese' ? 'Competências Linguísticas' : 'Language Skills';
     const digitalTitle = language === 'portuguese' ? 'Competências Digitais' : 'Digital Skills';
-    const infoaddTitle = language === 'portuguese' ? 'Outras informações' : 'Other informations';
+    const cert_and_prz = language === 'portuguese' ? 'Certificados' : 'Certificates';
 
     return (
         <>
@@ -239,7 +304,7 @@ const CV_Page = () => {
                     <div className="cv-personal-info">
                         <div className="cv-photo">
                             {profileImage && <img src={profileImage} alt="Simão Pedro Sá Cunha" />}
-                            <h1>{cvData.personal_info.name}</h1>
+                            <h2>{cvData.personal_info.name}</h2>
                         </div>
                         <div className="cv-details">
                             <button><FaCalendar /><span className="icon-text">{cvData.personal_info.date_of_birth}</span></button>
@@ -251,42 +316,61 @@ const CV_Page = () => {
                         </div>
                     </div>
 
-                    <section className="cv-section">
-                        <h2>{experienceTitle}</h2>
-                        {cvData.work_experience.map((experience, index) => (
-                            <div key={index} className="cv-job">
-                                <h3>{experience.position}</h3>
-                                <p>{experience.dates}, {experience.location}</p>
-                                <ul>
-                                    {experience.responsibilities.map((responsibility, i) => (
-                                        <li key={i}>{responsibility}</li>
-                                    ))}
-                                </ul>
-                            </div>
-                        ))}
-                    </section>
-
-                    <section className="cv-section">
-                        <h2>{educationTitle}</h2>
-                        {cvData.education.map((edu, index) => (
-                            <div key={index} className="cv-education">
-                                <h3>{edu.degree}</h3>
-                                <p>{edu.dates}, {edu.institution}</p>
-                            </div>
-                        ))}
-                    </section>
-
-                    <section className="cv-section">
-                        <h2>{langsTitle}</h2>
-                        <div className="cv-lang-buttons">
-                            {cvData.language_skills.map((lang, index) => (
-                                <div key={index} className="cv-lang-button">
-                                    <Flag className="flag" code={lang.language === "Portuguese" || lang.language === "Português" ? "PT" : "GB"} />
-                                    <p>{lang.language} ({lang.level})</p>
+                        <section className="cv-section">
+                            <h2>{experienceTitle}</h2>
+                            {cvData.work_experience.map((experience, index) => (
+                                <div key={index} className="cv-job">
+                                    <h3>{experience.position}</h3>
+                                    <div className="job-info">
+                                        <div><FaCalendarAlt /> {experience.dates}</div>
+                                        <div><FaMapMarkerAlt /> {experience.location}</div>
+                                    </div>
+                                    <ul className="responsibilities-list">
+                                        {experience.responsibilities.map((responsibility, i) => (
+                                            <li key={i}>{responsibility}</li>
+                                        ))}
+                                    </ul>
                                 </div>
                             ))}
-                        </div>
-                    </section>
+                        </section>
+
+                        <section className="cv-section">
+                            <h2>{educationTitle}</h2>
+                            {cvData.education.map((edu, index) => (
+                                <div key={index} className="cv-education">
+                                    <h3 style={{ marginBottom: '10px' }}>{edu.degree}</h3>
+                                    <div className="education-info">
+                                        <div><FaMapMarkerAlt /><span>{edu.institution}</span></div>
+                                        <div><FaCalendarAlt /><span>{edu.dates}</span></div>
+                                    </div>
+                                </div>
+                            ))}
+                        </section>
+                        <section className="cv-section">
+                            <h2>{langsTitle}</h2>
+                            <div className="cv-lang-buttons">
+                                {cvData.language_skills.map((lang, index) => {
+                                    const filledBalls = languageSkillLevels[lang.language];
+                                    const emptyBalls = maxSkillLevel - filledBalls;
+                                    return (
+                                        <div key={index} className="cv-lang-button">
+                                            <div className="cv-lang-text">
+                                                <p>{lang.language}</p>
+                                                <small className="cv-lang-level">{lang.level}</small>
+                                            </div>
+                                            <div className="cv-skill-level">
+                                                {[...Array(filledBalls)].map((_, i) => (
+                                                    <span key={i} className="cv-skill-ball filled"></span>
+                                                ))}
+                                                {[...Array(emptyBalls)].map((_, i) => (
+                                                    <span key={i} className="cv-skill-ball empty"></span>
+                                                ))}
+                                            </div>
+                                        </div>
+                                    );
+                                })}
+                            </div>
+                        </section>
 
                     <section className="cv-section">
                         <h2>{digitalTitle}</h2>
@@ -297,14 +381,34 @@ const CV_Page = () => {
                         </div>
                     </section>
 
-                    <section className="cv-section">
-                        <h2>{infoaddTitle}</h2>
-                        <ul>
-                            {cvData.additional_information.map((info, index) => (
-                                <li key={index}>{info}</li>
+                        <section className="cv-section">
+                            <h2>{cert_and_prz}</h2>
+                            {cvData.certificates_and_prizes.map((cp, index) => (
+                                <div key={index} className="cv-education">
+                                    <h3 style={{ marginBottom: '10px' }}>{cp.certificate_name}</h3>
+                                    <div className="education-info">
+                                        <div><FaUniversity /><span>{cp.institution}</span></div>
+                                        <div><FaCalendarAlt /><span>{cp.dates}</span></div>
+                                        <div className="url-info">
+                                            {<FiPaperclip />} {/* Mostra o clipe apenas se houver mais de um URL */}
+                                            <div className="button-container">
+                                                {cp.urls.map((urlObj, i) => (
+                                                    <a key={i} href={urlObj.url} target="_blank" rel="noopener noreferrer">
+                                                        <button className="cv-cert-button">
+                                                            {urlObj.name || urlObj.url} {/* Mostra o nome personalizado se fornecido, senão o URL */}
+                                                        </button>
+                                                    </a>
+                                                ))}
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                             ))}
-                        </ul>
-                    </section>
+                        </section>
+
+
+
+
                 </div>
             </div>
             </div>

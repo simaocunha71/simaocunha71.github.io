@@ -14,8 +14,10 @@
     border: 1px solid #ffffff;
     border-radius: 8px;
     background-color: #fff;
-    box-sizing: border-box; /* Garantir que o padding é incluído na largura */
+    box-sizing: border-box;
+    /* Garantir que o padding é incluído na largura */
 }
+
 
 .cv-wrapper.pdf-generation {
     display: flex;
@@ -32,6 +34,44 @@
     margin-bottom: 20px;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.education-header {
+    display: flex;
+    align-items: center;
+}
+
+.education-info div {
+    display: flex;
+    align-items: center;
+    margin-top: 5px;
+}
+
+.education-info div svg {
+    margin-right: 5px;
+}
+
+.job-header {
+    display: flex;
+    align-items: center;
+}
+
+.job-header p {
+    display: flex;
+    align-items: center;
+    margin-top: 5px;
+}
+
+.job-header p svg {
+    margin-right: 5px;
+}
+.job-info {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.responsibilities-list {
+    margin-top: 10px;
 }
 
 .cv-photo {
@@ -66,12 +106,14 @@
     align-items: center;
     font-size: 1em;
     color: #555;
-    font-family: 'Verdana', sans-serif; /* Nova fonte para o texto */
+    font-family: 'Verdana', sans-serif;
+    /* Nova fonte para o texto */
 }
 
 .cv-details a {
     color: #555;
-    text-decoration: none; /* Remover o sublinhado dos links */
+    text-decoration: none;
+    /* Remover o sublinhado dos links */
 }
 
 .cv-details button {
@@ -101,7 +143,8 @@
 
 .cv-section {
     margin-bottom: 20px;
-    page-break-inside: avoid; /* Evitar quebra de página dentro dessa seção */
+    page-break-inside: avoid;
+    /* Evitar quebra de página dentro dessa seção */
 }
 
 .cv-section h2 {
@@ -114,7 +157,8 @@
 .cv-job,
 .cv-education {
     margin-bottom: 15px;
-    page-break-inside: avoid; /* Evitar quebra de página dentro dessa seção */
+    page-break-inside: avoid;
+    /* Evitar quebra de página dentro dessa seção */
 }
 
 .cv-job h3,
@@ -217,7 +261,8 @@
 .cv-digital-skills {
     display: flex;
     flex-wrap: wrap;
-    page-break-inside: avoid; /* Evitar quebra de página dentro dessa seção */
+    page-break-inside: avoid;
+    /* Evitar quebra de página dentro dessa seção */
 }
 
 .cv-skill-button {
@@ -238,43 +283,106 @@
     background-color: #dcdcdc;
 }
 
-.cv-lang-buttons {
-    display: flex;
-    flex-wrap: wrap;
-}
-
-.cv-lang-button {
-    flex: 1 1 auto;
+.cv-cert-button {
     margin-right: 10px;
-    margin-bottom: 10px;
-    padding: 8px 16px;
+    margin-bottom: 5px; /* Reduzindo a margem inferior para diminuir a altura */
+    padding: 5px 20px; /* Reduzindo o preenchimento para diminuir a altura */
     font-size: 1em;
-    cursor: default;
+    cursor: pointer; /* Alterado de 'default' para 'pointer' para indicar que é clicável */
     border: none;
     border-radius: 5px;
     background-color: #f2f2f2;
     color: black;
     appearance: none;
     -webkit-appearance: none;
-    display: flex;
-    align-items: center;
-    justify-content: center; /* Adicionando alinhamento horizontal */
-    text-align: center; /* Adicionando alinhamento vertical */
-    height: 48px; /* Definindo uma altura fixa */
 }
 
-.cv-lang-button p {
-    margin: 0;
-}
 
-.cv-lang-button .flag {
-    width: 28px;
-    height: auto;
-    margin-right: 8px;
-}
-
-.cv-lang-button:hover {
+.cv-cert-button:hover {
     background-color: #dcdcdc;
+}
+
+.cv-lang-buttons {
+    display: flex;
+    flex-direction: column;
+}
+
+.cv-lang-button {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.cv-lang-text {
+    text-align: left;
+}
+
+.cv-lang-text p {
+    margin: 0;
+    font-size: 1em;
+    line-height: 1.2;
+    /* Adicionado para ajustar a distância entre a linguagem e o nível */
+}
+
+.cv-lang-level {
+    font-size: 0.8em;
+    color: gray;
+    margin-top: 2px;
+    /* Diminuído para ajustar a distância entre a linguagem e o nível */
+}
+
+.cv-skill-level {
+    display: flex;
+}
+
+.cv-skill-ball {
+    width: 10px;
+    height: 10px;
+    margin-left: 5px;
+    border-radius: 50%;
+    border: 1px solid black;
+}
+
+.cv-skill-ball.filled {
+    background-color: black;
+}
+
+.cv-skill-ball.empty {
+    background-color: white;
+}
+
+.certificates-and-awards {
+    margin-top: 20px;
+}
+
+.certificates-and-awards h2 {
+    font-size: 1.5em;
+    color: #333;
+    border-bottom: 2px solid #ddd;
+    padding-bottom: 5px;
+}
+
+.certificates-and-awards ul {
+    list-style: none;
+    padding: 0;
+}
+
+.certificates-and-awards li {
+    margin-bottom: 10px;
+}
+
+.certificates-and-awards li span {
+    color: #555;
+}
+
+.certificates-and-awards a {
+    color: #007bff; /* Blue color for links */
+    text-decoration: none;
+}
+
+.certificates-and-awards a:hover {
+    text-decoration: underline;
 }
 
 
@@ -303,24 +411,28 @@
         position: static;
         transform: none;
         margin-bottom: 20px;
-        width: 100%; /* Ajuste para alinhar os botões corretamente */
+        width: 100%;
+        /* Ajuste para alinhar os botões corretamente */
     }
 
     .cv-buttons button {
-        width: 75%; /* Diminui a largura dos botões em ecrã mobile */
+        width: 75%;
+        /* Diminui a largura dos botões em ecrã mobile */
         font-size: 0.9em;
     }
-    
+
     .cv-lang-button {
-        width: 100%; /* Definir largura de 100% para ocupar toda a largura do contêiner pai */
-        margin-right: 0; /* Remover a margem direita para evitar espaçamento extra */
+        width: 100%;
+        /* Definir largura de 100% para ocupar toda a largura do contêiner pai */
+        margin-right: 0;
+        /* Remover a margem direita para evitar espaçamento extra */
         margin-bottom: 10px;
     }
 
     .language-buttons {
-    display: flex;
-    width: 75%;
-    /* Garantir que ocupe 100% da largura do contêiner pai */
-    margin-bottom: 10px;
-}
+        display: flex;
+        width: 75%;
+        /* Garantir que ocupe 100% da largura do contêiner pai */
+        margin-bottom: 10px;
+    }
 }
