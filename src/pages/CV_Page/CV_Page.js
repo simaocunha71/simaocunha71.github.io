@@ -1,6 +1,6 @@
 import React, { useRef, useState, useEffect } from 'react';
 import { FiDownload, FiPaperclip } from 'react-icons/fi'; // Importar ícones do React Icons
-import { FaCalendar, FaGithub, FaEnvelope, FaLinkedin, FaMapMarkerAlt, FaGlobe, FaCalendarAlt, FaUniversity } from 'react-icons/fa';
+import { FaCalendar, FaGithub, FaEnvelope, FaLinkedin, FaMapMarkerAlt, FaGlobe, FaCalendarAlt, FaBuilding, FaUniversity } from 'react-icons/fa';
 import Flag from 'react-world-flags';
 
 import html2pdf from 'html2pdf.js';
@@ -74,9 +74,10 @@ const CV_Page = () => {
         },
         work_experience: [
             {
-                position: "Summer Internship at Accenture",
+                position: "Summer Internship",
                 dates: "11/07/2022 - 05/08/2022",
                 location: "Braga, Portugal",
+                company: "Accenture Portugal",
                 responsibilities: [
                     "Introduction to Google Cloud Platform.",
                     "Data Fusion instance creation and JSON file upload with a customized pipeline configuration in a Cloud Build file written in YAML.",
@@ -84,9 +85,10 @@ const CV_Page = () => {
                 ]
             },
             {
-                position: "Summer Internship at Bosch Portugal",
+                position: "Summer Internship",
                 dates: "17/07/2023 - 15/09/2023",
                 location: "Braga, Portugal",
+                company: "Bosch Portugal",
                 responsibilities: [
                     "Applied machine learning and deep learning techniques to develop a system for detecting delaminations.",
                     "Implemented Machine learning models using Python libraries such as Scikit-learn (Sklearn) and Deep Learning models using Deep Learning Halcon by MVTEC to build robust detection algorithms.",
@@ -181,9 +183,10 @@ const CV_Page = () => {
         },
         work_experience: [
             {
-                position: "Estágio de Verão na Accenture",
+                position: "Estágio de Verão",
                 dates: "11/07/2022 - 05/08/2022",
                 location: "Braga, Portugal",
+                company: "Accenture Portugal",
                 responsibilities: [
                     "Introdução ap Google Cloud Platform.",
                     "Criação de uma instância Data Fusion e upload de um ficheiro JSON com uma configuração de uma pipeline personalizada através de um ficheiro Cloud Build escrito em YAML.",
@@ -191,9 +194,10 @@ const CV_Page = () => {
                 ]
             },
             {
-                position: "Estágio de Verão na Bosch Portugal",
+                position: "Estágio de Verão",
                 dates: "17/07/2023 - 15/09/2023",
                 location: "Braga, Portugal",
+                company: "Bosch Portugal",
                 responsibilities: [
                     "Aplicação de técnicas de Machine Learning e de Deep Learning para desenvolver um sistema capaz de detetar delaminações.",
                     "Implementação de modelos de Machine Learning usando bibliotecas do Python tais como Scikit - learn (Sklearn) e modelos de Deep Learning usando o software Deep Learning Halcon da empresa MVTEC.",
@@ -316,23 +320,30 @@ const CV_Page = () => {
                         </div>
                     </div>
 
-                        <section className="cv-section">
-                            <h2>{experienceTitle}</h2>
-                            {cvData.work_experience.map((experience, index) => (
-                                <div key={index} className="cv-job">
-                                    <h3>{experience.position}</h3>
-                                    <div className="job-info">
-                                        <div><FaCalendarAlt /> {experience.dates}</div>
-                                        <div><FaMapMarkerAlt /> {experience.location}</div>
-                                    </div>
-                                    <ul className="responsibilities-list">
-                                        {experience.responsibilities.map((responsibility, i) => (
-                                            <li key={i}>{responsibility}</li>
-                                        ))}
-                                    </ul>
-                                </div>
-                            ))}
-                        </section>
+                    <section className="cv-section">
+        <h2>{experienceTitle}</h2>
+        {cvData.work_experience.map((experience, index) => (
+          <div key={index} className="cv-job">
+            <h3>{experience.position}</h3>
+            <div className="job-info">
+              <div className="info-item">
+                <FaCalendarAlt className="icon" /> <span>{experience.dates}</span>
+              </div>
+              <div className="info-item">
+                <FaMapMarkerAlt className="icon" /> <span>{experience.location}</span>
+              </div>
+              <div className="info-item">
+                <FaBuilding className="icon" /> <span>{experience.company}</span>
+              </div>
+            </div>
+            <ul className="responsibilities-list">
+              {experience.responsibilities.map((responsibility, i) => (
+                <li key={i}>{responsibility}</li>
+              ))}
+            </ul>
+          </div>
+        ))}
+      </section>
 
                         <section className="cv-section">
                             <h2>{educationTitle}</h2>

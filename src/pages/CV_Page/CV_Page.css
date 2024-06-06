@@ -18,14 +18,6 @@
     /* Garantir que o padding é incluído na largura */
 }
 
-
-.cv-wrapper.pdf-generation {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-}
-
 .cv-personal-info {
     display: flex;
     align-items: center;
@@ -65,9 +57,20 @@
 .job-header p svg {
     margin-right: 5px;
 }
+
 .job-info {
     margin-top: 10px;
     margin-bottom: 10px;
+}
+
+.info-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
+}
+
+.icon {
+    margin-right: 5px;
 }
 
 .responsibilities-list {
@@ -297,7 +300,6 @@
     -webkit-appearance: none;
 }
 
-
 .cv-cert-button:hover {
     background-color: #dcdcdc;
 }
@@ -384,7 +386,6 @@
 .certificates-and-awards a:hover {
     text-decoration: underline;
 }
-
 
 /* Media Queries para telas menores */
 @media (max-width: 600px) {
