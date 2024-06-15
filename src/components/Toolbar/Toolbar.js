@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { AiOutlineMenu, AiOutlineProject, AiOutlineFileText, AiOutlineBook, AiOutlineCheckCircle, AiOutlineHome, AiFillBank, AiOutlineFile } from 'react-icons/ai';
+import { AiOutlineMenu, AiOutlineFund, AiOutlineSound, AiOutlineRead, AiOutlineSafety, AiOutlineTeam, AiOutlineProfile } from 'react-icons/ai';
 import { Link } from 'react-router-dom';
 import './Toolbar.css';
 
@@ -12,34 +12,32 @@ const Toolbar = () => {
 
   return (
     <div className="toolbar">
-      <h1 className="toolbar-title">Simão Cunha's Portfolio</h1>
+      <Link to="/" className="toolbar-title">
+        Simão Cunha's Portfolio
+      </Link>
       <div className="toolbar-links">
-        <Link to="/" className="toolbar-link">
-          <AiOutlineHome size={24} />
-          Home
-        </Link>
         <Link to="/academic-projects" className="toolbar-link">
-          <AiOutlineProject size={24} />
+          <AiOutlineFund size={24} />
           Academic Projects
         </Link>
         <Link to="/work-experience" className="toolbar-link">
-          <AiFillBank size={24} />
+          <AiOutlineTeam size={24} />
           Work Experience
         </Link>
         <Link to="/talks" className="toolbar-link">
-          <AiOutlineFileText size={24} />
+          <AiOutlineSound size={24} />
           Talks
         </Link>
         <Link to="/publications" className="toolbar-link">
-          <AiOutlineBook size={24} />
+          <AiOutlineRead size={24} />
           Publications
         </Link>
         <Link to="/certificates" className="toolbar-link">
-          <AiOutlineCheckCircle size={24} />
+          <AiOutlineSafety size={24} />
           Certificates
         </Link>
         <Link to="/curriculum-vitae" className="toolbar-link">
-          <AiOutlineFile size={24} />
+          <AiOutlineProfile size={24} />
           Curriculum Vitae
         </Link>
       </div>
@@ -49,32 +47,28 @@ const Toolbar = () => {
         </button>
         {isDropdownOpen && (
           <div className="toolbar-dropdown">
-            <Link to="/" className="toolbar-link" onClick={handleToggleDropdown}>
-              <AiOutlineHome size={24} />
-              Home
-            </Link>
             <Link to="/academic-projects" className="toolbar-link" onClick={handleToggleDropdown}>
-              <AiOutlineProject size={24} />
+              <AiOutlineFund size={24} />
               Academic Projects
             </Link>
             <Link to="/work-experience" className="toolbar-link" onClick={handleToggleDropdown}>
-              <AiFillBank size={24} />
+              <AiOutlineTeam size={24} />
               Work Experience
             </Link>
             <Link to="/talks" className="toolbar-link" onClick={handleToggleDropdown}>
-              <AiOutlineFileText size={24} />
+              <AiOutlineSound size={24} />
               Talks
             </Link>
             <Link to="/publications" className="toolbar-link" onClick={handleToggleDropdown}>
-              <AiOutlineBook size={24} />
+              <AiOutlineRead size={24} />
               Publications
             </Link>
             <Link to="/certificates" className="toolbar-link" onClick={handleToggleDropdown}>
-              <AiOutlineCheckCircle size={24} />
+              <AiOutlineSafety size={24} />
               Certificates
             </Link>
             <Link to="/curriculum-vitae" className="toolbar-link" onClick={handleToggleDropdown}>
-              <AiOutlineFile size={24} />
+              <AiOutlineProfile size={24} />
               Curriculum Vitae
             </Link>
           </div>
