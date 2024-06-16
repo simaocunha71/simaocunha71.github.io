@@ -1,54 +1,58 @@
-/* WorkExperience.css */
+.work-experience-wrapper {
+  margin-bottom: 50px; /* Margem inferior para o wrapper */
+}
+
+.work-experience-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 
 .work-experience-card {
   display: flex;
-  align-items: center;
+  align-items: center; /* Centraliza verticalmente */
   margin-bottom: 20px;
-  border: 1px solid #ffffff;
+  border: 1px solid #ddd;
   border-radius: 10px;
   padding: 20px;
-  max-width: 100%;
-  /* Set the maximum width to 100% to make it responsive */
-  position: relative;
-  /* Add relative positioning */
+  width: 100%; /* Garante largura total */
+  max-width: 1600px; /* Ajusta a largura máxima conforme necessário */
+  box-sizing: border-box; /* Garante que padding e border estão incluídos na largura */
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
 }
 
-.company-image {
-  width: 10%;
-  height: 10%;
+.work-experience-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.company-logo {
+  width: 80px;
+  height: 80px;
   margin-right: 20px;
-  border-radius: 10%;
+  display: flex;
+  justify-content: center; /* Centraliza horizontalmente */
+  align-items: center; /* Centraliza verticalmente */
+}
+
+.logo-image {
+  width: 100%;
+  height: 100%;
+  object-fit: contain; /* Garante que a imagem se ajuste ao contêiner */
+  border-radius: 10px; /* Borda arredondada */
+}
+
+.experience-details {
+  flex: 1; /* Ocupa o espaço restante */
 }
 
 .keywords-container {
   margin-top: 10px;
+  color: #666;
 }
 
-.keyword-rectangle {
-  display: inline-block;
-  border: 2px solid #333;
-  /* Border color */
-  border-radius: 10px;
-  /* Makes it rounded */
-  padding: 5px 10px;
-  /* Adjust padding as needed */
+.keywords-container svg {
   margin-right: 5px;
-  /* Adjust margin as needed */
-  background-color: #f0f0f0;
-  /* Background color */
-  color: #333;
-  /* Text color */
-}
-
-.skills-label {
-  position: absolute;
-  /* Position it absolutely within the card */
-  bottom: 10px;
-  /* Adjust as needed */
-  right: 10px;
-  /* Adjust as needed */
-  font-weight: bold;
-  /* Make it bold */
-  color: #333;
-  /* Text color */
 }
