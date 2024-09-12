@@ -1,4 +1,4 @@
-.talks-container {
+.events-container {
   position: relative;
   display: flex;
   justify-content: center;
@@ -8,7 +8,7 @@
   overflow: hidden;
 }
 
-.talk-item {
+.event-item {
   margin: 10px;
   padding: 20px;
   display: flex;
@@ -20,52 +20,52 @@
   min-width: 100%;
 }
 
-.talk-item:hover {
+.event-item:hover {
   transform: translateY(-5px); /* Matches the transform on hover for work-experience-card */
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Matches the box-shadow on hover for work-experience-card */
 }
 
 
-.talk-item.enter-left {
+.event-item.enter-left {
   transform: translateX(-100%);
   opacity: 0;
 }
 
-.talk-item.enter-right {
+.event-item.enter-right {
   transform: translateX(100%);
   opacity: 0;
 }
 
-.talk-item.enter-active {
+.event-item.enter-active {
   transform: translateX(0);
   opacity: 1;
 }
 
-.talk-item.exit-left {
+.event-item.exit-left {
   transform: translateX(100%);
   opacity: 0;
 }
 
-.talk-item.exit-right {
+.event-item.exit-right {
   transform: translateX(-100%);
   opacity: 0;
 }
 
-.talk-title {
+.event-title {
   font-size: 24px;
   font-weight: bold;
   margin-bottom: 10px;
   text-align: center;
 }
 
-.talk-description {
+.event-description {
   font-size: 16px;
   margin-bottom: 20px;
   text-align: center;
   color: #666;
 }
 
-.talk-image {
+.event-image {
   width: auto; /* Allow the width to adjust according to the image's aspect ratio */
   height: auto; /* Allow the height to adjust according to the image's aspect ratio */
   max-width: 100%; /* Set maximum width to ensure responsiveness */
@@ -75,7 +75,7 @@
   border-radius: 10px; /* Make the corners rounded */
 }
 
-.talk-buttons {
+.event-buttons {
   display: flex;
   justify-content: center;
   gap: 10px; /* Add some space between the buttons */

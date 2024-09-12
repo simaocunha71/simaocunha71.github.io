@@ -1,7 +1,7 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useMemo } from 'react';
 import { pdfjs } from 'react-pdf';
-import { useParams, useHistory } from 'react-router-dom';
-import './Talks.css';
+import { useParams, useNavigate } from 'react-router-dom';
+import './Events.css';
 
 // Importar imagens e PDFs
 import sustrainable_presentationImage from '../../assets/docs/sustrainable/presentation.jpeg';
@@ -15,14 +15,14 @@ import uminho_open_days_posterPDF from '../../assets/docs/uminho_open_days/poste
 
 pdfjs.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.min.js`;
 
-const Talks = () => {
+const Events = () => {
   const { eventId } = useParams();
-  const history = useHistory();
+  const navigate = useNavigate(); // useNavigate replaces history
   const [currentSlide, setCurrentSlide] = useState(0);
   const [animation, setAnimation] = useState('');
 
-  // Array de talks com detalhes de cada evento
-  const talks = [
+  // Array de events com detalhes de cada evento
+  const events = useMemo(() => [
     {
       id: "sustrainable-coimbra-2023",
       title: "SusTrainable Summer School at Coimbra 2023",
@@ -42,21 +42,21 @@ const Talks = () => {
       posterPDF: uminho_open_days_posterPDF,
       githubRepo: "https://github.com/LuisMPSilva01/Energy-Languages-PowerCap"
     }
-    // Adicionar mais talks conforme necessário
-  ];
+    // Adicionar mais events conforme necessário
+  ], []);
 
   // Efeito para verificar o eventId na URL e ajustar o slide atual
   useEffect(() => {
     if (!eventId) {
       // Redirecionar para o evento padrão se nenhum eventId for fornecido
-      history.replace(`/talks/sustrainable-coimbra-2023`);
+      navigate(`/events/sustrainable-coimbra-2023`);
     } else {
-      const talkIndex = talks.findIndex(talk => talk.id === eventId);
-      if (talkIndex !== -1) {
-        setCurrentSlide(talkIndex);
+      const eventIndex = events.findIndex(event => event.id === eventId);
+      if (eventIndex !== -1) {
+        setCurrentSlide(eventIndex);
       }
     }
-  }, [eventId, talks, history]);
+  }, [eventId, events, navigate]);
 
   // Função para lidar com o clique nos botões de PDF
   const handlePdfButtonClick = (pdfUrl, pdfName) => {
@@ -68,8 +68,8 @@ const Talks = () => {
     setAnimation(direction === 'left' ? 'exit-right' : 'exit-left');
     setTimeout(() => {
       setCurrentSlide((prevSlide) => {
-        const newSlide = direction === 'left' ? (prevSlide - 1 + talks.length) % talks.length : (prevSlide + 1) % talks.length;
-        history.push(`/talks/${talks[newSlide].id}`);
+        const newSlide = direction === 'left' ? (prevSlide - 1 + events.length) % events.length : (prevSlide + 1) % events.length;
+        navigate(`/events/${events[newSlide].id}`);
         return newSlide;
       });
       setAnimation(direction === 'left' ? 'enter-left' : 'enter-right');
@@ -85,21 +85,21 @@ const Talks = () => {
 
   return (
     <div style={{ marginTop: '50px' }}>
-      <div className="talks-container">
-        <div className={`talk-item ${animation}`}>
-          <div className="talk-title">{talks[currentSlide].title}</div>
-          <div className="talk-description">{talks[currentSlide].description}</div>
+      <div className="events-container">
+        <div className={`event-item ${animation}`}>
+          <div className="event-title">{events[currentSlide].title}</div>
+          <div className="event-description">{events[currentSlide].description}</div>
           <img
-            src={talks[currentSlide].presentationImage}
+            src={events[currentSlide].presentationImage}
             alt="Talk Presentation"
-            className="talk-image"
+            className="event-image"
           />
-          <div className="talk-buttons">
-            <button className="rounded-button poster-button" onClick={() => handlePdfButtonClick(talks[currentSlide].posterPDF, 'Poster')}>Poster</button>
-            <button className="rounded-button presentation-button" onClick={() => handlePdfButtonClick(talks[currentSlide].presentationPDF, 'Presentation')}>Presentation</button>
-            <button className="rounded-button report-button" onClick={() => handlePdfButtonClick(talks[currentSlide].reportPDF, 'Report')}>Report</button>
-            {talks[currentSlide].githubRepo && (
-              <button onClick={() => window.open(talks[currentSlide].githubRepo, '_blank')} className="rounded-button github-button">GitHub repository</button>
+          <div className="event-buttons">
+            <button className="rounded-button poster-button" onClick={() => handlePdfButtonClick(events[currentSlide].posterPDF, 'Poster')}>Poster</button>
+            <button className="rounded-button presentation-button" onClick={() => handlePdfButtonClick(events[currentSlide].presentationPDF, 'Presentation')}>Presentation</button>
+            <button className="rounded-button report-button" onClick={() => handlePdfButtonClick(events[currentSlide].reportPDF, 'Report')}>Report</button>
+            {events[currentSlide].githubRepo && (
+              <button onClick={() => window.open(events[currentSlide].githubRepo, '_blank')} className="rounded-button github-button">GitHub repository</button>
             )}
           </div>
         </div>
@@ -113,4 +113,4 @@ const Talks = () => {
   );
 };
 
-export default Talks;
+export default Events;

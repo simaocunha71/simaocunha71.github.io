@@ -449,9 +449,9 @@ const AcademicProjects = () => {
 
 
         
-        <div className="talk-item">
-          <div className="talk-title">Informatics Engineering Project</div>
-          <div className="talk-description">
+        <div className="event-item">
+          <div className="event-title">Informatics Engineering Project</div>
+          <div className="event-description">
             This project involved creating dashboards using WyScout API data in Microsoft PowerBI for Sporting Clube de Braga. 
             Below are some of the pages created in the project:
           </div>
@@ -469,14 +469,14 @@ const AcademicProjects = () => {
             </div>
             <div style={{ marginTop: '20px' }}></div>
 
-          <div className="talk-buttons">
+          <div className="event-buttons">
             <a href="https://github.com/realRunlo/BragaScoutingPlatform" className="rounded-button">Github repository</a>
           </div>
         </div>
 
-        <div className="talk-item">
-          <div className="talk-title">Master's Dissertation in Informatics Engineering</div>
-          <div className="talk-description">
+        <div className="event-item">
+          <div className="event-title">Master's Dissertation in Informatics Engineering</div>
+          <div className="event-description">
             This dissertation details the creation of a platform designed for evaluating Large Language Models
             (LLMs) through benchmarking coding tasks using well-known datasets such as Human-Eval. The primary
             goal of this platform is to assess the effectiveness and energy efficiency of LLMs in addressing diverse
@@ -489,7 +489,7 @@ const AcademicProjects = () => {
             dissertation actively contributes to the progression of both efficient and sustainable software development
             practices.
           </div>
-          <div className="talk-buttons">
+          <div className="event-buttons">
             <a href={RPD_reportPDF} className="rounded-button">Preliminary Dissertation Report (PDR)</a>
             <a href={RPD_presentationPDF} className="rounded-button">PDR Presentation</a>
           </div>
@@ -498,9 +498,9 @@ const AcademicProjects = () => {
       )}
       {activeYear === 'Other' && (
         <>
-          <div className="talk-item">
-            <div className="talk-title">Hackathon Bugsbyte 2024</div>
-            <div className="talk-description">
+          <div className="event-item">
+            <div className="event-title">Hackathon Bugsbyte 2024</div>
+            <div className="event-description">
               This project was developed during the Hackathon Bugsbyte 2024 held at the Altice Forum in Braga, Portugal. <br></br>
               Over the course of 48 hours, our team created a simple application aimed at facilitating the search for cultural events across various districts of Portugal. <br></br>
               The application features a modern user interface designed to enhance the user experience.
@@ -519,7 +519,7 @@ const AcademicProjects = () => {
             </div>
             <div style={{ marginTop: '20px' }}></div>
 
-            <div className="talk-buttons">
+            <div className="event-buttons">
               <a href="https://github.com/simaobarroso/hackthon-bugsbyte" className="rounded-button">Github repository</a>
             </div>
           </div>

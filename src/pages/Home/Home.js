@@ -4,7 +4,7 @@ import coverImage from '../../assets/profile_image.jpeg';
 import { FaLinkedin, FaGithub, FaEnvelope } from 'react-icons/fa';
 
 const Home = () => {
-  const linkedinUrl = 'https://www.linkedin.com/in/sim%C3%A3o-cunha-379785202/';
+  const linkedinUrl = 'https://www.linkedin.com/in/simaocunha71/';
   const githubUrl = 'https://github.com/simaocunha71';
   const emailUrl = 'mailto:simaopscunha@outlook.pt';
   const description =

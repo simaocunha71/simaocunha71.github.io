@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { AiOutlineMenu, AiOutlineFund, AiOutlineSound, AiOutlineRead, AiOutlineSafety, AiOutlineTeam, AiOutlineProfile } from 'react-icons/ai';
+import { AiOutlineMenu, AiOutlineFund, AiOutlineSound, AiOutlineRead, AiOutlineSafety, AiOutlineTeam } from 'react-icons/ai';
 import { Link } from 'react-router-dom';
 import './Toolbar.css';
 
@@ -24,9 +24,9 @@ const Toolbar = () => {
           <AiOutlineTeam size={24} />
           Work Experience
         </Link>
-        <Link to="/talks" className="toolbar-link">
+        <Link to="/events" className="toolbar-link">
           <AiOutlineSound size={24} />
-          Talks
+          Events
         </Link>
         <Link to="/publications" className="toolbar-link">
           <AiOutlineRead size={24} />
@@ -35,10 +35,6 @@ const Toolbar = () => {
         <Link to="/certificates" className="toolbar-link">
           <AiOutlineSafety size={24} />
           Certificates
-        </Link>
-        <Link to="/curriculum-vitae" className="toolbar-link">
-          <AiOutlineProfile size={24} />
-          Curriculum Vitae
         </Link>
       </div>
       <div className="toolbar-right">
@@ -55,9 +51,9 @@ const Toolbar = () => {
               <AiOutlineTeam size={24} />
               Work Experience
             </Link>
-            <Link to="/talks" className="toolbar-link" onClick={handleToggleDropdown}>
+            <Link to="/events" className="toolbar-link" onClick={handleToggleDropdown}>
               <AiOutlineSound size={24} />
-              Talks
+              Events
             </Link>
             <Link to="/publications" className="toolbar-link" onClick={handleToggleDropdown}>
               <AiOutlineRead size={24} />
@@ -66,10 +62,6 @@ const Toolbar = () => {
             <Link to="/certificates" className="toolbar-link" onClick={handleToggleDropdown}>
               <AiOutlineSafety size={24} />
               Certificates
-            </Link>
-            <Link to="/curriculum-vitae" className="toolbar-link" onClick={handleToggleDropdown}>
-              <AiOutlineProfile size={24} />
-              Curriculum Vitae
             </Link>
           </div>
         )}
