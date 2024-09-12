@@ -5,6 +5,7 @@ import Certificates from './pages/Certificates/Certificates';
 import Publications from './pages/Publications/Publications';
 import AcademicProjects from './pages/AcademicProjects/AcademicProjects';
 import WorkExperience from './pages/WorkExperience/WorkExperience';
+import CV_Page from './pages/CV_Page/CV_Page';
 import Toolbar from './components/Toolbar/Toolbar';
 import Footer from './components/Footer/Footer';
 import Home from './pages/Home/Home';
@@ -25,6 +26,7 @@ const App = () => {
               <Route path="/certificates" element={<Certificates />} />
               <Route path="/publications" element={<Publications />} />
               <Route path="/academic-projects" element={<AcademicProjects />} />
+              <Route path="/curriculum-vitae" element={<CV_Page />} />
             </Routes>
           </div>
         </div>

@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { AiOutlineMenu, AiOutlineFund, AiOutlineSound, AiOutlineRead, AiOutlineSafety, AiOutlineTeam } from 'react-icons/ai';
+import { FaGraduationCap, FaBriefcase, FaCalendarAlt, FaNewspaper, FaCertificate, FaFileAlt, FaBars } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
 import './Toolbar.css';
 
@@ -17,51 +17,59 @@ const Toolbar = () => {
       </Link>
       <div className="toolbar-links">
         <Link to="/academic-projects" className="toolbar-link">
-          <AiOutlineFund size={24} />
+          <FaGraduationCap size={24} />
           Academic Projects
         </Link>
         <Link to="/work-experience" className="toolbar-link">
-          <AiOutlineTeam size={24} />
+          <FaBriefcase size={24} />
           Work Experience
         </Link>
         <Link to="/events" className="toolbar-link">
-          <AiOutlineSound size={24} />
+          <FaCalendarAlt size={24} />
           Events
         </Link>
         <Link to="/publications" className="toolbar-link">
-          <AiOutlineRead size={24} />
+          <FaNewspaper size={24} />
           Publications
         </Link>
         <Link to="/certificates" className="toolbar-link">
-          <AiOutlineSafety size={24} />
+          <FaCertificate size={24} />
           Certificates
+        </Link>
+        <Link to="/curriculum-vitae" className="toolbar-link">
+          <FaFileAlt size={24} />
+          Curriculum Vitae
         </Link>
       </div>
       <div className="toolbar-right">
         <button className="toggle-button" onClick={handleToggleDropdown}>
-          <AiOutlineMenu size={20} />
+          <FaBars size={20} />
         </button>
         {isDropdownOpen && (
           <div className="toolbar-dropdown">
             <Link to="/academic-projects" className="toolbar-link" onClick={handleToggleDropdown}>
-              <AiOutlineFund size={24} />
+              <FaGraduationCap size={24} />
               Academic Projects
             </Link>
             <Link to="/work-experience" className="toolbar-link" onClick={handleToggleDropdown}>
-              <AiOutlineTeam size={24} />
+              <FaBriefcase size={24} />
               Work Experience
             </Link>
             <Link to="/events" className="toolbar-link" onClick={handleToggleDropdown}>
-              <AiOutlineSound size={24} />
+              <FaCalendarAlt size={24} />
               Events
             </Link>
             <Link to="/publications" className="toolbar-link" onClick={handleToggleDropdown}>
-              <AiOutlineRead size={24} />
+              <FaNewspaper size={24} />
               Publications
             </Link>
             <Link to="/certificates" className="toolbar-link" onClick={handleToggleDropdown}>
-              <AiOutlineSafety size={24} />
+              <FaCertificate size={24} />
               Certificates
+            </Link>
+            <Link to="/curriculum-vitae" className="toolbar-link" onClick={handleToggleDropdown}>
+              <FaFileAlt size={24} />
+              Curriculum Vitae
             </Link>
           </div>
         )}

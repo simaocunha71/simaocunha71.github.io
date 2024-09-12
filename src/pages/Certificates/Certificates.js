@@ -22,7 +22,7 @@ const Certificates = () => {
 
   return (
     <>
-      <div style={{ marginBottom: '50px' }}></div>
+      <div style={{ marginTop: '80px' }}></div>
 
       {/* Item 1 */}
       <div className="certificate-item">
