@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { FaGraduationCap, FaBriefcase, FaCalendarAlt, FaNewspaper, FaCertificate, FaFileAlt, FaBars } from 'react-icons/fa';
+import { FaBriefcase, FaCalendarAlt, FaFileAlt, FaLightbulb, FaCode, FaProjectDiagram, FaCogs, FaRocket, FaBook, FaAward, FaBars } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
 import './Toolbar.css';
 
@@ -16,8 +16,12 @@ const Toolbar = () => {
         Simão Cunha's Portfolio
       </Link>
       <div className="toolbar-links">
+        <Link to="/skills-and-interests" className="toolbar-link">
+          <FaLightbulb size={24} />
+          Skills and Interests
+        </Link>
         <Link to="/academic-projects" className="toolbar-link">
-          <FaGraduationCap size={24} />
+          <FaCode size={24} /> {/* Change to FaProjectDiagram, FaCogs, or FaRocket if preferred */}
           Academic Projects
         </Link>
         <Link to="/work-experience" className="toolbar-link">
@@ -29,11 +33,11 @@ const Toolbar = () => {
           Events
         </Link>
         <Link to="/publications" className="toolbar-link">
-          <FaNewspaper size={24} />
+          <FaBook size={24} />
           Publications
         </Link>
         <Link to="/certificates" className="toolbar-link">
-          <FaCertificate size={24} />
+          <FaAward size={24} />
           Certificates
         </Link>
         <Link to="/curriculum-vitae" className="toolbar-link">
@@ -47,8 +51,12 @@ const Toolbar = () => {
         </button>
         {isDropdownOpen && (
           <div className="toolbar-dropdown">
+            <Link to="/skills-and-interests" className="toolbar-link" onClick={handleToggleDropdown}>
+              <FaLightbulb size={24} />
+              Skills and Interests
+            </Link>
             <Link to="/academic-projects" className="toolbar-link" onClick={handleToggleDropdown}>
-              <FaGraduationCap size={24} />
+              <FaCode size={24} /> {/* Change to FaProjectDiagram, FaCogs, or FaRocket if preferred */}
               Academic Projects
             </Link>
             <Link to="/work-experience" className="toolbar-link" onClick={handleToggleDropdown}>
@@ -60,11 +68,11 @@ const Toolbar = () => {
               Events
             </Link>
             <Link to="/publications" className="toolbar-link" onClick={handleToggleDropdown}>
-              <FaNewspaper size={24} />
+              <FaBook size={24} />
               Publications
             </Link>
             <Link to="/certificates" className="toolbar-link" onClick={handleToggleDropdown}>
-              <FaCertificate size={24} />
+              <FaAward size={24} />
               Certificates
             </Link>
             <Link to="/curriculum-vitae" className="toolbar-link" onClick={handleToggleDropdown}>

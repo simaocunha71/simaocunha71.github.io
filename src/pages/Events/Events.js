@@ -3,7 +3,7 @@ import { pdfjs } from 'react-pdf';
 import { useParams, useNavigate } from 'react-router-dom';
 import './Events.css';
 
-// Importar imagens e PDFs
+// Import images and PDFs
 import sustrainable_presentationImage from '../../assets/docs/sustrainable/presentation.jpeg';
 import sustrainable_presentationPDF from '../../assets/docs/sustrainable/presentation.pdf';
 import sustrainable_posterPDF from '../../assets/docs/sustrainable/poster.pdf';
@@ -13,15 +13,16 @@ import uminho_open_days_presentationImage from '../../assets/docs/uminho_open_da
 import uminho_open_days_presentationPDF from '../../assets/docs/uminho_open_days/presentation.pdf';
 import uminho_open_days_posterPDF from '../../assets/docs/uminho_open_days/poster.pdf';
 
+import cerciras_training_school_pic1 from '../../assets/docs/cerciras-training-school-2024/pic1.jpeg';
+
 pdfjs.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.min.js`;
 
 const Events = () => {
   const { eventId } = useParams();
-  const navigate = useNavigate(); // useNavigate replaces history
+  const navigate = useNavigate();
   const [currentSlide, setCurrentSlide] = useState(0);
   const [animation, setAnimation] = useState('');
 
-  // Array de events com detalhes de cada evento
   const events = useMemo(() => [
     {
       id: "sustrainable-coimbra-2023",
@@ -41,74 +42,88 @@ const Events = () => {
       presentationPDF: uminho_open_days_presentationPDF,
       posterPDF: uminho_open_days_posterPDF,
       githubRepo: "https://github.com/LuisMPSilva01/Energy-Languages-PowerCap"
+    },
+    {
+      id: "cerciras-training-school-2024",
+      title: "CERCIRAS Training School 2024",
+      description: "From August 26th to 30th, I had the privilege of attending the CERCIRAS Summer School in Klagenfurt, Austria! It was my first time taking part in a CERCIRAS event, and the experience was both insightful and inspiring. I greatly appreciated the chance to meet and connect with fellow researchers, exchanging ideas and exploring potential collaborations. The conversations were engaging, and I’m excited to see where they may lead in my future work.",
+      presentationImage: cerciras_training_school_pic1,
     }
-    // Adicionar mais events conforme necessário
+    // Add more events as needed
   ], []);
 
-  // Efeito para verificar o eventId na URL e ajustar o slide atual
   useEffect(() => {
     if (!eventId) {
-      // Redirecionar para o evento padrão se nenhum eventId for fornecido
       navigate(`/events/sustrainable-coimbra-2023`);
     } else {
       const eventIndex = events.findIndex(event => event.id === eventId);
       if (eventIndex !== -1) {
         setCurrentSlide(eventIndex);
+      } else {
+        navigate(`/events/sustrainable-coimbra-2023`);
       }
     }
   }, [eventId, events, navigate]);
 
-  // Função para lidar com o clique nos botões de PDF
   const handlePdfButtonClick = (pdfUrl, pdfName) => {
-    window.open(pdfUrl, pdfName);
+    if (pdfUrl) {
+      window.open(pdfUrl, pdfName);
+    }
   };
 
-  // Função para mudar o slide com animação de entrada e saída
-  const changeSlide = (direction) => {
-    setAnimation(direction === 'left' ? 'exit-right' : 'exit-left');
-    setTimeout(() => {
-      setCurrentSlide((prevSlide) => {
-        const newSlide = direction === 'left' ? (prevSlide - 1 + events.length) % events.length : (prevSlide + 1) % events.length;
-        navigate(`/events/${events[newSlide].id}`);
-        return newSlide;
-      });
-      setAnimation(direction === 'left' ? 'enter-left' : 'enter-right');
-    }, 500); // Ajustar a duração para combinar com a transição CSS
+  const handleImageClick = (imageUrl) => {
+    window.open(imageUrl, '_blank');
   };
 
-  // Efeito para adicionar a classe de animação ativa após a saída
   useEffect(() => {
     if (animation === 'enter-right' || animation === 'enter-left') {
       setTimeout(() => setAnimation('enter-active'), 50);
     }
   }, [animation]);
 
+  const currentEvent = events[currentSlide];
+
   return (
-    <div style={{ marginTop: '50px' }}>
-      <div className="events-container">
-        <div className={`event-item ${animation}`}>
-          <div className="event-title">{events[currentSlide].title}</div>
-          <div className="event-description">{events[currentSlide].description}</div>
-          <img
-            src={events[currentSlide].presentationImage}
-            alt="Talk Presentation"
-            className="event-image"
-          />
-          <div className="event-buttons">
-            <button className="rounded-button poster-button" onClick={() => handlePdfButtonClick(events[currentSlide].posterPDF, 'Poster')}>Poster</button>
-            <button className="rounded-button presentation-button" onClick={() => handlePdfButtonClick(events[currentSlide].presentationPDF, 'Presentation')}>Presentation</button>
-            <button className="rounded-button report-button" onClick={() => handlePdfButtonClick(events[currentSlide].reportPDF, 'Report')}>Report</button>
-            {events[currentSlide].githubRepo && (
-              <button onClick={() => window.open(events[currentSlide].githubRepo, '_blank')} className="rounded-button github-button">GitHub repository</button>
-            )}
-          </div>
-        </div>
-        <div className="slideshow-controls">
-          <button className="left-button" onClick={() => changeSlide('left')}>&lt;</button>
-          <button className="right-button" onClick={() => changeSlide('right')}>&gt;</button>
-        </div>
+    <div className="events-page">
+      <div className="sidebar">
+        {events.map((event) => (
+          <button
+            key={event.id}
+            className="sidebar-button"
+            onClick={() => navigate(`/events/${event.id}`)}
+          >
+            {event.title}
+          </button>
+        ))}
       </div>
-      <div style={{ marginBottom: '100px' }}></div>
+      <div className="main-content">
+        {currentEvent && (
+          <div className={`event-item ${animation}`}>
+            <div className="event-title">{currentEvent.title}</div>
+            <div className="event-description">{currentEvent.description}</div>
+            <img
+              src={currentEvent.presentationImage}
+              alt="Talk Presentation"
+              className="event-image"
+              onClick={() => handleImageClick(currentEvent.presentationImage)} // Added click handler
+            />
+            <div className="event-buttons">
+              {currentEvent.posterPDF && (
+                <button className="rounded-button poster-button" onClick={() => handlePdfButtonClick(currentEvent.posterPDF, 'Poster')}>Poster</button>
+              )}
+              {currentEvent.presentationPDF && (
+                <button className="rounded-button presentation-button" onClick={() => handlePdfButtonClick(currentEvent.presentationPDF, 'Presentation')}>Presentation</button>
+              )}
+              {currentEvent.reportPDF && (
+                <button className="rounded-button report-button" onClick={() => handlePdfButtonClick(currentEvent.reportPDF, 'Report')}>Report</button>
+              )}
+              {currentEvent.githubRepo && (
+                <button onClick={() => window.open(currentEvent.githubRepo, '_blank')} className="rounded-button github-button">GitHub repository</button>
+              )}
+            </div>
+          </div>
+        )}
+      </div>
     </div>
   );
 };

@@ -3,9 +3,9 @@ import { FiDownload } from 'react-icons/fi';
 import { useLocation } from 'react-router-dom';
 import Flag from 'react-world-flags';
 
-import './CV_Page.css';
+import './CVPage.css';
 
-const CV_Page = () => {
+const CVPage = () => {
     const [language, setLanguage] = useState('english');
     const [pdfUrl, setPdfUrl] = useState('');
     const location = useLocation();
@@ -66,4 +66,4 @@ const CV_Page = () => {
     );
 };
 
-export default CV_Page;
+export default CVPage;

@@ -1,11 +1,44 @@
-.events-container {
-  position: relative;
+.events-page {
   display: flex;
-  justify-content: center;
-  align-items: flex-start;
-  margin: 0 auto;
-  max-width: 1200px;
-  overflow: hidden;
+  height: 90vh; /* Adjust the height of the page to the height of the viewport */
+}
+
+.sidebar {
+  flex: 0 0 200px; /* Fixed width for the sidebar */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center; /* Center vertically */
+  padding-top: 50px;
+  background-color: #f2f2f2;
+  border-right: 1px solid #ddd;
+  height: 100%;
+}
+
+.sidebar-button {
+  padding: 10px 20px;
+  margin: 10px 0;
+  width: 100%;
+  text-align: center;
+  border: none;
+  background-color: #ffffff;
+  color: #000000;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.sidebar-button:hover {
+  background-color: #ddd;
+}
+
+.main-content {
+  flex: 1;
+  display: flex;
+  align-items: center; /* Center vertically */
+  justify-content: center; /* Center horizontally */
+  padding: 20px;
+  overflow-y: auto;
 }
 
 .event-item {
@@ -16,15 +49,16 @@
   border-radius: 10px;
   background-color: #fff;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  transition: transform 0.5s, opacity 0.5s, box-shadow 0.3s; /* Added box-shadow transition */
-  min-width: 100%;
+  transition: transform 0.5s, opacity 0.5s, box-shadow 0.3s;
+  max-width: 100%; /* Adjusts max width */
+  max-height: 80vh; /* Adjusts max height to keep content visible */
+  overflow: auto; /* Allows internal scrolling if content exceeds height */
 }
 
 .event-item:hover {
-  transform: translateY(-5px); /* Matches the transform on hover for work-experience-card */
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Matches the box-shadow on hover for work-experience-card */
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
-
 
 .event-item.enter-left {
   transform: translateX(-100%);
@@ -66,19 +100,22 @@
 }
 
 .event-image {
-  width: auto; /* Allow the width to adjust according to the image's aspect ratio */
-  height: auto; /* Allow the height to adjust according to the image's aspect ratio */
-  max-width: 100%; /* Set maximum width to ensure responsiveness */
-  max-height: 400px; /* Set maximum height */
-  margin: 0 auto; /* Center the image horizontally */
+  width: auto;
+  height: auto;
+  max-width: 80%; /* Increase the maximum width of the image */
+  max-height: 50vh; /* Increase the maximum height of the image */
+  margin: 0 auto;
   margin-bottom: 20px;
-  border-radius: 10px; /* Make the corners rounded */
+  border-radius: 10px;
 }
+
 
 .event-buttons {
   display: flex;
-  justify-content: center;
-  gap: 10px; /* Add some space between the buttons */
+  flex-direction: row; /* Align buttons horizontally */
+  justify-content: center; /* Center buttons horizontally */
+  gap: 10px; /* Space between buttons */
+  margin-top: 20px; /* Space above the button container */
 }
 
 .rounded-button {
@@ -94,34 +131,4 @@
 
 .rounded-button:hover {
   background-color: #dcdcdc;
-}
-
-.slideshow-controls {
-  position: absolute;
-  bottom: 20px;
-  left: 0;
-  right: 0;
-  display: flex;
-  justify-content: center;
-}
-
-.slideshow-controls button {
-  padding: 10px 20px;
-  margin: 0 5px;
-  border-radius: 5px;
-  font-size: 18px;
-}
-
-.left-button {
-  position: fixed;
-  left: 0;
-  top: 50%;
-  transform: translateY(-50%);
-}
-
-.right-button {
-  position: fixed;
-  right: 0;
-  top: 50%;
-  transform: translateY(-50%);
 }
