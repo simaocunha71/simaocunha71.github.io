@@ -54,13 +54,13 @@ const Events = () => {
 
   useEffect(() => {
     if (!eventId) {
-      navigate(`/events/sustrainable-coimbra-2023`);
+      navigate(`/events/cerciras-training-school-2024`);
     } else {
       const eventIndex = events.findIndex(event => event.id === eventId);
       if (eventIndex !== -1) {
         setCurrentSlide(eventIndex);
       } else {
-        navigate(`/events/sustrainable-coimbra-2023`);
+        navigate(`/events/cerciras-training-school-2024`);
       }
     }
   }, [eventId, events, navigate]);

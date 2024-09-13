@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import './AcademicProjects.css';
+import '../Certificates/Certificates.css';
 
 //TDS documents
 import TDS_presentationPDF from '../../assets/docs/TDS_Entrega_PI_93262_93168_Apresentacao.pdf';
@@ -449,9 +450,9 @@ const AcademicProjects = () => {
 
 
         
-        <div className="event-item">
-          <div className="event-title">Informatics Engineering Project</div>
-          <div className="event-description">
+        <div className="certificate-item">
+          <div className="certificate-title">Informatics Engineering Project</div>
+          <div className="certificate-description">
             This project involved creating dashboards using WyScout API data in Microsoft PowerBI for Sporting Clube de Braga. 
             Below are some of the pages created in the project:
           </div>
@@ -467,16 +468,18 @@ const AcademicProjects = () => {
               </button>
 
             </div>
-            <div style={{ marginTop: '20px' }}></div>
+            <div style={{ marginBottom: '20px' }}></div>
 
-          <div className="event-buttons">
+          <div className="certificate-buttons">
             <a href="https://github.com/realRunlo/BragaScoutingPlatform" className="rounded-button">Github repository</a>
           </div>
+
+          <div style={{ marginBottom: '20px' }}></div>
         </div>
 
-        <div className="event-item">
-          <div className="event-title">Master's Dissertation in Informatics Engineering</div>
-          <div className="event-description">
+        <div className="certificate-item">
+          <div className="certificate-title">Master's Dissertation in Informatics Engineering</div>
+          <div className="certificate-description">
             This dissertation details the creation of a platform designed for evaluating Large Language Models
             (LLMs) through benchmarking coding tasks using well-known datasets such as Human-Eval. The primary
             goal of this platform is to assess the effectiveness and energy efficiency of LLMs in addressing diverse
@@ -489,10 +492,11 @@ const AcademicProjects = () => {
             dissertation actively contributes to the progression of both efficient and sustainable software development
             practices.
           </div>
-          <div className="event-buttons">
+          <div className="certificate-buttons">
             <a href={RPD_reportPDF} className="rounded-button">Preliminary Dissertation Report (PDR)</a>
             <a href={RPD_presentationPDF} className="rounded-button">PDR Presentation</a>
           </div>
+          <div style={{ marginBottom: '20px' }}></div>
         </div>
         </>
       )}

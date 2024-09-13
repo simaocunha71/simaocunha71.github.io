@@ -1,42 +1,14 @@
+/* Estilos gerais */
 .events-page {
   display: flex;
-  height: 90vh; /* Adjust the height of the page to the height of the viewport */
-}
-
-.sidebar {
-  flex: 0 0 200px; /* Fixed width for the sidebar */
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center; /* Center vertically */
-  padding-top: 50px;
-  background-color: #f2f2f2;
-  border-right: 1px solid #ddd;
-  height: 100%;
-}
-
-.sidebar-button {
-  padding: 10px 20px;
-  margin: 10px 0;
-  width: 100%;
-  text-align: center;
-  border: none;
-  background-color: #ffffff;
-  color: #000000;
-  font-weight: bold;
-  cursor: pointer;
-  transition: background-color 0.3s;
-}
-
-.sidebar-button:hover {
-  background-color: #ddd;
+  height: 90vh; /* Ajusta a altura da página para ocupar a altura da viewport */
 }
 
 .main-content {
   flex: 1;
   display: flex;
-  align-items: center; /* Center vertically */
-  justify-content: center; /* Center horizontally */
+  align-items: center;
+  justify-content: center;
   padding: 20px;
   overflow-y: auto;
 }
@@ -50,9 +22,9 @@
   background-color: #fff;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   transition: transform 0.5s, opacity 0.5s, box-shadow 0.3s;
-  max-width: 100%; /* Adjusts max width */
-  max-height: 80vh; /* Adjusts max height to keep content visible */
-  overflow: auto; /* Allows internal scrolling if content exceeds height */
+  max-width: 100%; /* Ajusta a largura máxima */
+  max-height: 80vh; /* Ajusta a altura máxima */
+  overflow: auto; /* Permite rolagem interna se o conteúdo ultrapassar a altura */
 }
 
 .event-item:hover {
@@ -102,20 +74,19 @@
 .event-image {
   width: auto;
   height: auto;
-  max-width: 80%; /* Increase the maximum width of the image */
-  max-height: 50vh; /* Increase the maximum height of the image */
+  max-width: 80%; /* Aumenta a largura máxima da imagem */
+  max-height: 50vh; /* Aumenta a altura máxima da imagem */
   margin: 0 auto;
   margin-bottom: 20px;
   border-radius: 10px;
 }
 
-
 .event-buttons {
   display: flex;
-  flex-direction: row; /* Align buttons horizontally */
-  justify-content: center; /* Center buttons horizontally */
-  gap: 10px; /* Space between buttons */
-  margin-top: 20px; /* Space above the button container */
+  flex-direction: row; /* Alinha os botões horizontalmente */
+  justify-content: center; /* Centraliza os botões horizontalmente */
+  gap: 10px; /* Espaçamento entre os botões */
+  margin-top: 20px; /* Espaçamento acima dos botões */
 }
 
 .rounded-button {
@@ -123,7 +94,7 @@
   padding: 8px 16px;
   border-radius: 20px;
   background-color: #f2f2f2;
-  color: #000000;
+  color: #000;
   text-decoration: none;
   font-weight: bold;
   transition: background-color 0.3s;
@@ -131,4 +102,103 @@
 
 .rounded-button:hover {
   background-color: #dcdcdc;
+}
+
+/* Estilos para desktop - mantém a sidebar visível */
+.sidebar {
+  flex: 0 0 200px; /* Largura fixa da sidebar em ecrãs maiores */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center; /* Centraliza verticalmente */
+  padding-top: 50px;
+  background-color: #f2f2f2;
+  border-right: 1px solid #ddd;
+  height: 100%;
+}
+
+.sidebar-button {
+  padding: 10px 20px;
+  margin: 10px 0;
+  width: 100%;
+  text-align: center;
+  border: none;
+  background-color: #ffffff;
+  color: #000000;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.sidebar-button:hover {
+  background-color: #ddd;
+}
+
+/* Estilos para dispositivos móveis */
+@media (max-width: 768px) {
+  .events-page {
+    flex-direction: column; /* Sidebar em coluna com conteúdo */
+  }
+
+  .sidebar {
+    display: flex;
+    flex-direction: row;
+    width: auto;
+    max-width: 100%;
+    max-height: 20%;
+    padding-left: 200px;
+    padding-bottom: 20px;
+    overflow-x: auto;
+    white-space: nowrap;
+    background-color: #f2f2f2;
+    border-bottom: 1px solid #ddd;
+    box-sizing: border-box;
+    align-items: center;
+    scroll-snap-type: x mandatory;
+  }
+
+  .sidebar-button {
+    flex: 0 0 auto;
+    width: 180px;
+    height: 60px; /* Altura dos botões */
+    padding: 5px 10px;
+    margin: 0 5px;
+    text-align: center;
+    box-sizing: border-box;
+    white-space: normal;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    scroll-snap-align: start;
+    font-size: 14px;
+  }
+
+  .event-buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .event-buttons .rounded-button {
+    width: calc(50% - 10px); /* Largura dos botões com espaçamento */
+    margin: 5px 0; /* Margem para separar os botões verticalmente */
+  }
+
+  .event-buttons::before {
+    content: "";
+    flex: 0 0 50%; /* Cria um espaço flexível para acomodar os botões em duas linhas */
+  }
+
+  .event-buttons::after {
+    content: "";
+    flex: 0 0 50%; /* Cria um espaço flexível para acomodar os botões em duas linhas */
+  }
+
+  .main-content {
+    padding-top: 150px;
+
+  }
 }
