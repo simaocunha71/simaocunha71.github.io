@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { FaBriefcase, FaCalendarAlt, FaFileAlt, FaLightbulb, FaCode, FaProjectDiagram, FaCogs, FaRocket, FaBook, FaAward, FaBars } from 'react-icons/fa';
+import { FaBriefcase, FaCalendarAlt, FaFileAlt, FaLightbulb, FaCode, FaBook, FaAward, FaBars } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
 import './Toolbar.css';
 

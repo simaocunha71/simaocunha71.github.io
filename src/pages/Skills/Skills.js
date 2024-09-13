@@ -1,6 +1,6 @@
 import React from 'react';
 import { FaReact, FaNodeJs, FaGithub, FaDocker, FaCloud } from 'react-icons/fa';
-import { FaRobot, FaBrain, FaLeaf, FaRecycle, FaImage, FaEye, FaCogs } from 'react-icons/fa';
+import { FaRobot, FaBrain, FaRecycle, FaImage, FaEye } from 'react-icons/fa';
 
 import { DiJava, DiPython, DiHaskell, DiProlog } from 'react-icons/di';
 import { SiMysql, SiPowerbi, SiAnsible, SiJavascript } from 'react-icons/si';
