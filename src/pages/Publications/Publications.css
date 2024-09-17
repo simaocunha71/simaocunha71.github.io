@@ -1,0 +1,90 @@
+.publications-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+}
+
+h1 {
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.publications-list {
+    list-style-type: none;
+    margin-top: 75px;
+    width: 100%;
+    max-width: 1000px; /* Increased width for publication items */
+}
+
+.publication-item {
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+    margin: 20px 10px;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+    overflow: hidden;
+}
+
+.publication-item:hover {
+    transform: translateY(-5px);
+}
+
+.publication-content {
+    padding: 20px;
+    text-align: left; /* Align text to the left */
+}
+
+.publication-title {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.paragraph-indent {
+    text-indent: 2em; /* Ajuste o valor conforme necessário */
+  }
+  
+  
+.publication-description {
+    font-size: 16px;
+    margin-bottom: 20px;
+    color: #666;
+}
+
+.publication-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.citation, .abstract {
+    margin-top: 10px;
+    border-top: 1px solid #ddd;
+    padding-top: 10px;
+}
+
+.citation h3, .abstract h3 {
+    margin-bottom: 10px;
+}
+
+.rounded-button {
+    display: inline-block;
+    padding: 8px 16px;
+    border-radius: 20px;
+    background-color: #f2f2f2;
+    color: #000000;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s;
+    border: none;
+    cursor: pointer;
+}
+
+.rounded-button:hover {
+    background-color: #dcdcdc;
+}
