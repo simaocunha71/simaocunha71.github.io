@@ -31,7 +31,6 @@ const CVPage = () => {
 
     return (
         <>
-            <div style={{ marginBottom: '45px' }}></div>
             <div className="cv-wrapper">
                 <div className="cv-buttons">
                     <div className="language-buttons">
@@ -56,12 +55,11 @@ const CVPage = () => {
                     <iframe 
                         src={pdfUrl} 
                         title="CV" 
-                        style={{ width: '100%', height: '85vh', border: 'none' }}
+                        style={{ width: '100%', height: '150vh', border: 'none' }}
                         frameBorder="0"
                     ></iframe>
                 </div>
             </div>
-            <div style={{ marginBottom: '0px' }}></div>
         </>
     );
 };

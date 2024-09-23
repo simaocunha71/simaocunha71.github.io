@@ -96,7 +96,20 @@ const Certificates = () => {
         </div>
       </div>
 
-      <div style={{ marginBottom: '100px' }}></div>
+      <br></br>
+      <br></br>
+      <br></br>
+      <br></br>
+      <br></br>
+      <br></br>
+      <br></br>
+      <br></br>
+      <br></br>
+      <br></br>
+      <br></br>
+      <br></br>
+      <br></br>
+      <br></br>
     </>
   );
 };

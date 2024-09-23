@@ -1,7 +1,3 @@
-.work-experience-wrapper {
-  margin-bottom: 50px; /* Margem inferior para o wrapper */
-}
-
 .work-experience-list {
   display: flex;
   flex-direction: column;

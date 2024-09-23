@@ -52,7 +52,7 @@ const AcademicProjects = () => {
   };
 
   return (
-    <div style={{ marginTop: '70px' }}>
+    <div style={{ marginTop: '30px' }}>
 
       <div className="button-container_ap">
         {/* Buttons for each year */}
@@ -68,6 +68,13 @@ const AcademicProjects = () => {
         {/* Table for 1st year */}
         {activeYear === '1st' && (
           <>
+        <br></br>
+        <br></br>
+        <br></br>
+        <br></br>
+        <br></br>
+        <br></br>
+
             <h3 class="custom-indent">Bachelor's 1st year</h3>
 
 
@@ -113,11 +120,36 @@ const AcademicProjects = () => {
             </tr>
           </tbody>
         </table>
+
+        <br></br>
+        <br></br>
+        <br></br>
+        <br></br>
+        <br></br>
+        <br></br>
+        <br></br>
+        <br></br>
+        <br></br>
+        <br></br>
+        <br></br>
+        <br></br>
+        <br></br>
+        <br></br>
+        <br></br>
+        <br></br>
+
           </>
         )}
 
         {activeYear === '2nd' && (
           <>
+        <br></br>
+        <br></br>
+        <br></br>
+        <br></br>
+        <br></br>
+        <br></br>
+        
           <h3 class="custom-indent">Bachelor's 2nd year</h3>
         <table className="project-table">
           <thead>
@@ -173,6 +205,20 @@ const AcademicProjects = () => {
             </tr>
           </tbody>
         </table>
+        <br></br>
+        <br></br>
+        <br></br>
+        <br></br>
+        <br></br>
+        <br></br>
+        <br></br>
+        <br></br>
+        <br></br>
+        <br></br>
+        <br></br>
+        <br></br>
+        <br></br>
+
           </>
         )}
 
@@ -279,6 +325,10 @@ const AcademicProjects = () => {
             </tr>
           </tbody>
         </table>
+        <br></br>
+        <br></br>
+        <br></br>
+
           </>
         )}
 
@@ -441,6 +491,8 @@ const AcademicProjects = () => {
           </tr>
         </tbody>
       </table>
+      <div style={{ marginBottom: '-30px' }}></div>
+
           </>
         )}
 
@@ -498,6 +550,7 @@ const AcademicProjects = () => {
           </div>
           <div style={{ marginBottom: '20px' }}></div>
         </div>
+        <div style={{ marginBottom: '-20px' }}></div>
         </>
       )}
       {activeYear === 'Other' && (
@@ -527,9 +580,20 @@ const AcademicProjects = () => {
               <a href="https://github.com/simaobarroso/hackthon-bugsbyte" className="rounded-button">Github repository</a>
             </div>
           </div>
+          <br></br>
+        <br></br>
+        <br></br>
+        <br></br>
+        <br></br>
+        <br></br>
+        <br></br>
+        <br></br>
+        <br></br>
+
         </>
+        
       )}
-      <div style={{ marginBottom: '100px' }}></div>
+      <div style={{ marginBottom: '50px' }}></div>
     </div>
   );
 };

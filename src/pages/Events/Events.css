@@ -1,7 +1,7 @@
 /* Estilos gerais */
 .events-page {
   display: flex;
-  height: 90vh; /* Ajusta a altura da página para ocupar a altura da viewport */
+  height: 89.5vh; /* Ajusta a altura da página para ocupar a altura da viewport */
 }
 
 .main-content {
@@ -112,7 +112,7 @@
   align-items: center;
   justify-content: center; /* Centraliza verticalmente */
   padding-top: 50px;
-  background-color: #f2f2f2;
+  background-color: #ffffff;
   border-right: 1px solid #ddd;
   height: 100%;
 }
@@ -150,7 +150,7 @@
     padding-bottom: 20px;
     overflow-x: auto;
     white-space: nowrap;
-    background-color: #f2f2f2;
+    background-color: #ffffff;
     border-bottom: 1px solid #ddd;
     box-sizing: border-box;
     align-items: center;
