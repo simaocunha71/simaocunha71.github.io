@@ -1,6 +1,5 @@
 import React from 'react';
 import './Home.css';
-import coverImage from '../../assets/profile_image.jpeg';
 import { FaLinkedin, FaGithub, FaEnvelope } from 'react-icons/fa';
 
 const Home = () => {
@@ -15,7 +14,7 @@ const Home = () => {
   return (
     <div className="home-container">
       <div className="image-container">
-        <img src={coverImage} alt="Profile" className="cover-image" />
+        <img src={"assets/profile_image.jpeg"} alt="Profile" className="cover-image" />
       </div>
       <div className="content-container">
         <p className="description">{description}</p>

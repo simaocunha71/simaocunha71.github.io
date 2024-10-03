@@ -2,13 +2,6 @@ import React from 'react';
 import { Document, Page, pdfjs } from 'react-pdf';
 import './Certificates.css';
 
-// PDFs
-import english_certificate from '../../assets/docs/certificates/English_C1_Simao_Cunha.pdf';
-import sustrainable_attendence from '../../assets/docs/certificates/Sustrainable_Attendence_certificate.pdf';
-import sustrainable_students from '../../assets/docs/certificates/Sustrainable_Students_Workshop_certificate.pdf';
-import UOD_Pitch from '../../assets/docs/certificates/UMinhoOpenDays_Pitch.pdf';
-import UOD_Poster from '../../assets/docs/certificates/UMinhoOpenDays_Poster.pdf';
-
 // Ensure pdfjs worker is set correctly
 pdfjs.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.min.js`;
 
@@ -32,7 +25,7 @@ const Certificates = () => {
             Obtained from BabeliUM organization - from October 2021 to February 2022
           </div>
           <div className="certificate-buttons">
-            <button className="rounded-button" onClick={() => handlePdfButtonClick(english_certificate)}>
+            <button className="rounded-button" onClick={() => handlePdfButtonClick("assets/docs/certificates/English_C1_Simao_Cunha.pdf")}>
               Open PDF Certificate
             </button>
           </div>
@@ -54,10 +47,10 @@ const Certificates = () => {
             Obtained from the University of Coimbra - from July 11, 2023 to July 14, 2023
           </div>
           <div className="certificate-buttons">
-            <button className="rounded-button" onClick={() => handlePdfButtonClick(sustrainable_attendence)}>
+            <button className="rounded-button" onClick={() => handlePdfButtonClick("assets/docs/certificates/Sustrainable_Attendence_certificate.pdf")}>
               Attendance Certificate
             </button>
-            <button className="rounded-button" onClick={() => handlePdfButtonClick(sustrainable_students)}>
+            <button className="rounded-button" onClick={() => handlePdfButtonClick("assets/docs/certificates/Sustrainable_Students_Workshop_certificate.pdf")}>
               Students Workshop and Poster Session Certificate
             </button>
           </div>
@@ -79,10 +72,10 @@ const Certificates = () => {
             Obtained from the University of Minho - January 2024
           </div>
           <div className="certificate-buttons">
-            <button className="rounded-button" onClick={() => handlePdfButtonClick(UOD_Pitch)}>
+            <button className="rounded-button" onClick={() => handlePdfButtonClick("assets/docs/certificates/UMinhoOpenDays_Pitch.pdf")}>
               Pitch Certificate
             </button>
-            <button className="rounded-button" onClick={() => handlePdfButtonClick(UOD_Poster)}>
+            <button className="rounded-button" onClick={() => handlePdfButtonClick("assets/docs/certificates/UMinhoOpenDays_Poster.pdf")}>
               Poster Certificate
             </button>
           </div>

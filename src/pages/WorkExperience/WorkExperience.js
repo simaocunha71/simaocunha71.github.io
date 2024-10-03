@@ -2,8 +2,6 @@ import React from 'react';
 import './WorkExperience.css';
 import { FaCalendarAlt, FaBuilding, FaTools } from 'react-icons/fa'; // Importa os ícones necessários
 
-import accentureLogo from '../../assets/icons/accenture.png'; // Logos existentes
-import boschLogo from '../../assets/icons/bosch.png';
 
 const workExperiences = [
   {
@@ -15,7 +13,7 @@ const workExperiences = [
       Data Fusion instance creation and uploading a JSON file with a custom pipeline configuration using a Cloud Build file written in YAML
       Agile Scrum methodology applied during the entire internship`,
     keywords: ['Google Cloud Platform', 'Agile Scrum'],
-    logo: accentureLogo, // Utiliza os logos existentes
+    logo: "assets/icons/accenture.png", // Utiliza os logos existentes
   },
   {
     company: 'Bosch Portugal',
@@ -28,7 +26,7 @@ const workExperiences = [
       Contributed to internal software development projects.
       Gained foundational knowledge in computer vision.`,
     keywords: ['Machine Learning', 'Deep Learning', 'Image Processing', 'Computer Vision'],
-    logo: boschLogo, // Utiliza os logos existentes
+    logo: "assets/icons/bosch.png", // Utiliza os logos existentes
   },
   // Adicione mais experiências de trabalho conforme necessário
 ];

@@ -2,26 +2,6 @@ import React, { useState } from 'react';
 import './AcademicProjects.css';
 import '../Certificates/Certificates.css';
 
-//TDS documents
-import TDS_presentationPDF from '../../assets/docs/TDS_Entrega_PI_93262_93168_Apresentacao.pdf';
-import TDS_reportPDF from '../../assets/docs/TDS_Entrega_PI_93262_93168_Relatorio.pdf';
-
-//PEI documents
-import PEI_competicao from '../../assets/docs/PEI/competicao.png';
-import PEI_competicoes from '../../assets/docs/PEI/competicoes.png';
-import PEI_jogador from '../../assets/docs/PEI/jogador.png';
-import PEI_jogo from '../../assets/docs/PEI/jogo.png';
-import PEI_equipa from '../../assets/docs/PEI/equipa.png';
-import PEI_filter from '../../assets/docs/PEI/filter.png';
-
-//RPD documents
-import RPD_presentationPDF from '../../assets/docs/apresentacao_rpd.pdf';
-import RPD_reportPDF from '../../assets/docs/rpd.pdf';
-
-//Hackathon Bugsbyte images
-import HB2024_main from '../../assets/docs/hackathon_bugsbyte_2024/mainpage.png';
-import HB2024_list from '../../assets/docs/hackathon_bugsbyte_2024/listevents.png';
-import HB2024_eventpage from '../../assets/docs/hackathon_bugsbyte_2024/eventpage.png';
 
 const AcademicProjects = () => {
   // State variables to manage table visibility for each year
@@ -38,8 +18,10 @@ const AcademicProjects = () => {
     window.open(imageUrl, '_blank');
   };
 
-  const images = [PEI_competicoes, PEI_competicao, PEI_jogador, PEI_jogo, PEI_equipa, PEI_filter];
-  const hackathonImages = [HB2024_main, HB2024_list, HB2024_eventpage];
+  const images = ["assets/docs/PEI/competicoes.png", "assets/docs/PEI/competicao.png", "assets/docs/PEI/jogador.png",
+                   "assets/docs/PEI/jogo.png", "assets/docs/PEI/equipa.png", "assets/docs/PEI/filter.png"];
+  const hackathonImages = ["assets/docs/hackathon_bugsbyte_2024/mainpage.png", "assets/docs/hackathon_bugsbyte_2024/listevents.png",
+                            "assets/docs/hackathon_bugsbyte_2024/eventpage.png"];
 
   const [currentIndex, setCurrentIndex] = useState(0);
 
@@ -439,8 +421,8 @@ const AcademicProjects = () => {
             </td>
             <td>
                 <a href="https://github.com/LuisMPSilva01/BraGuia" className="rounded-button">Projects</a>
-                <a href= {TDS_reportPDF} className="rounded-button">Investigation Project Report</a>
-                <a href= {TDS_presentationPDF} className="rounded-button">Investigation Project Presentation</a>
+                <a href= {"assets/docs/TDS_Entrega_PI_93262_93168_Relatorio.pdf"} className="rounded-button">Investigation Project Report</a>
+                <a href= {"assets/docs/TDS_Entrega_PI_93262_93168_Apresentacao.pdf"} className="rounded-button">Investigation Project Presentation</a>
             </td>
           </tr>
           <tr>
@@ -545,8 +527,8 @@ const AcademicProjects = () => {
             practices.
           </div>
           <div className="certificate-buttons">
-            <a href={RPD_reportPDF} className="rounded-button">Preliminary Dissertation Report (PDR)</a>
-            <a href={RPD_presentationPDF} className="rounded-button">PDR Presentation</a>
+            <a href={"assets/docs/rpd.pdf"} className="rounded-button">Preliminary Dissertation Report (PDR)</a>
+            <a href={"assets/docs/apresentacao_rpd.pdf"} className="rounded-button">PDR Presentation</a>
           </div>
           <div style={{ marginBottom: '20px' }}></div>
         </div>
