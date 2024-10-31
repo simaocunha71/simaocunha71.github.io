@@ -505,7 +505,7 @@ const AcademicProjects = () => {
             <div style={{ marginBottom: '20px' }}></div>
 
           <div className="certificate-buttons">
-            <a href="https://github.com/realRunlo/BragaScoutingPlatform" className="rounded-button">Github repository</a>
+            <a href="https://github.com/realRunlo/BragaScoutingPlatform" className="rounded-button">Github Repository</a>
           </div>
 
           <div style={{ marginBottom: '20px' }}></div>
@@ -514,21 +514,19 @@ const AcademicProjects = () => {
         <div className="certificate-item">
           <div className="certificate-title">Master's Dissertation in Informatics Engineering</div>
           <div className="certificate-description">
-            This dissertation details the creation of a platform designed for evaluating Large Language Models
-            (LLMs) through benchmarking coding tasks using well-known datasets such as Human-Eval. The primary
-            goal of this platform is to assess the effectiveness and energy efficiency of LLMs in addressing diverse
-            challenges, with a specific focus on code generation and software development. The document thoroughly
-            examines the project's context, motivation, and objectives, emphasizing the transformative influence of
-            LLMs like GPT-4 and LLAMA-2 on the field of software development. Furthermore, it delves into the
-            challenges posed by the energy consumption of LLMs when represented as quantized models, analyzing
-            their size and weight differences. This exploration underscores the fundamental principles of sustainability
-            within software engineering. Through an extensive analysis of the performance of existing LLMs, this
-            dissertation actively contributes to the progression of both efficient and sustainable software development
-            practices.
-          </div>
-          <div className="certificate-buttons">
+          This dissertation presents the development of a comprehensive platform for evaluating Large Language Models (LLMs) through benchmarking coding tasks with established datasets, including HumanEval-X, MBPP+, and CyberSecEval. The primary objective of this platform is to assess not only the effectiveness, energy efficiency and runtime of LLMs in generating code but also their security implications in software development scenarios. By focusing on these critical aspects, the research aims to provide insights into the practical applications of LLMs in various programming contexts.
+          <div className="certificate-description">
+          The document thoroughly explores the project's context, motivation, and objectives, emphasizing the transformative influence of advanced LLMs, such as GPT-4 and Llama-2, on the software development landscape. It delves into the challenges associated with the energy consumption of LLMs, particularly when represented as quantized models, analysing their performance and resource requirements across different programming languages and prompting techniques (0-shot and 3-shot).
+          <div className="certificate-description">
+          Moreover, the research highlights the findings from the CyberSecEval benchmark, which evaluates the security of generated code, revealing vulnerabilities inherent in the outputs of various LLMs. This underscores the critical need to consider security alongside energy efficiency and execution time when selecting an LLM for software development.
+          <div className="certificate-description">
+          Through an extensive analysis of LLM performance metrics, including functional correctness and code quality, this dissertation contributes to the advancement of sustainable software engineering practices. By prioritizing sustainability and security in LLM deployment, it offers a complete approach to software development that aligns with the evolving principles of eco-friendly practices in technology.
+          </div></div></div></div>
+          <div className="certificate-buttons" >
             <a href={"assets/docs/rpd.pdf"} className="rounded-button">Preliminary Dissertation Report (PDR)</a>
             <a href={"assets/docs/apresentacao_rpd.pdf"} className="rounded-button">PDR Presentation</a>
+            <a href={"assets/docs/dissertation.pdf"} className="rounded-button">Dissertation</a>
+            <a href="https://github.com/simaocunha71/msc-thesis" className="rounded-button">Github Repository</a>
           </div>
           <div style={{ marginBottom: '20px' }}></div>
         </div>
