@@ -514,13 +514,28 @@ const AcademicProjects = () => {
         <div className="certificate-item">
           <div className="certificate-title">Master's Dissertation in Informatics Engineering</div>
           <div className="certificate-description">
-          This dissertation presents the development of a comprehensive platform for evaluating Large Language Models (LLMs) through benchmarking coding tasks with established datasets, including HumanEval-X, MBPP+, and CyberSecEval. The primary objective of this platform is to assess not only the effectiveness, energy efficiency and runtime of LLMs in generating code but also their security implications in software development scenarios. By focusing on these critical aspects, the research aims to provide insights into the practical applications of LLMs in various programming contexts.
+          This dissertation presents the development of a comprehensive platform for evaluating Large Language
+Models (LLMs) through benchmarking coding tasks with established datasets, including HumanEval-X,
+MBPP+, and CyberSecEval. The primary objective of this platform is to assess not only the effectiveness,
+energy efficiency and runtime of LLMs in generating code but also their security implications in software
+development scenarios. By focusing on these critical aspects, the research aims to provide insights into
+the practical applications of LLMs in various programming contexts
           <div className="certificate-description">
-          The document thoroughly explores the project's context, motivation, and objectives, emphasizing the transformative influence of advanced LLMs, such as GPT-4 and Llama-2, on the software development landscape. It delves into the challenges associated with the energy consumption of LLMs, particularly when represented as quantized models, analysing their performance and resource requirements across different programming languages and prompting techniques (0-shot and 3-shot).
+          The document thoroughly explores the project’s context, motivation, and objectives, emphasizing the
+transformative influence of advanced LLMs, such as GPT-4 and Llama-2, on the software development
+landscape. It investigates the challenges associated with the energy consumption of LLMs, particularly
+when represented as quantized models - simplified (and smaller) models that are easier to run on hardware with limited resources - analysing their performance and resource requirements across different
+programming languages and prompt engineering techniques
           <div className="certificate-description">
-          Moreover, the research highlights the findings from the CyberSecEval benchmark, which evaluates the security of generated code, revealing vulnerabilities inherent in the outputs of various LLMs. This underscores the critical need to consider security alongside energy efficiency and execution time when selecting an LLM for software development.
+          Moreover, the research highlights the findings from the CyberSecEval benchmark, which evaluates
+the security of generated code, revealing vulnerabilities inherent in the outputs of various LLMs. This
+underscores the critical need to consider security alongside energy efficiency and execution time when
+selecting an LLM for software development.
           <div className="certificate-description">
-          Through an extensive analysis of LLM performance metrics, including functional correctness and code quality, this dissertation contributes to the advancement of sustainable software engineering practices. By prioritizing sustainability and security in LLM deployment, it offers a complete approach to software development that aligns with the evolving principles of eco-friendly practices in technology.
+          Through an extensive analysis of LLM performance metrics, including functional correctness and code
+quality, this dissertation contributes to the advancement of sustainable software engineering practices.
+By prioritizing sustainability and security in LLM deployment, it offers a complete approach to software
+development that follows the recent, but important, sustainable principles in software development.
           </div></div></div></div>
           <div className="certificate-buttons" >
             <a href={"assets/docs/rpd.pdf"} className="rounded-button">Preliminary Dissertation Report (PDR)</a>
