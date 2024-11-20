@@ -1,0 +1,155 @@
+.msc-thesis-container {
+    text-align: center;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+  }
+  
+  .pdf-buttons {
+    margin: 20px 0;
+  }
+  
+  .pdf-button {
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 15px;
+    margin: 5px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    text-decoration: none;
+  }
+  
+  .pdf-button:hover {
+    background-color: #45a049;
+  }
+  
+  .filter-bar {
+    margin: 20px 0;
+  }
+  
+  .filter-button {
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px 15px;
+    margin: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s, color 0.3s;
+  }
+  
+  .filter-button.active {
+    background-color: #007bff;
+    color: #fff;
+    border-color: #007bff;
+  }
+  
+  .filter-button:hover {
+    background-color: #0056b3;
+    color: #fff;
+  }
+  
+  .image-display {
+    margin-top: 30px;
+  }
+  
+  .selected-image {
+    max-width: 100%;
+    height: auto;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .image-title {
+    margin-top: 10px;
+    font-size: 16px;
+    font-weight: bold;
+  }
+  
+  .category-bar {
+    margin: 20px 0;
+  }
+  
+  .category-button {
+    background-color: #e0e0e0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px 15px;
+    margin: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s, color 0.3s;
+  }
+  
+  .category-button.active {
+    background-color: #007bff;
+    color: #fff;
+    border-color: #007bff;
+  }
+  
+  .category-button:hover {
+    background-color: #0056b3;
+    color: #fff;
+  }
+  
+  .prompting-bar {
+    margin: 20px 0;
+  }
+  
+  .prompting-button {
+    background-color: #e0e0e0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px 15px;
+    margin: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s, color 0.3s;
+  }
+  
+  .prompting-button.active {
+    background-color: #007bff;
+    color: #fff;
+    border-color: #007bff;
+  }
+  
+  .prompting-button:hover {
+    background-color: #0056b3;
+    color: #fff;
+  }
+  
+  .sanitization-bar {
+    margin: 20px 0;
+  }
+  
+  .sanitization-button {
+    background-color: #e0e0e0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px 15px;
+    margin: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s, color 0.3s;
+  }
+  
+  .sanitization-button.active {
+    background-color: #007bff;
+    color: #fff;
+    border-color: #007bff;
+  }
+  
+  .sanitization-button:hover {
+    background-color: #0056b3;
+    color: #fff;
+  }
+  
+  .text-description {
+    font-size: 16px;
+    margin-bottom: 20px;
+    color: #666;
+    text-indent: 20px;
+  }

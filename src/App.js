@@ -7,6 +7,7 @@ import AcademicProjects from './pages/AcademicProjects/AcademicProjects';
 import WorkExperience from './pages/WorkExperience/WorkExperience';
 import CVPage from './pages/CVPage/CVPage';
 import Skills from './pages/Skills/Skills';
+import MScThesis from './pages/MScThesis/MScThesis'; 
 import Toolbar from './components/Toolbar/Toolbar';
 import Footer from './components/Footer/Footer';
 import Home from './pages/Home/Home';
@@ -29,6 +30,7 @@ const App = () => {
               <Route path="/academic-projects" element={<AcademicProjects />} />
               <Route path="/curriculum-vitae" element={<CVPage />} />
               <Route path="/skills-and-interests" element={<Skills />} />
+              <Route path="/msc-thesis" element={<MScThesis />} /> 
             </Routes>
           </div>
         </div>

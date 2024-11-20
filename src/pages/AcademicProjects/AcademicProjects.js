@@ -1,4 +1,6 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
+
 import './AcademicProjects.css';
 import '../Certificates/Certificates.css';
 
@@ -537,11 +539,10 @@ quality, this dissertation contributes to the advancement of sustainable softwar
 By prioritizing sustainability and security in LLM deployment, it offers a complete approach to software
 development that follows the recent, but important, sustainable principles in software development.
           </div></div></div></div>
-          <div className="certificate-buttons" >
-            <a href={"assets/docs/rpd.pdf"} className="rounded-button">Preliminary Dissertation Report (PDR)</a>
-            <a href={"assets/docs/apresentacao_rpd.pdf"} className="rounded-button">PDR Presentation</a>
-            <a href={"assets/docs/dissertation.pdf"} className="rounded-button">Dissertation</a>
-            <a href="https://github.com/simaocunha71/msc-thesis" className="rounded-button">Github Repository</a>
+          <div className="certificate-buttons">
+            <Link to="/msc-thesis" className="rounded-button">
+              MSc Thesis Webpage
+            </Link>
           </div>
           <div style={{ marginBottom: '20px' }}></div>
         </div>
