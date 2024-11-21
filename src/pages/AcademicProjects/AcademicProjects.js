@@ -541,7 +541,7 @@ development that follows the recent, but important, sustainable principles in so
           </div></div></div></div>
           <div className="certificate-buttons">
             <Link to="/msc-thesis" className="rounded-button">
-              MSc Thesis Webpage
+              Webpage
             </Link>
           </div>
           <div style={{ marginBottom: '20px' }}></div>
