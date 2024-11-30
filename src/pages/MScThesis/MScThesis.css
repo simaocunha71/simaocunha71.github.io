@@ -122,6 +122,37 @@
   margin-top: 10px;
 }
 
+/* Image display */
+.image-display {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 20px;
+}
+
+.image-display img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 10px;
+}
+
+.image-display p {
+  font-size: 1rem;
+  color: #444;
+  text-align: center;
+}
+
+.selected-image {
+  transition: box-shadow 0.3s ease; /* Transição suave para a sombra */
+}
+
+.selected-image:hover {
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Sombra mais forte e mais difusa */
+}
+
 /* Category bar */
 .category-bar {
   display: flex;
@@ -155,36 +186,76 @@
 
 
 
-/* Image display */
-.image-display {
+
+
+
+.abstract-container {
+  width: 80%;
+  margin: 0 auto;
+  padding: 20px;
+  background: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.abstract-header {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
-  flex-direction: column;
-  margin-top: 20px;
+  border-bottom: 2px solid #ddd;
+  padding-bottom: 10px;
 }
 
-.image-display img {
-  max-width: 100%;
+h2 {
+  font-size: 1.8rem;
+  margin: 0;
+}
+
+.button-container {
+  display: flex;
+  gap: 10px;
+}
+
+.language-button {
+  padding: 10px 20px;
+  border: 3px solid #000; /* Borda grossa preta */
+  border-radius: 5px;
+  background-color: white; /* Fundo branco */
+  color: #000; /* Texto preto */
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.language-button.active {
+  background-color: #000; /* Fundo preto para botão ativo */
+  color: white; /* Texto branco */
+}
+
+.language-button:hover {
+  background-color: #333; /* Fundo cinza escuro ao passar o mouse */
+  color: white; /* Texto branco */
+}
+
+.flag-icon {
+  margin-right: 8px; /* Espaço entre a bandeira e o texto */
+  width: 20px;
   height: auto;
-  border-radius: 10px;
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-  margin-bottom: 10px;
 }
 
-.image-display p {
+.abstract-content {
+  margin-top: 20px;
+  font-family: "Arial", sans-serif;
+  line-height: 1.6;
   font-size: 1rem;
-  color: #444;
-  text-align: center;
+  color: #333;
 }
 
-.selected-image {
-  transition: box-shadow 0.3s ease; /* Transição suave para a sombra */
+.text-description {
+  margin-bottom: 15px;
+  text-align: justify;
 }
 
-.selected-image:hover {
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Sombra mais forte e mais difusa */
-}
 
 
 
