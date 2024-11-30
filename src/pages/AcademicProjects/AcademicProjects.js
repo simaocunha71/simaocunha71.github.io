@@ -516,20 +516,25 @@ const AcademicProjects = () => {
         <div className="certificate-item">
           <div className="certificate-title">Master's Dissertation in Informatics Engineering</div>
           <div className="certificate-description">
-          This dissertation presents the development of a comprehensive platform for evaluating Large Language
-Models (LLMs) through benchmarking coding tasks with established datasets, including HumanEval-X,
+      This dissertation presents the development of a comprehensive platform for evaluating large language
+models (LLMs) through benchmarking coding tasks with established datasets, including HumanEval-X,
 MBPP+, and CyberSecEval. The primary objective of this platform is to assess not only the effectiveness,
 energy efficiency and runtime of LLMs in generating code but also their security implications in software
 development scenarios. By focusing on these critical aspects, the research aims to provide insights into
-the practical applications of LLMs in various programming contexts
+the practical applications of LLMs in various programming contexts.
           <div className="certificate-description">
           The document thoroughly explores the project’s context, motivation, and objectives, emphasizing the
 transformative influence of advanced LLMs, such as GPT-4 and Llama-2, on the software development
 landscape. It investigates the challenges associated with the energy consumption of LLMs, particularly
 when represented as quantized models - simplified (and smaller) models that are easier to run on hardware with limited resources - analysing their performance and resource requirements across different
-programming languages and prompt engineering techniques
+programming languages and prompt engineering techniques.
           <div className="certificate-description">
-          Moreover, the research highlights the findings from the CyberSecEval benchmark, which evaluates
+          The findings showed that energy consumption and runtime varied among different LLMs based on the
+benchmark, programming language and prompting type (0-shot vs 3-shot). Overall, 3-shot prompting led to
+lower energy consumption and faster runtime than 0-shot prompting. Pass@10 outperformed pass@1, and
+SacreBLEU and GoogleBLEU scores improved with 3-shot prompting, while CodeBLEU scores decreased.
+          <div className="certificate-description">
+          Additionally, the research highlights the findings from the CyberSecEval benchmark, which evaluates
 the security of generated code, revealing vulnerabilities inherent in the outputs of various LLMs. This
 underscores the critical need to consider security alongside energy efficiency and execution time when
 selecting an LLM for software development.
@@ -538,7 +543,7 @@ selecting an LLM for software development.
 quality, this dissertation contributes to the advancement of sustainable software engineering practices.
 By prioritizing sustainability and security in LLM deployment, it offers a complete approach to software
 development that follows the recent, but important, sustainable principles in software development.
-          </div></div></div></div>
+          </div></div></div></div></div>
           <div className="certificate-buttons">
             <Link to="/msc-thesis" className="rounded-button">
               Webpage
