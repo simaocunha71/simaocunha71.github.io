@@ -282,3 +282,20 @@ h2 {
     font-size: 0.9rem;
   }
 }
+
+/* Responsividade: coloca os botões abaixo do título apenas em telas pequenas */
+@media (max-width: 768px) {
+  .abstract-header {
+    display: flex;
+    flex-direction: column; /* Faz com que o título e os botões fiquem empilhados */
+    align-items: center; /* Centraliza o conteúdo */
+  }
+
+  .button-container {
+    margin-top: 10px; /* Distância entre o título e os botões */
+    display: flex;
+    flex-direction: row; /* Coloca os botões na linha */
+    justify-content: center; /* Centraliza os botões */
+    gap: 10px; /* Espaçamento entre os botões */
+  }
+}
