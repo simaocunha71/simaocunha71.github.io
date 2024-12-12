@@ -7,6 +7,7 @@
   color: #333;
 }
 
+
 /* Header styles */
 .msc-thesis-container h1 {
   font-size: 2rem;
@@ -59,6 +60,7 @@
 /* Dropdown */
 .dropdown {
   position: relative;
+  display: inline-block; /* Garante que o menu esteja corretamente alinhado ao botão */
 }
 
 .dropdown-button {
@@ -82,6 +84,7 @@
 .dropdown-menu {
   display: none;
   position: absolute;
+  width: 100%; /* Faz o menu ter a mesma largura do botão */
   top: 100%;
   left: 0;
   background-color: white;
@@ -92,13 +95,15 @@
 }
 
 .dropdown:hover .dropdown-menu {
-  display: block;
+  display: block; /* Exibe o menu ao passar o mouse sobre o dropdown */
 }
 
 .dropdown-item {
   display: flex;
-  align-items: center;
-  padding: 10px 38px;
+  align-items: center; /* Alinha verticalmente o ícone e o texto ao centro */
+  justify-content: flex-start; /* Ícones e texto alinhados à esquerda */
+  width: 100%;
+  padding: 10px 20px;
   text-decoration: none;
   color: #333;
   font-size: 0.9rem;
@@ -106,7 +111,11 @@
 }
 
 .dropdown-item:hover {
-  background-color: #f0f0f0;
+  background-color: #f0f0f0; /* Cor de fundo ao passar o mouse sobre os itens */
+}
+
+.dropdown-item svg {
+  margin-right: 8px; /* Espaçamento entre o ícone e o texto */
 }
 
 /* Text description */
@@ -197,6 +206,7 @@
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
+
 
 .abstract-header {
   display: flex;

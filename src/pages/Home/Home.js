@@ -6,10 +6,10 @@ const Home = () => {
   const linkedinUrl = 'https://www.linkedin.com/in/simaocunha71/';
   const githubUrl = 'https://github.com/simaocunha71';
   const emailUrl = 'mailto:simaopscunha@outlook.pt';
-  const description =
-    `Greetings everyone!\n\n
-    My name is Simão Cunha and I'm currently a 5th year Integrated Masters (2nd year MSc) student in Software Engineering at the University of Minho.\n
-    Here you can find more about my projects and get in touch with me using the following links:`;
+  const description = `Greetings everyone!\n\n
+  My name is Simão Cunha and I'm a MSc Graduate in Informatics Engineering from the University of Minho.\n
+  Here you can find more about my projects and get in touch with me using the following links:`;
+  
 
   return (
     <div className="home-container">

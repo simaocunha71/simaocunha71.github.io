@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
-import { FaFilePdf, FaGithub, FaChevronDown } from "react-icons/fa"; // Importando ícones do React Icons
+import { FaFilePdf, FaGithub, FaChevronDown } from "react-icons/fa";
+import { PiMicrosoftPowerpointLogoFill } from "react-icons/pi";
 import Flag from "react-world-flags";
 import './MScThesis.css';
 
@@ -299,8 +300,8 @@ const MScThesis = () => {
     Supervisors: <strong>João Saraiva</strong> and <strong>Francisco Ribeiro</strong>
       </p>
 
-    <div className="pdf-buttons">
-      {/* Dropdown com estilo de botão */}
+      <div className="pdf-buttons">
+      {/* Dropdown com estilo de botão para Pre-Dissertation */}
       <div className="dropdown">
         <button className="pdf-button dropdown-button">
           Pre-Dissertation
@@ -326,16 +327,39 @@ const MScThesis = () => {
         </div>
       </div>
 
-      <a
-        href="assets/docs/msc-thesis/dissertation.pdf"
-        target="_blank"
-        rel="noopener noreferrer"
-        className="pdf-button"
-      >
-        <FaFilePdf size={20} style={{ marginRight: "8px" }} />
-        Dissertation
-      </a>
-      
+      <div className="dropdown">
+        <button className="pdf-button dropdown-button">
+          Dissertation
+          <FaChevronDown size={14} style={{ marginLeft: "8px" }} />
+        </button>
+        <div className="dropdown-menu">
+          <a
+            href="assets/docs/msc-thesis/dissertation.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="dropdown-item"
+          >
+            <FaFilePdf size={20} style={{ marginRight: "8px" }} /> Dissertation
+          </a>
+          <a
+            href="assets/docs/msc-thesis/presentation.pptx"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="dropdown-item"
+          >
+            <PiMicrosoftPowerpointLogoFill size={20} style={{ marginRight: "8px" }} /> Presentation
+          </a>
+          <a
+            href="assets/docs/msc-thesis/presentation.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="dropdown-item"
+          >
+            <FaFilePdf size={20} style={{ marginRight: "8px" }} /> Presentation
+          </a>
+        </div>
+      </div>
+
       <a
         href="https://github.com/simaocunha71/msc-thesis"
         target="_blank"
@@ -345,36 +369,38 @@ const MScThesis = () => {
         <FaGithub size={20} style={{ marginRight: "8px" }} />
         Repository
       </a>
+
     </div>
 
-    <div className="abstract-container">
-      <div className="abstract-header">
-      <h2>{language === "en" ? "Abstract" : "Resumo"}</h2>
-        <div className="button-container">
-          <button
-            onClick={() => setLanguage("en")}
-            className={`language-button ${language === "en" ? "active" : ""}`}
-          >
-            <Flag code="GB" className="flag-icon" />
-            English
-          </button>
-          <button
-            onClick={() => setLanguage("pt")}
-            className={`language-button ${language === "pt" ? "active" : ""}`}
-          >
-            <Flag code="PT" className="flag-icon" />
-            Português
-          </button>
-        </div>
-      </div>
-      <div className="abstract-content">
-        {texts[language].map((paragraph, index) => (
-          <div key={index} className="text-description">
-            {paragraph}
-          </div>
-        ))}
-      </div>
+<div className="abstract-container">
+  <div className="abstract-header">
+    <h2>{language === "en" ? "Abstract" : "Resumo"}</h2>
+    <div className="button-container">
+      <button
+        onClick={() => setLanguage("en")}
+        className={`language-button ${language === "en" ? "active" : ""}`}
+      >
+        <Flag code="GB" className="flag-icon" />
+        English
+      </button>
+      <button
+        onClick={() => setLanguage("pt")}
+        className={`language-button ${language === "pt" ? "active" : ""}`}
+      >
+        <Flag code="PT" className="flag-icon" />
+        Português
+      </button>
     </div>
+  </div>
+  <div className="abstract-content">
+    {texts[language].map((paragraph, index) => (
+      <div key={index} className="text-description">
+        {paragraph}
+      </div>
+    ))}
+  </div>
+</div>
+
 
           <h3 style={{ textAlign: 'center' }}>Select a category above to filter images.</h3>
       {/* Seleção de Categoria */}
