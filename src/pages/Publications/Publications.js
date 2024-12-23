@@ -27,9 +27,10 @@ const Publications = () => {
     {
       title: "On the Impact of PowerCap in Haskell, Java, and Python",
       authors: "Luís Maia, Marta Sá, Inês Ferreira, Simão Cunha, Luís Silva, Paulo Azevedo and João Saraiva",
-      conference: "RAW’24: 3rd Workshop on Resource Awareness of Systems and Society",
+      conference: "Proceedings of the 3rd International Workshop on Resource AWareness of Systems and Society",
       date: "July 02–05, 2024",
       location: "Maribor, Slovenia",
+      doi: "https://ceur-ws.org/Vol-3867/paper4.pdf",
       abstract: "Historically, programming language performance focused on fast execution times. With the advent of cloud and edge computing, and the significant energy consumption of large data centers, energy efficiency has become a critical concern both for computer manufacturers and software developers.\nThis paper investigates the impact of CPU power capping on the energy consumption and execution time of programs written in Haskell, Java, and Python. Our preliminary results analyzing well-established benchmarks indicate that while power capping does reduce energy consumption across all benchmarks, it also substantially increases execution time. These findings highlight the trade-offs between energy efficiency and runtime performance, offering insights for optimizing software under energy constraints.",
       keywords: ["Energy Efficiency", "Programming Languages", "Benchmark", "Power Cap"],
       pdfLink: "assets/docs/papers/On_the_Impact_of_PowerCap_in_Haskell_Java_and_Python.pdf"
