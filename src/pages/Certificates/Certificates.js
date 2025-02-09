@@ -44,10 +44,10 @@ const Certificates = () => {
         <div className="certificate-content">
           <div className="certificate-title">Sustrainable Summer School 2023 - Attendance and Students Workshop and Poster Session Certificates</div>
           <div className="certificate-description">
-            Obtained from the University of Coimbra - from July 11, 2023 to July 14, 2023
+            Obtained from University of Coimbra - from July 11, 2023 to July 14, 2023
           </div>
           <div className="certificate-buttons">
-            <button className="rounded-button" onClick={() => handlePdfButtonClick("assets/docs/certificates/Sustrainable_Attendence_certificate.pdf")}>
+            <button className="rounded-button" onClick={() => handlePdfButtonClick("assets/docs/certificates/Sustrainable_Attendance_certificate.pdf")}>
               Attendance Certificate
             </button>
             <button className="rounded-button" onClick={() => handlePdfButtonClick("assets/docs/certificates/Sustrainable_Students_Workshop_certificate.pdf")}>
@@ -69,7 +69,7 @@ const Certificates = () => {
         <div className="certificate-content">
           <div className="certificate-title">1st UMinho Research & Innovation Open Days 2024 - Pitch and Poster Session Certificates</div>
           <div className="certificate-description">
-            Obtained from the University of Minho - January 2024
+            Obtained from University of Minho - January 2024
           </div>
           <div className="certificate-buttons">
             <button className="rounded-button" onClick={() => handlePdfButtonClick("assets/docs/certificates/UMinhoOpenDays_Pitch.pdf")}>
@@ -77,6 +77,27 @@ const Certificates = () => {
             </button>
             <button className="rounded-button" onClick={() => handlePdfButtonClick("assets/docs/certificates/UMinhoOpenDays_Poster.pdf")}>
               Poster Certificate
+            </button>
+          </div>
+          {selectedPdf && (
+            <div className="pdf-container">
+              <Document file={selectedPdf}>
+                <Page pageNumber={1} />
+              </Document>
+            </div>
+          )}
+        </div>
+      </div>
+
+      <div className="certificate-item">
+        <div className="certificate-content">
+          <div className="certificate-title">Greening AI with Software Engineering 2025 - Attendance Certificate</div>
+          <div className="certificate-description">
+            Obtained from CECAM & Lorentz Center - February 2025
+          </div>
+          <div className="certificate-buttons">
+            <button className="rounded-button" onClick={() => handlePdfButtonClick("assets/docs/cecam-lorentz-greening-ai-2025/certificate.pdf")}>
+              Attendance Certificate
             </button>
           </div>
           {selectedPdf && (

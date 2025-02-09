@@ -67,8 +67,9 @@
 .event-description {
   font-size: 16px;
   margin-bottom: 20px;
-  text-align: center;
+  text-align: justify;
   color: #666;
+  text-indent: 20px;
 }
 
 .event-image {
@@ -79,6 +80,38 @@
   margin: 0 auto;
   margin-bottom: 20px;
   border-radius: 10px;
+}
+
+.event-gallery-centered {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Ajusta os botões de slideshow mais próximos da imagem */
+.slideshow-controls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-width: 80%; /* Mesma largura máxima da imagem */
+  margin: 10px 0; /* Margem reduzida */
+}
+
+.slideshow-button {
+  background-color: #b3b7bb;
+  color: white;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.slideshow-button:hover {
+  background-color: #525457;
 }
 
 .event-buttons {
@@ -199,6 +232,5 @@
 
   .main-content {
     padding-top: 5px;
-
   }
 }
