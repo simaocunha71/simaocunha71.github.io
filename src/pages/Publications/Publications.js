@@ -35,9 +35,6 @@ const Publications = () => {
     }
   ];
 
-  const handlePDFClick = (link) => {
-    window.open(link, '_blank');
-  };
 
   const handleAbstractClick = (index) => {
     setSelectedPublication(selectedPublication === index ? null : index);
