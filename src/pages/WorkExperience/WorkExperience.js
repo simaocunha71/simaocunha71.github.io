@@ -1,7 +1,6 @@
 import React from 'react';
 import './WorkExperience.css';
-import { FaCalendarAlt, FaBuilding, FaTools } from 'react-icons/fa'; // Importa os ícones necessários
-
+import { FaCalendarAlt, FaBuilding, FaTools } from 'react-icons/fa';
 
 const workExperiences = [
   {
@@ -13,7 +12,7 @@ const workExperiences = [
       Data Fusion instance creation and uploading a JSON file with a custom pipeline configuration using a Cloud Build file written in YAML
       Agile Scrum methodology applied during the entire internship`,
     keywords: ['Google Cloud Platform', 'Agile Scrum'],
-    logo: "assets/icons/accenture.png", // Utiliza os logos existentes
+    logo: "assets/icons/accenture.png",
   },
   {
     company: 'Bosch Portugal',
@@ -26,9 +25,16 @@ const workExperiences = [
       Contributed to internal software development projects.
       Gained foundational knowledge in computer vision.`,
     keywords: ['Machine Learning', 'Deep Learning', 'Image Processing', 'Computer Vision'],
-    logo: "assets/icons/bosch.png", // Utiliza os logos existentes
+    logo: "assets/icons/bosch.png",
   },
-  // Adicione mais experiências de trabalho conforme necessário
+  {
+    company: 'University of Minho',
+    jobTitle: 'Invited Assistant Professor',
+    duration: 'Feb 2024 - Present',
+    description: '',
+    keywords: [],
+    logo: "assets/icons/uminho.png",
+  },
 ];
 
 const WorkExperience = () => {
@@ -47,24 +53,22 @@ const WorkExperience = () => {
               <h3>{experience.jobTitle}</h3>
               <p><FaBuilding /> {experience.company}</p>
               <p><FaCalendarAlt /> {experience.duration}</p>
-              <ul>
-                {experience.description.split('\n').map((item, itemIndex) => (
-                  <li key={itemIndex}>{item.trim()}</li>
-                ))}
-              </ul>
-              <div className="keywords-container">
-                <FaTools /> {experience.keywords.join(', ')}
-              </div>
+              {experience.description && (
+                <ul>
+                  {experience.description.split('\n').map((item, itemIndex) => (
+                    <li key={itemIndex}>{item.trim()}</li>
+                  ))}
+                </ul>
+              )}
+              {experience.keywords.length > 0 && (
+                <div className="keywords-container">
+                  <FaTools /> {experience.keywords.join(', ')}
+                </div>
+              )}
             </div>
           </div>
         ))}
       </div>
-      <br></br>
-      <br></br>
-      <br></br>
-      <br></br>
-      <br></br>
-      <br></br>
       <br></br>
       <br></br>
       <br></br>

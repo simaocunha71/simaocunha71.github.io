@@ -1,7 +1,6 @@
 import React from 'react';
 import { FaReact, FaNodeJs, FaGithub, FaDocker, FaCloud } from 'react-icons/fa';
 import { FaRobot, FaBrain, FaRecycle, FaImage, FaEye } from 'react-icons/fa';
-
 import { DiJava, DiPython, DiHaskell, DiProlog } from 'react-icons/di';
 import { SiMysql, SiPowerbi, SiAnsible, SiJavascript } from 'react-icons/si';
 import { TbSql, TbBrandCpp } from 'react-icons/tb';
@@ -12,42 +11,42 @@ import './Skills.css';
 
 const skillsData = {
   'Programming Languages': [
-    { icon: <FaC />, label: 'C' },
-    { icon: <TbBrandCpp />, label: 'C++' },
-    { icon: <DiJava />, label: 'Java' },
-    { icon: <SiJavascript />, label: 'JavaScript' },
-    { icon: <DiPython />, label: 'Python' },
-    { icon: <DiHaskell />, label: 'Haskell' },
-    { icon: <DiProlog />, label: 'Prolog' }
+    { icon: <FaC color="#A8B9CC" />, label: 'C' },
+    { icon: <TbBrandCpp color="#00599C" />, label: 'C++' },
+    { icon: <DiJava color="#007396" />, label: 'Java' },
+    { icon: <SiJavascript color="#F7DF1E" />, label: 'JavaScript' },
+    { icon: <DiPython color="#3776AB" />, label: 'Python' },
+    { icon: <DiHaskell color="#5D4F85" />, label: 'Haskell' },
+    { icon: <DiProlog color="#742F2F" />, label: 'Prolog' }
   ],
   'Frameworks': [
-    { icon: <FaReact />, label: 'React Native' },
+    { icon: <FaReact color="#61DAFB" />, label: 'React Native' },
   ],
   'Web Development Tools': [
-    { icon: <FaNodeJs />, label: 'Node.js' },
-    { icon: <FaGithub />, label: 'GitHub' },
-    { icon: <FaGitAlt />, label: 'Git' },
-    { icon: <VscVscode />, label: 'Microsoft Visual Studio Code' }
+    { icon: <FaNodeJs color="#68A063" />, label: 'Node.js' },
+    { icon: <FaGithub color="#181717" />, label: 'GitHub' },
+    { icon: <FaGitAlt color="#F34F29" />, label: 'Git' },
+    { icon: <VscVscode color="#007ACC" />, label: 'Microsoft Visual Studio Code' }
   ],
   'Cloud and DevOps': [
-    { icon: <IoLogoFirebase />, label: 'Firebase' },
-    { icon: <FaDocker />, label: 'Docker' },
-    { icon: <SiAnsible />, label: 'Ansible' },
-    { icon: <FaCloud />, label: 'Google Cloud Platform' }
+    { icon: <IoLogoFirebase color="#FFCA28" />, label: 'Firebase' },
+    { icon: <FaDocker color="#2496ED" />, label: 'Docker' },
+    { icon: <SiAnsible color="#000000" />, label: 'Ansible' },
+    { icon: <FaCloud color="#4285F4" />, label: 'Google Cloud Platform' }
   ],
   'Databases': [
-    { icon: <TbSql />, label: 'SQL' },
-    { icon: <SiMysql />, label: 'MySQL' }
+    { icon: <TbSql color="#4479A1" />, label: 'SQL' },
+    { icon: <SiMysql color="#4479A1" />, label: 'MySQL' }
   ],
   'Business Intelligence': [
-    { icon: <SiPowerbi />, label: 'Microsoft PowerBI' }
+    { icon: <SiPowerbi color="#F2C811" />, label: 'Microsoft PowerBI' }
   ],
   'Areas of Interest': [
-    { icon: <FaRobot />, label: 'Large Language Models' },
-    { icon: <FaBrain />, label: 'Machine Learning' },
-    { icon: <FaRecycle />, label: 'Green Software' },
-    { icon: <FaImage />, label: 'Image Processing' },
-    { icon: <FaEye />, label: 'Computer Vision' }
+    { icon: <FaRobot color="#FFD700" />, label: 'Large Language Models' },
+    { icon: <FaBrain color="#DC143C" />, label: 'Machine Learning' },
+    { icon: <FaRecycle color="#008000" />, label: 'Green Software' },
+    { icon: <FaImage color="#4682B4" />, label: 'Image Processing' },
+    { icon: <FaEye color="#800080" />, label: 'Computer Vision' }
   ]
 };
 
