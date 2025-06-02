@@ -25,7 +25,7 @@ const Certificates = () => {
             Obtained from BabeliUM organization - from October 2021 to February 2022
           </div>
           <div className="certificate-buttons">
-            <button className="rounded-button" onClick={() => handlePdfButtonClick("assets/docs/certificates/English_C1_Simao_Cunha.pdf")}>
+            <button className="rounded-button" onClick={() => handlePdfButtonClick("assets/docs/English_C1_Simao_Cunha.pdf")}>
               Open PDF Certificate
             </button>
           </div>
@@ -47,10 +47,10 @@ const Certificates = () => {
             Obtained from University of Coimbra - from July 11, 2023 to July 14, 2023
           </div>
           <div className="certificate-buttons">
-            <button className="rounded-button" onClick={() => handlePdfButtonClick("assets/docs/certificates/Sustrainable_Attendance_certificate.pdf")}>
+            <button className="rounded-button" onClick={() => handlePdfButtonClick("assets/docs/sustrainable-summer-school-2023/attendance_certificate.pdf")}>
               Attendance Certificate
             </button>
-            <button className="rounded-button" onClick={() => handlePdfButtonClick("assets/docs/certificates/Sustrainable_Students_Workshop_certificate.pdf")}>
+            <button className="rounded-button" onClick={() => handlePdfButtonClick("assets/docs/sustrainable-summer-school-2023/students_workshop_certificate.pdf")}>
               Students Workshop and Poster Session Certificate
             </button>
           </div>
@@ -72,11 +72,32 @@ const Certificates = () => {
             Obtained from University of Minho - January 2024
           </div>
           <div className="certificate-buttons">
-            <button className="rounded-button" onClick={() => handlePdfButtonClick("assets/docs/certificates/UMinhoOpenDays_Pitch.pdf")}>
+            <button className="rounded-button" onClick={() => handlePdfButtonClick("assets/docs/uminho-open-days-2024/pitch_certificate.pdf")}>
               Pitch Certificate
             </button>
-            <button className="rounded-button" onClick={() => handlePdfButtonClick("assets/docs/certificates/UMinhoOpenDays_Poster.pdf")}>
+            <button className="rounded-button" onClick={() => handlePdfButtonClick("assets/docs/uminho-open-days-2024/poster_certificate.pdf")}>
               Poster Certificate
+            </button>
+          </div>
+          {selectedPdf && (
+            <div className="pdf-container">
+              <Document file={selectedPdf}>
+                <Page pageNumber={1} />
+              </Document>
+            </div>
+          )}
+        </div>
+      </div>
+
+      <div className="certificate-item">
+        <div className="certificate-content">
+          <div className="certificate-title">Cerciras Training School 2024 - Attendance Certificate</div>
+          <div className="certificate-description">
+            Obtained from University of Klagenfurt - August 2024
+          </div>
+          <div className="certificate-buttons">
+            <button className="rounded-button" onClick={() => handlePdfButtonClick("assets/docs/cerciras-training-school-2024/certificate.pdf")}>
+              Attendance Certificate
             </button>
           </div>
           {selectedPdf && (

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import './WorkExperience.css';
 import { FaCalendarAlt, FaBuilding, FaTools } from 'react-icons/fa';
 
@@ -28,14 +28,49 @@ const workExperiences = [
     logo: "assets/icons/bosch.png",
   },
   {
+    company: 'Requião Primary School and Vale S. Martinho Primary School',
+    jobTitle: 'Informatics Teacher',
+    duration: 'Mar 2024 - Jun 2024',
+    description: 
+    `Taught IT basics to 2nd, 3rd, and 4th grade students using Microsoft PowerPoint and Word
+    Taught programming basics with the Scratch platform`,
+    keywords: [],
+    logo: ["assets/icons/aper.jpg", "assets/icons/apeeji.jpg"],
+  },
+  {
     company: 'University of Minho',
     jobTitle: 'Invited Assistant Professor',
     duration: 'Feb 2024 - Present',
-    description: '',
+    description: 'Courses taught: Topics of Software Development and Experimentation in Software Engineering',
     keywords: [],
     logo: "assets/icons/uminho.png",
   },
 ];
+
+// Componente Carousel simples para os logos múltiplos
+const LogoCarousel = ({ logos, interval = 2000 }) => {
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+  useEffect(() => {
+    if (logos.length <= 1) return;
+
+    const timer = setInterval(() => {
+      setCurrentIndex((prevIndex) => (prevIndex + 1) % logos.length);
+    }, interval);
+
+    return () => clearInterval(timer);
+  }, [logos, interval]);
+
+  return (
+    <div className="company-logo">
+      <img
+        src={logos[currentIndex]}
+        alt={`logo ${currentIndex + 1}`}
+        className="logo-image"
+      />
+    </div>
+  );
+};
 
 const WorkExperience = () => {
   const reversedExperiences = [...workExperiences].reverse();
@@ -46,9 +81,15 @@ const WorkExperience = () => {
       <div className="work-experience-list">
         {reversedExperiences.map((experience, index) => (
           <div key={index} className="work-experience-card">
-            <div className="company-logo">
-              <img src={experience.logo} alt={experience.company} className="logo-image" />
-            </div>
+            {/* Renderiza o carousel se tiver múltiplos logos */}
+            {Array.isArray(experience.logo) ? (
+              <LogoCarousel logos={experience.logo} />
+            ) : (
+              <div className="company-logo">
+                <img src={experience.logo} alt={experience.company} className="logo-image" />
+              </div>
+            )}
+
             <div className="experience-details">
               <h3>{experience.jobTitle}</h3>
               <p><FaBuilding /> {experience.company}</p>
@@ -69,10 +110,10 @@ const WorkExperience = () => {
           </div>
         ))}
       </div>
-      <br></br>
-      <br></br>
-      <br></br>
 
+      <br />
+      <br />
+      <br />
     </div>
   );
 };

@@ -22,8 +22,8 @@ const AcademicProjects = () => {
 
   const images = ["assets/docs/PEI/competicoes.png", "assets/docs/PEI/competicao.png", "assets/docs/PEI/jogador.png",
                    "assets/docs/PEI/jogo.png", "assets/docs/PEI/equipa.png", "assets/docs/PEI/filter.png"];
-  const hackathonImages = ["assets/docs/hackathon_bugsbyte_2024/mainpage.png", "assets/docs/hackathon_bugsbyte_2024/listevents.png",
-                            "assets/docs/hackathon_bugsbyte_2024/eventpage.png"];
+  const hackathonImages = ["assets/docs/hackathon-bugsbyte-2024/mainpage.png", "assets/docs/hackathon-bugsbyte-2024/listevents.png",
+                            "assets/docs/hackathon-bugsbyte-2024/eventpage.png"];
 
   const [currentIndex, setCurrentIndex] = useState(0);
 

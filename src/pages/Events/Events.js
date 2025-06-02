@@ -16,19 +16,19 @@ const Events = () => {
       id: "sustrainable-coimbra-2023",
       title: "SusTrainable Summer School at Coimbra 2023",
       description: "I had the opportunity to receive a scholarship from the University of Minho to participate in the second SusTrainable summer school organized in Coimbra, Portugal by the University of Coimbra. Additionally, I had the privilege of presenting collaborative work with Luís Silva on the energy efficiency of sorting algorithms and programming languages using RAPL during the Students Workshop and Posters Session.",
-      images: ["assets/docs/sustrainable/presentation.jpeg"],
-      presentationPDF: "assets/docs/sustrainable/presentation.pdf",
-      posterPDF: "assets/docs/sustrainable/poster.pdf",
-      reportPDF: "assets/docs/sustrainable/report.pdf",
+      images: ["assets/docs/sustrainable-summer-school-2023/presentation.jpeg"],
+      presentationPDF: "assets/docs/sustrainable-summer-school-2023/presentation.pdf",
+      posterPDF: "assets/docs/sustrainable-summer-school-2023/poster.pdf",
+      reportPDF: "assets/docs/sustrainable-summer-school-2023/report.pdf",
       githubRepo: "https://github.com/simaocunha71/EnergyMeasurement"
     },
     {
       id: "uminho-open-days-2024",
       title: "1st UMinho Research and Innovation Open Days 2024",
       description: "I had the opportunity to participate in the first edition of UMinho Research and Innovation Open Days in Braga, Portugal at the University of Minho. Additionally, I had the privilege of presenting collaborative work with Luís Silva and João Saraiva on the energy efficiency of programming languages using RAPL, as well as the influence of powercap on the energy efficiency of programming languages during the Flash Talk and Posters Session.",
-      images: ["assets/docs/uminho_open_days/presentation.jpg"],
-      presentationPDF: "assets/docs/uminho_open_days/presentation.pdf",
-      posterPDF: "assets/docs/uminho_open_days/poster.pdf",
+      images: ["assets/docs/uminho-open-days-2024/presentation.jpg"],
+      presentationPDF: "assets/docs/uminho-open-days-2024/presentation.pdf",
+      posterPDF: "assets/docs/uminho-open-days-2024/poster.pdf",
       githubRepo: "https://github.com/LuisMPSilva01/Energy-Languages-PowerCap"
     },
     {
