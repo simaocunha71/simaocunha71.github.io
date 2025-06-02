@@ -32,9 +32,9 @@ const workExperiences = [
     jobTitle: 'Informatics Teacher',
     duration: 'Mar 2024 - Jun 2024',
     description: 
-    `Taught IT basics to 2nd, 3rd, and 4th grade students using Microsoft PowerPoint and Word
+    `Taught IT basics to 2nd, 3rd, and 4th grade students using Microsoft PowerPoint and Microsoft Word
     Taught programming basics with the Scratch platform`,
-    keywords: [],
+    keywords: ['Teaching', 'Scratch', 'Microsoft Office'],
     logo: ["assets/icons/aper.jpg", "assets/icons/apeeji.jpg"],
   },
   {
@@ -42,12 +42,11 @@ const workExperiences = [
     jobTitle: 'Invited Assistant Professor',
     duration: 'Feb 2024 - Present',
     description: 'Courses taught: Topics of Software Development and Experimentation in Software Engineering',
-    keywords: [],
+    keywords: ['Software Development', 'Experimentation'],
     logo: "assets/icons/uminho.png",
   },
 ];
 
-// Componente Carousel simples para os logos múltiplos
 const LogoCarousel = ({ logos, interval = 2000 }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
 
@@ -65,7 +64,7 @@ const LogoCarousel = ({ logos, interval = 2000 }) => {
     <div className="company-logo">
       <img
         src={logos[currentIndex]}
-        alt={`logo ${currentIndex + 1}`}
+        alt={`Logo ${currentIndex + 1}`}
         className="logo-image"
       />
     </div>
@@ -77,43 +76,44 @@ const WorkExperience = () => {
 
   return (
     <div className="work-experience-wrapper">
-      <div style={{ marginBottom: '75px' }}></div>
+      <div style={{ marginBottom: '50px' }}></div>
       <div className="work-experience-list">
         {reversedExperiences.map((experience, index) => (
           <div key={index} className="work-experience-card">
-            {/* Renderiza o carousel se tiver múltiplos logos */}
             {Array.isArray(experience.logo) ? (
               <LogoCarousel logos={experience.logo} />
             ) : (
               <div className="company-logo">
-                <img src={experience.logo} alt={experience.company} className="logo-image" />
+                <img
+                  src={experience.logo}
+                  alt={`Logo of ${experience.company}`}
+                  className="logo-image"
+                />
               </div>
             )}
 
             <div className="experience-details">
               <h3>{experience.jobTitle}</h3>
-              <p><FaBuilding /> {experience.company}</p>
-              <p><FaCalendarAlt /> {experience.duration}</p>
-              {experience.description && (
+              <p><FaBuilding aria-label="Company" /> {experience.company}</p>
+              <p><FaCalendarAlt aria-label="Duration" /> {experience.duration}</p>
+              {experience.description ? (
                 <ul>
                   {experience.description.split('\n').map((item, itemIndex) => (
                     <li key={itemIndex}>{item.trim()}</li>
                   ))}
                 </ul>
+              ) : (
+                <p>No description available.</p>
               )}
               {experience.keywords.length > 0 && (
                 <div className="keywords-container">
-                  <FaTools /> {experience.keywords.join(', ')}
+                  <FaTools aria-label="Keywords" /> {experience.keywords.join(', ')}
                 </div>
               )}
             </div>
           </div>
         ))}
       </div>
-
-      <br />
-      <br />
-      <br />
     </div>
   );
 };

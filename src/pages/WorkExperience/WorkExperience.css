@@ -2,18 +2,19 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  background-color: #ffffff; /* Fundo claro para melhor contraste */
 }
 
 .work-experience-card {
   display: flex;
-  align-items: center; /* Centraliza verticalmente */
+  align-items: center;
   margin-bottom: 20px;
   border: 1px solid #ddd;
   border-radius: 10px;
   padding: 20px;
-  width: 100%; /* Garante largura total */
-  max-width: 1600px; /* Ajusta a largura máxima conforme necessário */
-  box-sizing: border-box; /* Garante que padding e border estão incluídos na largura */
+  width: 100%;
+  max-width: 1200px;
+  box-sizing: border-box;
   background-color: #fff;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s, box-shadow 0.3s;
@@ -29,28 +30,44 @@
   height: 80px;
   margin-right: 20px;
   display: flex;
-  justify-content: center; /* Centraliza horizontalmente */
-  align-items: center; /* Centraliza verticalmente */
+  justify-content: center;
+  align-items: center;
+  transition: transform 0.3s ease-in-out;
+}
+
+.company-logo:hover {
+  transform: scale(1.1);
 }
 
 .logo-image {
   width: 100%;
   height: 100%;
-  object-fit: contain; /* Garante que a imagem se ajuste ao contêiner */
-  border-radius: 10px; /* Borda arredondada */
+  object-fit: contain;
+  border-radius: 10px;
 }
 
 .experience-details {
-  flex: 1; /* Ocupa o espaço restante */
+  flex: 1;
 }
 
 .keywords-container {
   margin-top: 10px;
   color: #666;
+  font-size: 0.9em;
 }
 
 .keywords-container svg {
   margin-right: 5px;
+}
+
+.work-experience-card ul {
+  padding-left: 20px;
+  margin-top: 10px;
+}
+
+.work-experience-card li {
+  margin-bottom: 5px;
+  line-height: 1.4;
 }
 
 /* Responsividade */
@@ -66,13 +83,13 @@
   }
 }
 
-/* Melhoria para listas */
-.work-experience-card ul {
-  padding-left: 20px;
-  margin-top: 10px;
-}
+@media (max-width: 480px) {
+  .work-experience-card {
+    padding: 15px;
+  }
 
-.work-experience-card li {
-  margin-bottom: 5px;
-  line-height: 1.4;
+  .company-logo {
+    width: 60px;
+    height: 60px;
+  }
 }

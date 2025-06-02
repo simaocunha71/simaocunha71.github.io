@@ -556,12 +556,10 @@ development that follows the recent, but important, sustainable principles in so
       )}
       {activeYear === 'Other' && (
         <>
-          <div className="event-item">
+          <div className="certificate-item">
             <div className="event-title">Hackathon Bugsbyte 2024</div>
-            <div className="event-description">
-              This project was developed during the Hackathon Bugsbyte 2024 held at the Altice Forum in Braga, Portugal. <br></br>
-              Over the course of 48 hours, our team created a simple application aimed at facilitating the search for cultural events across various districts of Portugal. <br></br>
-              The application features a modern user interface designed to enhance the user experience.
+            <div className="certificate-description">
+              This project was developed during the Hackathon Bugsbyte 2024 held at the Altice Forum in Braga, Portugal. Over the course of 48 hours, our team created a simple application aimed at facilitating the search for cultural events across various districts of Portugal. The application features a modern user interface designed to enhance the user experience.
             </div>
             <div className="slideshow-container">
               <button className="prev" onClick={() => goToPreviousSlide(hackathonImages)}>
@@ -575,13 +573,16 @@ development that follows the recent, but important, sustainable principles in so
               </button>
 
             </div>
-            <div style={{ marginTop: '20px' }}></div>
 
             <div className="event-buttons">
               <a href="https://github.com/simaobarroso/hackthon-bugsbyte" className="rounded-button">Github repository</a>
             </div>
+            <div style={{ marginBottom: '20px' }}></div>
           </div>
           <br></br>
+        <br></br>
+        <br></br>
+        <br></br>
         <br></br>
         <br></br>
         <br></br>
