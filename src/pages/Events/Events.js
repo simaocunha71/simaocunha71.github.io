@@ -54,7 +54,7 @@ const Events = () => {
                 <button onClick={() => handlePrevImage(event.images)} className="slideshow-button">{"<"}</button>
                 <img 
                   src={event.images[currentImageIndex]} 
-                  alt={`Event image ${currentImageIndex + 1}`} 
+                  alt={`Slide ${currentImageIndex + 1}`}
                   className="event-image" 
                   onClick={() => window.open(event.images[currentImageIndex], '_blank')} 
                 />
@@ -65,7 +65,7 @@ const Events = () => {
                 <img 
                   key={idx} 
                   src={image} 
-                  alt={`Event image ${idx + 1}`} 
+                  alt={`Slide ${idx + 1}`}
                   className="event-image" 
                   onClick={() => window.open(image, '_blank')} 
                 />

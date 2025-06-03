@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Document, Page, pdfjs } from 'react-pdf';
+import { pdfjs } from 'react-pdf';
 import './Publications.css';
 
 // Ensure pdfjs worker is set correctly
