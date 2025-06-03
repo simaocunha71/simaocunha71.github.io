@@ -15,22 +15,20 @@ h1 {
     list-style-type: none;
     margin-top: 75px;
     width: 100%;
-    /* Removido max-width */
-    padding: 0; /* Adicionado para remover espaçamento padrão de listas */
+    padding: 0; /* Remove default list spacing */
 }
 
 .publication-item {
     display: flex;
     flex-direction: column;
     border-radius: 10px;
-    margin: 20px 0; /* Ajustado para apenas margens verticais */
-    width: 100%; /* Garante que os itens ocupem a largura total */
+    margin: 20px 0; /* Vertical margins only */
+    width: 100%; /* Full width */
     background-color: #fff;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s;
+    transition: transform 0.3s ease;
     overflow: hidden;
 }
-
 
 .publication-item:hover {
     transform: translateY(-5px);
@@ -48,11 +46,6 @@ h1 {
     color: #333;
 }
 
-.paragraph-indent {
-    text-indent: 2em; /* Ajuste o valor conforme necessário */
-  }
-  
-  
 .publication-description {
     font-size: 16px;
     margin-bottom: 20px;
@@ -80,14 +73,24 @@ h1 {
     padding: 8px 16px;
     border-radius: 20px;
     background-color: #f2f2f2;
-    color: #000000;
+    color: #000;
     text-decoration: none;
     font-weight: bold;
-    transition: background-color 0.3s;
+    transition: background-color 0.3s ease;
     border: none;
     cursor: pointer;
 }
 
 .rounded-button:hover {
     background-color: #dcdcdc;
+}
+
+.paragraph-indent {
+    text-indent: 2em; /* Adjust indentation */
+}
+
+.keywords {
+    margin-top: 10px;
+    font-size: 14px;
+    color: #555;
 }

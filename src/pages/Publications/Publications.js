@@ -7,9 +7,17 @@ pdfjs.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/$
 
 const Publications = () => {
   const [selectedPublication, setSelectedPublication] = useState(null);
-  const [selectedPdf] = React.useState(null);
-  
+
   const publications = [
+    {
+      title: "Greening AI-enabled Systems with Software Engineering: A Research Agenda for Environmentally Sustainable AI Practices",
+      authors: "Luís Cruz, João Paulo Fernandes, Maja H. Kirkeby, Silverio Martínez-Fernández, June Sallou, Hina Anwar, Enrique Barba Roque, Justus Bogner, Joel Castaño, Fernando Castor, Aadil Chasmawala, Simão Cunha, Daniel Feitosa, Alexandra González, Andreas Jedlitschka, Patricia Lago, Ana Oprescu, Pooja Rani, João Saraiva, Federica Sarro, Raghavendra Selvan, Karthik Vaidhyanathan, Roberto Verdecchia, Ivan P. Yamshchikov, Henry Muccini",
+      conference: "arXiv preprint (from the Greening AI with Software Engineering workshop, CECAM & Lorentz Center, 2025)",
+      doi: "https://doi.org/10.48550/arXiv.2506.01774",
+      abstract: 'The environmental impact of Artificial Intelligence (AI)-enabled systems is increasing rapidly, and software engineering plays a critical role in developing sustainable solutions. The "Greening AI with Software Engineering" CECAM-Lorentz workshop (no. 1358, 2025) funded by the Centre Européen de Calcul Atomique et Moléculaire and the Lorentz Center, provided an interdisciplinary forum for 29 participants, from practitioners to academics, to share knowledge, ideas, practices, and current results dedicated to advancing green software and AI research. The workshop was held February 3-7, 2025, in Lausanne, Switzerland. Through keynotes, flash talks, and collaborative discussions, participants identified and prioritized key challenges for the field. These included energy assessment and standardization, benchmarking practices, sustainability-aware architectures, runtime adaptation, empirical methodologies, and education. This report presents a research agenda emerging from the workshop, outlining open research directions and practical recommendations to guide the development of environmentally sustainable AI-enabled systems rooted in software engineering principles.',
+      keywords: [],
+      kudosLink: ""
+    },
     {
       title: "Trading Runtime for Energy Efficiency: Leveraging Power Caps to Save Energy Across Programming Languages",
       authors: "Simão Cunha, Luís Silva, João Saraiva and João Paulo Fernandes",
@@ -34,7 +42,6 @@ const Publications = () => {
       keywords: ["Energy Efficiency", "Programming Languages", "Benchmark", "Power Cap"],
     }
   ];
-
 
   const handleAbstractClick = (index) => {
     setSelectedPublication(selectedPublication === index ? null : index);
@@ -74,13 +81,6 @@ const Publications = () => {
                     View on Kudos
                   </button>
                 )}
-                {selectedPdf && (
-                  <div className="pdf-container">
-                    <Document file={selectedPdf}>
-                      <Page pageNumber={1} />
-                    </Document>
-                  </div>
-                )}
               </div>
               {selectedPublication === index && (
                 <div className="abstract">
@@ -90,7 +90,7 @@ const Publications = () => {
                       <p key={i} className="paragraph-indent">{line}</p>
                     ))}
                   </div>
-                  {pub.keywords && (
+                  {pub.keywords && pub.keywords.length > 0 && (
                     <div className="keywords">
                       <strong>Keywords:</strong> {pub.keywords.join(', ')}
                     </div>
@@ -118,8 +118,6 @@ const Publications = () => {
       <br></br>
       <br></br>
       <br></br>
-      <br></br>
-
     </div>
   );
 };
