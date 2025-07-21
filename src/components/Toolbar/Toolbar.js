@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { FaBriefcase, FaCalendarAlt, FaFileAlt, FaLightbulb, FaCode, FaBook, FaAward, FaBars } from 'react-icons/fa';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import './Toolbar.css';
 
 const Toolbar = () => {
@@ -10,79 +10,81 @@ const Toolbar = () => {
     setIsDropdownOpen(!isDropdownOpen);
   };
 
+  const closeDropdown = () => setIsDropdownOpen(false);
+
   return (
-    <div className="toolbar">
-      <Link to="/" className="toolbar-title">
+    <nav className="toolbar" aria-label="Main navigation">
+      <NavLink to="/" className="toolbar-title">
         Simão Cunha's Portfolio
-      </Link>
+      </NavLink>
       <div className="toolbar-links">
-        <Link to="/skills-and-interests" className="toolbar-link">
+        <NavLink to="/skills-and-interests" className="toolbar-link" activeClassName="active">
           <FaLightbulb size={24} />
           Skills and Interests
-        </Link>
-        <Link to="/academic-projects" className="toolbar-link">
-          <FaCode size={24} /> {/* Change to FaProjectDiagram, FaCogs, or FaRocket if preferred */}
+        </NavLink>
+        <NavLink to="/academic-projects" className="toolbar-link" activeClassName="active">
+          <FaCode size={24} />
           Academic Projects
-        </Link>
-        <Link to="/work-experience" className="toolbar-link">
+        </NavLink>
+        <NavLink to="/work-experience" className="toolbar-link" activeClassName="active">
           <FaBriefcase size={24} />
           Work Experience
-        </Link>
-        <Link to="/events" className="toolbar-link">
+        </NavLink>
+        <NavLink to="/events" className="toolbar-link" activeClassName="active">
           <FaCalendarAlt size={24} />
           Events
-        </Link>
-        <Link to="/publications" className="toolbar-link">
+        </NavLink>
+        <NavLink to="/publications" className="toolbar-link" activeClassName="active">
           <FaBook size={24} />
           Publications
-        </Link>
-        <Link to="/certificates" className="toolbar-link">
+        </NavLink>
+        <NavLink to="/certificates" className="toolbar-link" activeClassName="active">
           <FaAward size={24} />
           Certificates
-        </Link>
-        <Link to="/curriculum-vitae" className="toolbar-link">
+        </NavLink>
+        <NavLink to="/curriculum-vitae" className="toolbar-link" activeClassName="active">
           <FaFileAlt size={24} />
           Curriculum Vitae
-        </Link>
+        </NavLink>
       </div>
       <div className="toolbar-right">
-        <button className="toggle-button" onClick={handleToggleDropdown}>
+        <button className="toggle-button" onClick={handleToggleDropdown} aria-label="Open menu">
           <FaBars size={20} />
         </button>
         {isDropdownOpen && (
-          <div className="toolbar-dropdown">
-            <Link to="/skills-and-interests" className="toolbar-link" onClick={handleToggleDropdown}>
+          <div className="toolbar-dropdown" role="menu">
+            <NavLink to="/skills-and-interests" className="toolbar-link" onClick={closeDropdown} activeClassName="active">
               <FaLightbulb size={24} />
               Skills and Interests
-            </Link>
-            <Link to="/academic-projects" className="toolbar-link" onClick={handleToggleDropdown}>
-              <FaCode size={24} /> {/* Change to FaProjectDiagram, FaCogs, or FaRocket if preferred */}
+            </NavLink>
+            <NavLink to="/academic-projects" className="toolbar-link" onClick={closeDropdown} activeClassName="active">
+              <FaCode size={24} />
               Academic Projects
-            </Link>
-            <Link to="/work-experience" className="toolbar-link" onClick={handleToggleDropdown}>
+            </NavLink>
+            <NavLink to="/work-experience" className="toolbar-link" onClick={closeDropdown} activeClassName="active">
               <FaBriefcase size={24} />
               Work Experience
-            </Link>
-            <Link to="/events" className="toolbar-link" onClick={handleToggleDropdown}>
+            </NavLink>
+            <NavLink to="/events" className="toolbar-link" onClick={closeDropdown} activeClassName="active">
               <FaCalendarAlt size={24} />
               Events
-            </Link>
-            <Link to="/publications" className="toolbar-link" onClick={handleToggleDropdown}>
+            </NavLink>
+            <NavLink to="/publications" className="toolbar-link" onClick={closeDropdown} activeClassName="active">
               <FaBook size={24} />
               Publications
-            </Link>
-            <Link to="/certificates" className="toolbar-link" onClick={handleToggleDropdown}>
+            </NavLink>
+            <NavLink to="/certificates" className="toolbar-link" onClick={closeDropdown} activeClassName="active">
               <FaAward size={24} />
               Certificates
-            </Link>
-            <Link to="/curriculum-vitae" className="toolbar-link" onClick={handleToggleDropdown}>
+            </NavLink>
+            <NavLink to="/curriculum-vitae" className="toolbar-link" onClick={closeDropdown} activeClassName="active">
               <FaFileAlt size={24} />
               Curriculum Vitae
-            </Link>
+            </NavLink>
           </div>
         )}
       </div>
-    </div>
+    </nav>
   );
 };
 

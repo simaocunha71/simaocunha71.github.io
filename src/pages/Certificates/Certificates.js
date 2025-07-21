@@ -1,151 +1,99 @@
 import React from 'react';
-import { Document, Page, pdfjs } from 'react-pdf';
+import { pdfjs } from 'react-pdf';
 import './Certificates.css';
 
 // Ensure pdfjs worker is set correctly
 pdfjs.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.min.js`;
 
-const Certificates = () => {
-  const [selectedPdf] = React.useState(null);
+function extractYear(str) {
+  const match = str.match(/\b(20\d{2}|19\d{2})\b/);
+  return match ? match[0] : '';
+}
 
+const certificates = [
+  {
+    title: "English C1 Certificate",
+    description: "Obtained from BabeliUM organization - from October 2021 to February 2022",
+    year: "2022",
+    files: [
+      { label: "Open PDF Certificate", url: "assets/docs/English_C1_Simao_Cunha.pdf" }
+    ]
+  },
+  {
+    title: "Sustrainable Summer School 2023 - Attendance and Students Workshop and Poster Session Certificates",
+    description: "Obtained from University of Coimbra - from July 11, 2023 to July 14, 2023",
+    year: "2023",
+    files: [
+      { label: "Attendance Certificate", url: "assets/docs/sustrainable-summer-school-2023/attendance_certificate.pdf" },
+      { label: "Students Workshop and Poster Session Certificate", url: "assets/docs/sustrainable-summer-school-2023/students_workshop_certificate.pdf" }
+    ]
+  },
+  {
+    title: "1st UMinho Research & Innovation Open Days 2024 - Pitch and Poster Session Certificates",
+    description: "Obtained from University of Minho - January 2024",
+    year: "2024",
+    files: [
+      { label: "Pitch Certificate", url: "assets/docs/uminho-open-days-2024/pitch_certificate.pdf" },
+      { label: "Poster Certificate", url: "assets/docs/uminho-open-days-2024/poster_certificate.pdf" }
+    ]
+  },
+  {
+    title: "Cerciras Training School 2024 - Attendance Certificate",
+    description: "Obtained from University of Klagenfurt - August 2024",
+    year: "2024",
+    files: [
+      { label: "Attendance Certificate", url: "assets/docs/cerciras-training-school-2024/certificate.pdf" }
+    ]
+  },
+  {
+    title: "Greening AI with Software Engineering 2025 - Attendance Certificate",
+    description: "Obtained from CECAM & Lorentz Center - February 2025",
+    year: "2025",
+    files: [
+      { label: "Attendance Certificate", url: "assets/docs/cecam-lorentz-greening-ai-2025/certificate.pdf" }
+    ]
+  }
+];
+
+// Ordena os certificados do mais recente para o mais antigo
+const sortedCertificates = [...certificates].sort((a, b) => {
+  const yearA = parseInt(a.year || extractYear(a.description) || extractYear(a.title)) || 0;
+  const yearB = parseInt(b.year || extractYear(b.description) || extractYear(b.title)) || 0;
+  return yearB - yearA;
+});
+
+const Certificates = () => {
   const handlePdfButtonClick = (pdfUrl) => {
-    // Open the PDF in a new tab
     window.open(pdfUrl, '_blank');
   };
 
   return (
-    <>
-      <div style={{ marginTop: '80px' }}></div>
-
-      {/* Item 1 */}
-      <div className="certificate-item">
-        <div className="certificate-content">
-          <div className="certificate-title">English C1 Certificate</div>
-          <div className="certificate-description">
-            Obtained from BabeliUM organization - from October 2021 to February 2022
-          </div>
-          <div className="certificate-buttons">
-            <button className="rounded-button" onClick={() => handlePdfButtonClick("assets/docs/English_C1_Simao_Cunha.pdf")}>
-              Open PDF Certificate
-            </button>
-          </div>
-          {selectedPdf && (
-            <div className="pdf-container">
-              <Document file={selectedPdf}>
-                <Page pageNumber={1} />
-              </Document>
+    <div className="certificates-container">
+      <div className="certificate-list">
+        {sortedCertificates.map((cert, idx) => (
+          <div className="certificate-item" key={idx}>
+            <div className="certificate-content">
+              <div className="certificate-title">
+                {cert.title}
+                <span className="certificate-year">{cert.year || extractYear(cert.description) || extractYear(cert.title)}</span>
+              </div>
+              <div className="certificate-description">{cert.description}</div>
+              <div className="certificate-buttons">
+                {cert.files.map((file, i) => (
+                  <button
+                    className="rounded-button"
+                    key={i}
+                    onClick={() => handlePdfButtonClick(file.url)}
+                  >
+                    {file.label}
+                  </button>
+                ))}
+              </div>
             </div>
-          )}
-        </div>
+          </div>
+        ))}
       </div>
-
-      {/* Item 2 */}
-      <div className="certificate-item">
-        <div className="certificate-content">
-          <div className="certificate-title">Sustrainable Summer School 2023 - Attendance and Students Workshop and Poster Session Certificates</div>
-          <div className="certificate-description">
-            Obtained from University of Coimbra - from July 11, 2023 to July 14, 2023
-          </div>
-          <div className="certificate-buttons">
-            <button className="rounded-button" onClick={() => handlePdfButtonClick("assets/docs/sustrainable-summer-school-2023/attendance_certificate.pdf")}>
-              Attendance Certificate
-            </button>
-            <button className="rounded-button" onClick={() => handlePdfButtonClick("assets/docs/sustrainable-summer-school-2023/students_workshop_certificate.pdf")}>
-              Students Workshop and Poster Session Certificate
-            </button>
-          </div>
-          {selectedPdf && (
-            <div className="pdf-container">
-              <Document file={selectedPdf}>
-                <Page pageNumber={1} />
-              </Document>
-            </div>
-          )}
-        </div>
-      </div>
-
-      {/* Item 3 */}
-      <div className="certificate-item">
-        <div className="certificate-content">
-          <div className="certificate-title">1st UMinho Research & Innovation Open Days 2024 - Pitch and Poster Session Certificates</div>
-          <div className="certificate-description">
-            Obtained from University of Minho - January 2024
-          </div>
-          <div className="certificate-buttons">
-            <button className="rounded-button" onClick={() => handlePdfButtonClick("assets/docs/uminho-open-days-2024/pitch_certificate.pdf")}>
-              Pitch Certificate
-            </button>
-            <button className="rounded-button" onClick={() => handlePdfButtonClick("assets/docs/uminho-open-days-2024/poster_certificate.pdf")}>
-              Poster Certificate
-            </button>
-          </div>
-          {selectedPdf && (
-            <div className="pdf-container">
-              <Document file={selectedPdf}>
-                <Page pageNumber={1} />
-              </Document>
-            </div>
-          )}
-        </div>
-      </div>
-
-      <div className="certificate-item">
-        <div className="certificate-content">
-          <div className="certificate-title">Cerciras Training School 2024 - Attendance Certificate</div>
-          <div className="certificate-description">
-            Obtained from University of Klagenfurt - August 2024
-          </div>
-          <div className="certificate-buttons">
-            <button className="rounded-button" onClick={() => handlePdfButtonClick("assets/docs/cerciras-training-school-2024/certificate.pdf")}>
-              Attendance Certificate
-            </button>
-          </div>
-          {selectedPdf && (
-            <div className="pdf-container">
-              <Document file={selectedPdf}>
-                <Page pageNumber={1} />
-              </Document>
-            </div>
-          )}
-        </div>
-      </div>
-
-      <div className="certificate-item">
-        <div className="certificate-content">
-          <div className="certificate-title">Greening AI with Software Engineering 2025 - Attendance Certificate</div>
-          <div className="certificate-description">
-            Obtained from CECAM & Lorentz Center - February 2025
-          </div>
-          <div className="certificate-buttons">
-            <button className="rounded-button" onClick={() => handlePdfButtonClick("assets/docs/cecam-lorentz-greening-ai-2025/certificate.pdf")}>
-              Attendance Certificate
-            </button>
-          </div>
-          {selectedPdf && (
-            <div className="pdf-container">
-              <Document file={selectedPdf}>
-                <Page pageNumber={1} />
-              </Document>
-            </div>
-          )}
-        </div>
-      </div>
-
-      <br></br>
-      <br></br>
-      <br></br>
-      <br></br>
-      <br></br>
-      <br></br>
-      <br></br>
-      <br></br>
-      <br></br>
-      <br></br>
-      <br></br>
-      <br></br>
-      <br></br>
-      <br></br>
-    </>
+    </div>
   );
 };
 

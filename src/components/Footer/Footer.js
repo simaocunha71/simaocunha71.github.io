@@ -5,10 +5,13 @@ const Footer = () => {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="footer">
-      © {currentYear} Simão Cunha
-      <br />
-      Developed with React
+    <footer className="footer" role="contentinfo">
+      <div>
+        © {currentYear} Simão Cunha
+      </div>
+      <div>
+        Developed with React
+      </div>
     </footer>
   );
 };

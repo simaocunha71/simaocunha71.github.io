@@ -1,9 +1,22 @@
 import React, { useState } from 'react';
-import { pdfjs } from 'react-pdf';
 import './Publications.css';
 
-// Ensure pdfjs worker is set correctly
-pdfjs.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.min.js`;
+function extractYear(pub) {
+  // Tenta extrair o ano do campo date, conference ou doi
+  if (pub.date) {
+    const match = pub.date.match(/\b(20\d{2}|19\d{2})\b/);
+    if (match) return match[0];
+  }
+  if (pub.conference) {
+    const match = pub.conference.match(/\b(20\d{2}|19\d{2})\b/);
+    if (match) return match[0];
+  }
+  if (pub.doi) {
+    const match = pub.doi.match(/\b(20\d{2}|19\d{2})\b/);
+    if (match) return match[0];
+  }
+  return '';
+}
 
 const Publications = () => {
   const [selectedPublication, setSelectedPublication] = useState(null);
@@ -57,10 +70,14 @@ const Publications = () => {
         {publications.map((pub, index) => (
           <div key={index} className="publication-item">
             <div className="publication-content">
-              <div className="publication-title">{pub.title}</div>
-              <div className="publication-description">
-                <strong>{pub.authors}.</strong>
-                <br />
+              <div className="publication-title">
+                {pub.title}
+                {extractYear(pub) && (
+                  <span className="publication-year">{extractYear(pub)}</span>
+                )}
+              </div>
+              <div className="publication-authors">{pub.authors}</div>
+              <div className="publication-meta">
                 <em>
                   {pub.conference}
                   {pub.date && `, ${pub.date}`}
@@ -69,9 +86,8 @@ const Publications = () => {
                   {pub.pages && `, ${pub.pages}.`}
                   {!pub.pages && (pub.publisher || pub.date || pub.location) && `.`}
                 </em>
-                <br />
-                <a href={pub.doi} target="_blank" rel="noopener noreferrer">{pub.doi}</a>
               </div>
+              <a className="publication-doi" href={pub.doi} target="_blank" rel="noopener noreferrer">{pub.doi}</a>
               <div className="publication-buttons">
                 <button className="rounded-button" onClick={() => handleAbstractClick(index)}>
                   {selectedPublication === index ? 'Hide Abstract' : 'Show Abstract'}
@@ -101,23 +117,6 @@ const Publications = () => {
           </div>
         ))}
       </div>
-      <br></br>
-      <br></br>
-      <br></br>
-      <br></br>
-      <br></br>
-      <br></br>
-      <br></br>
-      <br></br>
-      <br></br>
-      <br></br>
-      <br></br>
-      <br></br>
-      <br></br>
-      <br></br>
-      <br></br>
-      <br></br>
-      <br></br>
     </div>
   );
 };
