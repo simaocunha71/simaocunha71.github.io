@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import './Events.css';
 
 const Events = () => {
-  const [currentImageIndex, setCurrentImageIndex] = useState(0);
+  const [currentImageIndexes, setCurrentImageIndexes] = useState({});
 
   const events = [
     {
@@ -34,12 +34,18 @@ const Events = () => {
     },
   ];
 
-  const handlePrevImage = (images) => {
-    setCurrentImageIndex((prevIndex) => (prevIndex - 1 + images.length) % images.length);
+  const handlePrevImage = (eventIndex, images) => {
+    setCurrentImageIndexes(prev => ({
+      ...prev,
+      [eventIndex]: ((prev[eventIndex] || 0) - 1 + images.length) % images.length
+    }));
   };
 
-  const handleNextImage = (images) => {
-    setCurrentImageIndex((prevIndex) => (prevIndex + 1) % images.length);
+  const handleNextImage = (eventIndex, images) => {
+    setCurrentImageIndexes(prev => ({
+      ...prev,
+      [eventIndex]: ((prev[eventIndex] || 0) + 1) % images.length
+    }));
   };
 
   return (
@@ -49,23 +55,23 @@ const Events = () => {
           <div className="event-title">{event.title}</div>
           <div className="event-description">{event.description}</div>
           <div className="event-gallery-centered">
-            {event.title === 'Greening AI with Software Engineering 2025' && event.images.length > 1 ? (
+            {event.images.length > 1 ? (
               <>
-                <button onClick={() => handlePrevImage(event.images)} className="slideshow-button">{"<"}</button>
+                <button onClick={() => handlePrevImage(index, event.images)} className="slideshow-button">{"<"}</button>
                 <img 
-                  src={event.images[currentImageIndex]} 
-                  alt={`Slide ${currentImageIndex + 1}`}
+                  src={event.images[currentImageIndexes[index] || 0]} 
+                  alt={`${event.title} - Slide ${(currentImageIndexes[index] || 0) + 1}`}
                   className="event-image" 
-                  onClick={() => window.open(event.images[currentImageIndex], '_blank')} 
+                  onClick={() => window.open(event.images[currentImageIndexes[index] || 0], '_blank')} 
                 />
-                <button onClick={() => handleNextImage(event.images)} className="slideshow-button">{">"}</button>
+                <button onClick={() => handleNextImage(index, event.images)} className="slideshow-button">{">"}</button>
               </>
             ) : (
               event.images.map((image, idx) => (
                 <img 
                   key={idx} 
                   src={image} 
-                  alt={`Slide ${idx + 1}`}
+                  alt={`${event.title} - Image ${idx + 1}`}
                   className="event-image" 
                   onClick={() => window.open(image, '_blank')} 
                 />
