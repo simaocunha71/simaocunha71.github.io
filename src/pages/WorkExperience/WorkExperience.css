@@ -190,6 +190,10 @@
   gap: 6px;
 }
 
+.timeline-event.left .timeline-keywords {
+  justify-content: flex-end;
+}
+
 .timeline-date-label {
   position: absolute;
   top: 20px;
