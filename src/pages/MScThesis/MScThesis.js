@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { FaFilePdf, FaGithub, FaChevronDown } from "react-icons/fa";
+import { FaFilePdf, FaGithub, FaChevronDown, FaExternalLinkAlt } from "react-icons/fa";
 import { PiMicrosoftPowerpointLogoFill } from "react-icons/pi";
 import Flag from "react-world-flags";
 import './MScThesis.css';
@@ -274,22 +274,11 @@ const MScThesis = () => {
     };
 
     const texts = {
-      pt: [
-        "Esta dissertação apresenta o desenvolvimento de uma plataforma abrangente para a avaliação de large language models (LLMs) através de tarefas de benchmarking com datasets estabelecidos, incluindo HumanEval-X, MBPP+ e CyberSecEval. O principal objetivo desta plataforma é avaliar não apenas a eficácia, eficiência energética e tempo de execução dos LLMs na geração de código, mas também as suas implicações de segurança em cenários de desenvolvimento de software.",
-        "O documento analisa o contexto, a motivação e os objetivos do projeto, destacando a influência dos LLMs, como o GPT-4 e o Llama-2, no desenvolvimento de software. Discute os desafios do consumo de energia dos LLMs, especialmente quando são representados como modelos quantizados - modelos menores que funcionam melhor em hardware com recursos limitados - e examina o seu desempenho e requisitos em diferentes linguagens de programação e técnicas de prompt engineering.",
-        "Os resultados mostraram que o consumo de energia e o tempo de execução variaram entre diferentes LLMs, com base no benchmark, na linguagem de programação e no tipo de prompting (0-shot vs 3-shot). De um modo geral, o 3-shot prompting levou a um menor consumo de energia e a um tempo de execução menor em comparação com 0-shot. Além disso, pass@10 superou pass@1, e SacreBLEU e GoogleBLEU melhorou com o 3-shot prompting, enquanto que CodeBLEU diminuiu.",
-        "Além disso, a pesquisa destaca os resultados do benchmark CyberSecEval, que avalia a segurança do código gerado e revela vulnerabilidades em vários LLMs. Isso mostra a importância de considerar a segurança, além da eficiência energética e do tempo de execução, ao escolher um LLM para o desenvolvimento de software.",
-        "Esta dissertação analisa as métricas de desempenho dos LLMs, como correção funcional e qualidade do código, contribuindo para práticas de engenharia de software sustentável. Ao focar na sustentabilidade e na segurança ao implementar LLMs, oferece uma abordagem mais completa para o desenvolvimento de software, alinhada com os princípios modernos de sustentabilidade na engenharia de software.",
-      ],
-      en: [
-        "This dissertation presents the development of a comprehensive platform for evaluating large language models (LLMs) through benchmarking coding tasks with established datasets, including HumanEval-X, MBPP+, and CyberSecEval. The primary objective of this platform is to assess not only the effectiveness, energy efficiency and runtime of LLMs in generating code but also their security implications in software development scenarios.",
-        "The document thoroughly explores the project’s context, motivation, and objectives, emphasizing the transformative influence of advanced LLMs, such as GPT-4 and Llama-2, on the software development landscape. It investigates the challenges associated with the energy consumption of LLMs, particularly when represented as quantized models - simplified (and smaller) models that are easier to run on hardware with limited resources - analysing their performance and resource requirements across different programming languages and prompt engineering techniques.",
-        "The findings showed that energy consumption and runtime varied among different LLMs based on the benchmark, programming language and prompting type (0-shot vs 3-shot). Overall, 3-shot prompting led to lower energy consumption and faster runtime than 0-shot prompting. Pass@10 outperformed pass@1, and SacreBLEU and GoogleBLEU scores improved with 3-shot prompting, while CodeBLEU scores decreased.",
-        "Additionally, the research highlights the findings from the CyberSecEval benchmark, which evaluates the security of generated code, revealing vulnerabilities inherent in the outputs of various LLMs. This underscores the critical need to consider security alongside energy efficiency and execution time when selecting an LLM for software development.",
-        "Through an extensive analysis of LLM performance metrics, including functional correctness and code quality, this dissertation contributes to the advancement of sustainable software engineering practices. By prioritizing sustainability and security in LLM deployment, it offers a complete approach to software development that follows the recent, but important, sustainable principles in software development.",
-      ],
+      pt: "Esta dissertação apresenta o desenvolvimento de uma plataforma abrangente para a avaliação de large language models (LLMs) através de tarefas de benchmarking com datasets estabelecidos, incluindo HumanEval-X, MBPP+ e CyberSecEval. O principal objetivo desta plataforma é avaliar não apenas a eficácia, eficiência energética e tempo de execução dos LLMs na geração de código, mas também as suas implicações de segurança em cenários de desenvolvimento de software. O documento analisa o contexto, a motivação e os objetivos do projeto, destacando a influência dos LLMs, como o GPT-4 e o Llama-2, no desenvolvimento de software. Discute os desafios do consumo de energia dos LLMs, especialmente quando são representados como modelos quantizados - modelos menores que funcionam melhor em hardware com recursos limitados - e examina o seu desempenho e requisitos em diferentes linguagens de programação e técnicas de prompt engineering. Os resultados mostraram que o consumo de energia e o tempo de execução variaram entre diferentes LLMs, com base no benchmark, na linguagem de programação e no tipo de prompting (0-shot vs 3-shot). De um modo geral, o 3-shot prompting levou a um menor consumo de energia e a um tempo de execução menor em comparação com 0-shot. Além disso, pass@10 superou pass@1, e SacreBLEU e GoogleBLEU melhorou com o 3-shot prompting, enquanto que CodeBLEU diminuiu. Além disso, a pesquisa destaca os resultados do benchmark CyberSecEval, que avalia a segurança do código gerado e revela vulnerabilidades em vários LLMs. Isso mostra a importância de considerar a segurança, além da eficiência energética e do tempo de execução, ao escolher um LLM para o desenvolvimento de software. Esta dissertação analisa as métricas de desempenho dos LLMs, como correção funcional e qualidade do código, contribuindo para práticas de engenharia de software sustentável. Ao focar na sustentabilidade e na segurança ao implementar LLMs, oferece uma abordagem mais completa para o desenvolvimento de software, alinhada com os princípios modernos de sustentabilidade na engenharia de software.",
+      en: "This dissertation presents the development of a comprehensive platform for evaluating large language models (LLMs) through benchmarking coding tasks with established datasets, including HumanEval-X, MBPP+, and CyberSecEval. The primary objective of this platform is to assess not only the effectiveness, energy efficiency and runtime of LLMs in generating code but also their security implications in software development scenarios. The document thoroughly explores the project’s context, motivation, and objectives, emphasizing the transformative influence of advanced LLMs, such as GPT-4 and Llama-2, on the software development landscape. It investigates the challenges associated with the energy consumption of LLMs, particularly when represented as quantized models - simplified (and smaller) models that are easier to run on hardware with limited resources - analysing their performance and resource requirements across different programming languages and prompt engineering techniques. The findings showed that energy consumption and runtime varied among different LLMs based on the benchmark, programming language and prompting type (0-shot vs 3-shot). Overall, 3-shot prompting led to lower energy consumption and faster runtime than 0-shot prompting. Pass@10 outperformed pass@1, and SacreBLEU and GoogleBLEU scores improved with 3-shot prompting, while CodeBLEU scores decreased. Additionally, the research highlights the findings from the CyberSecEval benchmark, which evaluates the security of generated code, revealing vulnerabilities inherent in the outputs of various LLMs. This underscores the critical need to consider security alongside energy efficiency and execution time when selecting an LLM for software development. Through an extensive analysis of LLM performance metrics, including functional correctness and code quality, this dissertation contributes to the advancement of sustainable software engineering practices. By prioritizing sustainability and security in LLM deployment, it offers a complete approach to software development that follows the recent, but important, sustainable principles in software development."
     };
     
+
   return (
     <div className="msc-thesis-container">
       <h1>Towards a Platform for Benchmarking Large Language Models</h1>
@@ -370,6 +359,17 @@ const MScThesis = () => {
         Repository
       </a>
 
+      <a
+        href="https://hdl.handle.net/1822/96851"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="github-button"
+      >
+        <FaExternalLinkAlt size={20} style={{ marginRight: "8px" }} />
+        RepositóriUM
+      </a>
+
+
     </div>
 
 <div className="abstract-container">
@@ -393,11 +393,9 @@ const MScThesis = () => {
     </div>
   </div>
   <div className="abstract-content">
-    {texts[language].map((paragraph, index) => (
-      <div key={index} className="text-description">
-        {paragraph}
-      </div>
-    ))}
+    <div className="text-description">
+      {texts[language]}
+    </div>
   </div>
 </div>
 

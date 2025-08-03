@@ -7,7 +7,6 @@
   padding: 32px 24px 40px 24px;
   background: #fff;
   border-radius: 18px;
-  box-shadow: 0 6px 32px rgba(0,0,0,0.10), 0 1.5px 4px rgba(0,0,0,0.04);
   color: #23272f;
   transition: box-shadow 0.3s;
 }
@@ -140,16 +139,12 @@
 
 /* Text description */
 .text-description {
-  margin: 28px 0 18px 0;
+  margin: 16px 0 12px 0;
   text-align: justify;
   color: #3a3f4b;
-  line-height: 1.85;
-  text-indent: 2em;
+  line-height: 1.7;
+  text-indent: 0;
   font-size: 1.08rem;
-  background: #f7f8fa;
-  border-radius: 10px;
-  padding: 18px 22px;
-  box-shadow: 0 2px 8px rgba(35,39,47,0.04);
 }
 
 .text-description div {
