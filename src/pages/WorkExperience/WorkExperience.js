@@ -40,7 +40,7 @@ const workExperiences = [
   },
   {
     company: 'University of Minho',
-    jobTitle: 'Invited Assistant Professor',
+    jobTitle: 'Teaching Assistant',
     duration: 'Feb 2025 - Present',
     description: 'Courses taught: Topics of Software Development and Experimentation in Software Engineering',
     keywords: ['Software Development', 'Experimentation'],
