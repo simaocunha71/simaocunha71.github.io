@@ -52,14 +52,36 @@ const certificates = [
     files: [
       { label: "Attendance Certificate", url: "assets/docs/cecam-lorentz-greening-ai-2025/certificate.pdf" }
     ]
+  },
+  {
+    title: "Symposium on Sustainable IT Systems (SUITS) 2025 - Attendance Certificate",
+    description: "Obtained from DIREC - Digital Research Centre Denmark & Novo Nordisk Foundation & Roskilde University & University of Copenhagen & University of Southern Denmark & IT-University & Technical University of Denmark & Aalborg University - September 2025",
+    year: "2025",
+    files: [
+      { label: "Attendance Certificate", url: "assets/docs/suits-2025/certificate.pdf" }
+    ]
   }
 ];
 
-// Ordena os certificados do mais recente para o mais antigo
+function extractDate(str) {
+  // Try to match something like "January 2024", "Aug 2025", "July 11, 2023", etc.
+  const match = str.match(/\b(January|February|March|April|May|June|July|August|September|October|November|December)\s*(\d{4})?\b/i);
+  if (match) {
+    const month = match[1];
+    const year = match[2] || extractYear(str) || '1900';
+    return new Date(`${month} 1, ${year}`);
+  }
+
+  // fallback: just use year if month not found
+  const year = extractYear(str);
+  return year ? new Date(`${year}-01-01`) : new Date(0);
+}
+
+// Improved sorting: considers both year and month
 const sortedCertificates = [...certificates].sort((a, b) => {
-  const yearA = parseInt(a.year || extractYear(a.description) || extractYear(a.title)) || 0;
-  const yearB = parseInt(b.year || extractYear(b.description) || extractYear(b.title)) || 0;
-  return yearB - yearA;
+  const dateA = extractDate(a.description) || extractDate(a.title);
+  const dateB = extractDate(b.description) || extractDate(b.title);
+  return dateB - dateA; // descending order
 });
 
 const Certificates = () => {

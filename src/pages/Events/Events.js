@@ -6,6 +6,11 @@ const Events = () => {
 
   const events = [
     {
+      title: 'Symposium on Sustainable IT Systems (SUITS) 2025',
+      description: 'From September 22-25, 2025, I had the chance to attend the first Symposium on Sustainable IT Systems (SUITS) in Copenhagen, Denmark. The 4-day seminar brought together researchers in sustainable IT, energy efficiency and green programming to exchange ideas, discuss open challenges and foster new collaborations. It was an amazing opportunity to connect with others who share the same passion for making computing more sustainable. As a PhD student focused on green software, I was eager to learn about ongoing work in sustainable computing and to share a tool I developed, which measures software energy consumption and execution time and applies power capping to the system using Intel RAPL. Many thanks to Michael Kirkedal Thomsen and Maja Hanne Kirkeby for organizing such an inspiring event. I left feeling inspired and ready to take my PhD research to the next level. Learn more about SUITS 2025 here: https://suits-25.github.io/',
+      images: ["assets/docs/suits-2025/group_picture.jpg"]
+    },
+    {
       title: 'Greening AI with Software Engineering 2025',
       description: 'From February 3 to February 7, 2025, I had the incredible opportunity to attend the CECAM-Lorentz Workshop on "Greening AI with Software Engineering" at EPFL, Lausanne, Switzerland. It was an inspiring event that brought together researchers from around the world to discuss how software engineering can contribute to more sustainable AI development. As an MSc graduate passionate about green software, I was especially excited to discuss how we can make AI systems more energy-efficient and integrate sustainability into software development. I also had the chance to present my MSc thesis on the energy consumption of local LLMs for code, which led to some fascinating discussions and valuable feedback from experts in the field. A huge thank you to the amazing organizers - Luís Cruz, João Paulo Fernandes, Maja Hanne Kirkeby, Silverio Martínez Fernández, and June Sallou - as well as the @CECAM and Lorentz Center for making this event such a great experience. I left with new insights, great conversations, and a stronger motivation to contribute to the future of sustainable software engineering.',
       images: ["assets/docs/cecam-lorentz-greening-ai-2025/group_picture.jpg", "assets/docs/cecam-lorentz-greening-ai-2025/presentation.jpg"]
@@ -53,7 +58,15 @@ const Events = () => {
       {events.map((event, index) => (
         <div key={index} className="event-item">
           <div className="event-title">{event.title}</div>
-          <div className="event-description">{event.description}</div>
+          <div
+            className="event-description"
+            dangerouslySetInnerHTML={{
+              __html: event.description.replace(
+                /(https?:\/\/[^\s)]+)/g,
+                '<a href="$1" target="_blank" rel="noopener noreferrer">$1</a>'
+              )
+            }}
+          ></div>
           <div className="event-gallery-centered">
             {event.images.length > 1 ? (
               <>
