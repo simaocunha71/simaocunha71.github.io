@@ -29,19 +29,9 @@ const workExperiences = [
     logo: "assets/icons/bosch.png",
   },
   {
-    company: 'Requião Primary School and Vale S. Martinho Primary School',
-    jobTitle: 'Informatics Teacher',
-    duration: 'Mar 2025 - Jun 2025',
-    description: 
-    `Taught IT basics to 2nd, 3rd, and 4th grade students using Microsoft PowerPoint and Microsoft Word
-    Taught programming basics with the Scratch platform`,
-    keywords: ['Teaching', 'Scratch', 'Microsoft Office'],
-    logo: ["assets/icons/aper.jpg", "assets/icons/apeeji.jpg"],
-  },
-  {
     company: 'University of Minho',
     jobTitle: 'Teaching Assistant',
-    duration: 'Feb 2025 - Present',
+    duration: 'Feb 2025 - Jul 2025',
     description: 'Courses taught: Topics of Software Development and Experimentation in Software Engineering',
     keywords: ['Software Development', 'Experimentation'],
     logo: "assets/icons/uminho.png",
