@@ -6,7 +6,7 @@ import './Home.css';
 const Home = () => {
   const linkedinUrl = 'https://www.linkedin.com/in/simaocunha71/';
   const githubUrl = 'https://github.com/simaocunha71';
-  const emailUrl = 'mailto:simaopscunha@outlook.pt';
+  const emailUrl = 'mailto:simao.s.cunha@inesctec.pt';
   const orcidUrl = 'https://orcid.org/0009-0008-7979-2747';
   const scholarUrl = 'https://scholar.google.com/citations?user=BA9OLokAAAAJ&hl=pt-PT';
 
