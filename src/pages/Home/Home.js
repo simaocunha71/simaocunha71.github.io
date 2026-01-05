@@ -10,7 +10,10 @@ const Home = () => {
   const orcidUrl = 'https://orcid.org/0009-0008-7979-2747';
   const scholarUrl = 'https://scholar.google.com/citations?user=BA9OLokAAAAJ&hl=pt-PT';
 
-  const description = `Greetings everyone!\n\nMy name is Simão Cunha and I'm a MSc Graduate in Informatics Engineering from the University of Minho.\nHere you can find more about my projects and get in touch with me using the following links:`;
+  const description = `Greetings everyone!
+
+My name is Simão Cunha, and I am a PhD student in the Doctoral Program in Informatics at the University of Minho.
+Here you can learn more about my work and get in touch with me using the links below.`;
 
   return (
     <div className="home-container">
