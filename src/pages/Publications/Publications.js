@@ -23,10 +23,26 @@ const Publications = () => {
 
   const publications = [
     {
+      title: "The Green Side of the Lua",
+      authors: "André Brandão, Diogo Matos, Miguel Guimarães, Simão Cunha, and João Saraiva",
+      year: 2026,
+      conference: "arXiv preprint",
+      doi: "https://arxiv.org/abs/2601.16670",
+      abstract: "The United Nations' 2030 Agenda for Sustainable Development highlights the importance of energy-efficient software to reduce the global carbon footprint. Programming languages and execution models strongly influence software energy consumption, with interpreted languages generally being less efficient than compiled ones. Lua illustrates this trade-off: despite its popularity, it is less energy-efficient than greener and faster languages such as C.",
+      keywords: ["Energy Efficiency", "Language Benchmarking", "Green Software"],
+      kudosLink: ""
+    },
+    {
       title: "Greening AI-enabled Systems with Software Engineering: A Research Agenda for Environmentally Sustainable AI Practices",
-      authors: "Luís Cruz, João Paulo Fernandes, Maja H. Kirkeby, Silverio Martínez-Fernández, June Sallou, Hina Anwar, Enrique Barba Roque, Justus Bogner, Joel Castaño, Fernando Castor, Aadil Chasmawala, Simão Cunha, Daniel Feitosa, Alexandra González, Andreas Jedlitschka, Patricia Lago, Ana Oprescu, Pooja Rani, João Saraiva, Federica Sarro, Raghavendra Selvan, Karthik Vaidhyanathan, Roberto Verdecchia, Ivan P. Yamshchikov, Henry Muccini",
-      conference: "arXiv preprint (from the Greening AI with Software Engineering workshop, CECAM & Lorentz Center, 2025)",
-      doi: "https://doi.org/10.48550/arXiv.2506.01774",
+      authors: "Luís Cruz, João Paulo Fernandes, Maja H. Kirkeby, Silverio Martínez-Fernández, June Sallou, Hina Anwar, Enrique Barba Roque, Justus Bogner, Joel Castaño, Fernando Castor, Aadil Chasmawala, Simão Cunha, Daniel Feitosa, Alexandra González, Andreas Jedlitschka, Patricia Lago, Henry Muccini, Ana Oprescu, Pooja Rani, João Saraiva, Federica Sarro, Raghavendra Selvan, Karthik Vaidhyanathan, and Roberto Verdecchia",
+      year: 2025,
+      conference: "SIGSOFT Software Engineering Notes (ACM)",
+      date: "July 2025",
+      volume: "50",
+      issue: "3",
+      pages: "14–23",
+      publisher: "Association for Computing Machinery",
+      doi: "https://doi.org/10.1145/3743095.3743099",
       abstract: 'The environmental impact of Artificial Intelligence (AI)-enabled systems is increasing rapidly, and software engineering plays a critical role in developing sustainable solutions. The "Greening AI with Software Engineering" CECAM-Lorentz workshop (no. 1358, 2025) funded by the Centre Européen de Calcul Atomique et Moléculaire and the Lorentz Center, provided an interdisciplinary forum for 29 participants, from practitioners to academics, to share knowledge, ideas, practices, and current results dedicated to advancing green software and AI research. The workshop was held February 3-7, 2025, in Lausanne, Switzerland. Through keynotes, flash talks, and collaborative discussions, participants identified and prioritized key challenges for the field. These included energy assessment and standardization, benchmarking practices, sustainability-aware architectures, runtime adaptation, empirical methodologies, and education. This report presents a research agenda emerging from the workshop, outlining open research directions and practical recommendations to guide the development of environmentally sustainable AI-enabled systems rooted in software engineering principles.',
       keywords: [],
       kudosLink: ""
