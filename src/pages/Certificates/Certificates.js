@@ -60,6 +60,14 @@ const certificates = [
     files: [
       { label: "Attendance Certificate", url: "assets/docs/suits-2025/certificate.pdf" }
     ]
+  },
+  {
+    title: "1st International Workshop on Green Software Evolution (Greenvolve 2026) - Attendance Certificate",
+    description: "Obtained from University of Cyprus & IEEE & EasyConferences (Online attendance) - March 2026",
+    year: "2026",
+    files: [
+      { label: "Attendance Certificate", url: "assets/docs/greenvolve-2026/certificate.pdf" }
+    ]
   }
 ];
 
