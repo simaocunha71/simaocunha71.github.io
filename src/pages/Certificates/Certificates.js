@@ -68,6 +68,14 @@ const certificates = [
     files: [
       { label: "Attendance Certificate", url: "assets/docs/greenvolve-2026/certificate.pdf" }
     ]
+  },
+  {
+    title: "10th International Workshop on Green and Sustainable Software (GREENS'26) - Attendance Certificate",
+    description: "Obtained from ACM & IEEE & SIGSOFT - April 2026",
+    year: "2026",
+    files: [
+      { label: "Attendance Certificate", url: "assets/docs/greens-2026/certificate.pdf" }
+    ]
   }
 ];
 

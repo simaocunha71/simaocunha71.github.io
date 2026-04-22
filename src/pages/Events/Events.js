@@ -1,10 +1,22 @@
 import React, { useState } from 'react';
 import './Events.css';
 
+
 const Events = () => {
   const [currentImageIndexes, setCurrentImageIndexes] = useState({});
 
   const events = [
+    {
+      title: "10th International Workshop on Green and Sustainable Software (GREENS '26)",
+      description: "On April 14th 2026, I had the opportunity to present my first PhD paper \"Not All Local LLMs Are Equal: A Benchmark of Energy and Performance\" at the 10th International Workshop on Green and Sustainable Software (GREENS '26), co-located with the IEEE/ACM International Conference on Software Engineering (ICSE) in Rio de Janeiro, Brazil. The paper briefly explores the energy and runtime efficiency of local Large Language Models for code generation, highlighting how model choice and prompting strategies can influence both performance and sustainability when running LLMs locally. I look forward to sharing more details about the work once the paper is officially published. It was also a great networking opportunity with researchers working on Green Software Engineering and LLMs, while experiencing the beautiful city of Rio de Janeiro - the people, food and sights made the trip even more memorable. Many thanks to Francisco Ribeiro, Luís Cruz and João Saraiva for helping make this paper possible! In the meantime, you can explore our online appendix here: https://sites.google.com/view/energy-local-llms-for-code/home",
+      images: [
+        "assets/docs/greens-2026/icse_photo.jpeg",
+        "assets/docs/greens-2026/group_picture.jpg",
+        "assets/docs/greens-2026/presentation_1.jpeg",
+        "assets/docs/greens-2026/presentation_2.jpeg"
+        
+      ]
+    },
     {
       title: 'Symposium on Sustainable IT Systems (SUITS) 2025',
       description: 'From September 22-25, 2025, I had the chance to attend the first Symposium on Sustainable IT Systems (SUITS) in Copenhagen, Denmark. The 4-day seminar brought together researchers in sustainable IT, energy efficiency and green programming to exchange ideas, discuss open challenges and foster new collaborations. It was an amazing opportunity to connect with others who share the same passion for making computing more sustainable. As a PhD student focused on green software, I was eager to learn about ongoing work in sustainable computing and to share a tool I developed, which measures software energy consumption and execution time and applies power capping to the system using Intel RAPL. Many thanks to Michael Kirkedal Thomsen and Maja Hanne Kirkeby for organizing such an inspiring event. I left feeling inspired and ready to take my PhD research to the next level. Learn more about SUITS 2025 here: https://suits-25.github.io/',
