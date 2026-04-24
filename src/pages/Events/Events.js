@@ -15,7 +15,8 @@ const Events = () => {
         "assets/docs/greens-2026/presentation_1.jpeg",
         "assets/docs/greens-2026/presentation_2.jpeg"
         
-      ]
+      ],
+      presentationPDF: "assets/docs/greens-2026/slides.pdf"
     },
     {
       title: 'Symposium on Sustainable IT Systems (SUITS) 2025',
