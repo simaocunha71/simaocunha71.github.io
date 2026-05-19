@@ -9,9 +9,9 @@ const workExperiences = [
     jobTitle: 'Summer Intern',
     duration: 'Jul 2022 - Aug 2022',
     description:
-      `Google Cloud Platform basics
-      Data Fusion instance creation and uploading a JSON file with a custom pipeline configuration using a Cloud Build file written in YAML
-      Agile Scrum methodology applied during the entire internship`,
+      `Google Cloud Platform basics.
+      Data Fusion instance creation and uploading a JSON file with a custom pipeline configuration using a Cloud Build file written in YAML.
+      Agile Scrum methodology applied during the entire internship.`,
     keywords: ['Google Cloud Platform', 'Agile Scrum'],
     logo: "assets/icons/accenture.png",
   },
@@ -31,10 +31,22 @@ const workExperiences = [
   {
     company: 'University of Minho',
     jobTitle: 'Teaching Assistant',
-    duration: 'Feb 2025 - Jul 2025',
-    description: 'Courses taught: Topics of Software Development and Experimentation in Software Engineering',
-    keywords: ['Software Development', 'Experimentation'],
+    duration: 'Feb 2024 - Jul 2026',
+    description: 
+    `Imperative Programming (2025/2026).
+     Topics of Software Development (2024/2025, 2025/2026).
+     Experimentation in Software Engineering (2024/2025).`,
+    keywords: ['Software Development', 'Experimentation', 'Imperative Programming'],
     logo: "assets/icons/uminho.png",
+  },
+  {
+    company: 'HASLab, INESC TEC',
+    jobTitle: 'Research Assistant',
+    duration: 'Sep 2025 - Present',
+    description: 
+    `Research activities in the field of software engineering during the PhD program.`,
+    keywords: ['Research', 'PhD'],
+    logo: "assets/icons/haslab.png",
   },
 ];
 
