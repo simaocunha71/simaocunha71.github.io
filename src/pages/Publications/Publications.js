@@ -23,8 +23,18 @@ const Publications = () => {
 
   const publications = [
     {
+      title: "Why Just-In-Time Compilation Matters: Evaluating Runtime and Energy Efficiency",
+      authors: " Luís Maia, Simão Cunha and João Saraiva",
+      year: 2026,
+      conference: "SLE '26: Proceedings of the 19th ACM SIGPLAN International Conference on Software Language Engineering",
+      doi: "https://dl.acm.org/doi/10.1145/3806383.3815520",
+      abstract: "Just-in-time (JIT) compilation is a core feature of many modern programming languages, combining the portability of interpreted languages with the performance benefits of ahead-of-time compilation. Originally introduced to improve the runtime performance of interpreted languages, JIT compilation dynamically compiles frequently executed code during program execution. In this paper, we investigate the impact of JIT compilation not only on execution time but also on energy efficiency across seven programming languages. Our experimental results show that enabling JIT compilation consistently improves both execution time and energy consumption. Overall, in six of the seven languages studied, JIT compilation makes programs both faster and more energy-efficient. Among the evaluated programming languages, CPU and DRAM energy consumption decreased by 64% and 57% on average, respectively, while execution time improved by 65%.",
+      keywords: ["Programming Languages", "Just-In-Time Compilation", "Energy Efficiency", "Runtime Efficiency"],
+      kudosLink: ""
+    },
+    {
       title: "The Green Side of the Lua",
-      authors: "André Brandão, Diogo Matos, Miguel Guimarães, Simão Cunha, and João Saraiva",
+      authors: "André Brandão, Diogo Matos, Miguel Guimarães, Simão Cunha and João Saraiva",
       year: 2026,
       conference: "2026 IEEE International Conference on Software Analysis, Evolution and Reengineering - Companion (SANER-C)",
       doi: "https://ieeexplore.ieee.org/document/11500263",
@@ -50,7 +60,7 @@ const Publications = () => {
     {
       title: "Trading Runtime for Energy Efficiency: Leveraging Power Caps to Save Energy Across Programming Languages",
       authors: "Simão Cunha, Luís Silva, João Saraiva and João Paulo Fernandes",
-      conference: "Proceedings of the 17th ACM SIGPLAN International Conference on Software Language Engineering (SLE ’24)",
+      conference: "Proceedings of the 17th ACM SIGPLAN International Conference on Software Language Engineering (SLE '24)",
       date: "October 20-21, 2024",
       location: "Pasadena, CA, USA",
       publisher: "Association for Computing Machinery, New York, NY, USA",
@@ -92,7 +102,15 @@ const Publications = () => {
                   <span className="publication-year">{extractYear(pub)}</span>
                 )}
               </div>
-              <div className="publication-authors">{pub.authors}</div>
+              <div
+                className="publication-authors"
+                dangerouslySetInnerHTML={{
+                  __html: pub.authors.replace(
+                    /Simão Cunha/g,
+                    "<u>Simão Cunha</u>"
+                  ),
+                }}
+              />
               <div className="publication-meta">
                 <em>
                   {pub.conference}
