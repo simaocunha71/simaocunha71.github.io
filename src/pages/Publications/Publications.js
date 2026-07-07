@@ -2,6 +2,10 @@ import React, { useState } from 'react';
 import './Publications.css';
 
 function extractYear(pub) {
+  if (pub.year) {
+    return String(pub.year);
+  }
+
   // Tenta extrair o ano do campo date, conference ou doi
   if (pub.date) {
     const match = pub.date.match(/\b(20\d{2}|19\d{2})\b/);
