@@ -28,12 +28,22 @@ const Publications = () => {
   const publications = [
     {
       title: "Why Just-In-Time Compilation Matters: Evaluating Runtime and Energy Efficiency",
-      authors: " Luís Maia, Simão Cunha and João Saraiva",
+      authors: "Luís Maia, Simão Cunha and João Saraiva",
       year: 2026,
       conference: "SLE '26: Proceedings of the 19th ACM SIGPLAN International Conference on Software Language Engineering",
       doi: "https://dl.acm.org/doi/10.1145/3806383.3815520",
       abstract: "Just-in-time (JIT) compilation is a core feature of many modern programming languages, combining the portability of interpreted languages with the performance benefits of ahead-of-time compilation. Originally introduced to improve the runtime performance of interpreted languages, JIT compilation dynamically compiles frequently executed code during program execution. In this paper, we investigate the impact of JIT compilation not only on execution time but also on energy efficiency across seven programming languages. Our experimental results show that enabling JIT compilation consistently improves both execution time and energy consumption. Overall, in six of the seven languages studied, JIT compilation makes programs both faster and more energy-efficient. Among the evaluated programming languages, CPU and DRAM energy consumption decreased by 64% and 57% on average, respectively, while execution time improved by 65%.",
       keywords: ["Programming Languages", "Just-In-Time Compilation", "Energy Efficiency", "Runtime Efficiency"],
+      kudosLink: ""
+    },
+    {
+      title: "Not All Local LLMs Are Equal: A Benchmark of Energy and Performance",
+      authors: "Simão Cunha, Francisco Ribeiro, Luís Cruz and João Saraiva",
+      year: 2026,
+      conference: "GREENS '26: Proceedings of the IEEE/ACM 10th International Workshop on Green and Sustainable Software",
+      doi: "https://dl.acm.org/doi/10.1145/3786148.3788630",
+      abstract: "The rapid adoption of Large Language Models (LLMs) is transforming research, education, software development and everyday life. As their use grows, so does the diversity of available models, from general-purpose to code-oriented LLMs that can run both in data centers and on edge devices. Several benchmarks have emerged to evaluate their performance in code generation and completion tasks, yet their energy and time efficiency remain underexplored. This paper evaluates five local LLMs on HumanEval-X and MBPP+ to analyze their accuracy, runtime and energy consumption under CPU-only inference, reflecting realistic on-device deployment scenarios where GPUs are unavailable. The results reveal clear trade-offs between effectiveness and efficiency: while some models achieve higher accuracy, others deliver comparable results with substantially lower energy use. In particular, 3-shot prompting consistently improves runtime and energy efficiency compared to 0-shot, without sacrificing code quality. These findings emphasize that prompt design and model selection must be considered together when deploying LLMs for coding tasks and call for the creation of practical prompt-efficiency guidelines to support more sustainable and efficient use of local LLMs.",
+      keywords: ["Large Language Models", "Energy Consumption", "Green Software", "Programming Languages"],
       kudosLink: ""
     },
     {
