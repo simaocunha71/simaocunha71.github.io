@@ -76,6 +76,14 @@ const certificates = [
     files: [
       { label: "Attendance Certificate", url: "assets/docs/greens-2026/certificate.pdf" }
     ]
+  },
+  {
+    title: "Reviewer of Sustainable Computing: Informatics and Systems Journal - Certificate of Reviewing",
+    description: "Obtained from Elsevier - September 2026",
+    year: "2026",
+    files: [
+      { label: "Attendance Certificate", url: "assets/docs/reviews/sustainable-computing-journal.pdf" }
+    ]
   }
 ];
 
